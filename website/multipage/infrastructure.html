@@ -177,7 +177,7 @@
   <script data-file-issue-url=https://github.com/whatwg/html/issues/new src=https://resources.whatwg.org/file-issue.js async=""></script>
   <header id=head class="head with-buttons">
    <p><a href=https://whatwg.org/ class=logo><img alt=WHATWG src=https://resources.whatwg.org/logo.svg width=100 height=100></a></p>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>5 December 2016</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>7 December 2016</span></h2></hgroup>
    
    
   </header>
@@ -206,17 +206,17 @@
   attributes</dfn>指的是在 IDL 接口中定义的属性。同样，“属性”这个词也同时指 Javascript 对象属性和 CSS 属性。在可能产生混淆时，
   该标准使用 <dfn>object properties</dfn> 和 <dfn>CSS properties</dfn> 来区别。</p>
 
-  <p>一般而言，当该标准申明一个特性可以在 <a id=术语:syntax href=syntax.html#syntax>HTML 语法</a> 或 <a id=术语:the-xhtml-syntax href=xhtml.html#the-xhtml-syntax>XML 语法</a> 中应用，则在另一个中也可用。
+  <p>一般而言，当该标准申明一个特性可以在 <a id=术语:syntax href=syntax.html#syntax>the HTML syntax</a> 或 <a href=xhtml.html#the-xhtml-syntax id=术语:the-xhtml-syntax>XML 语法</a> 中应用，则在另一个中也可用。
   当一个特性仅在两个语言之一中应用时，该标准将显式申明它不能在另一个语言中使用，
   如：“可在 HTML 中使用，…… （该语法不可用于 XML）”。</p>
 
-  <p>该标准使用术语 <dfn>document</dfn>（文档）指任何 HTML，从短小精悍的文档到长篇累牍的论文，
-  亦或是多媒体报告、完整的交互式应用程序。该术语同时指 <code id=术语:document><a href=dom.html#document>Document</a></code> 对象和他们的后裔 DOM 树。至于序列化的字节流，
-  则根据上下文使用 <a href=syntax.html#syntax id=术语:syntax-2>HTML 语法</a> 或 <a href=xhtml.html#the-xhtml-syntax id=术语:the-xhtml-syntax-2>XML 语法</a> 来表示。</p>
+  <p>该标准使用术语 <a href=dom.html#document id=术语:document>文档</a>指任何 HTML，从短小精悍的文档到长篇累牍的论文，
+  亦或是多媒体报告、完整的交互式应用程序。该术语同时指 <code id=术语:document-2><a href=dom.html#document>Document</a></code> 对象和他们的后裔 DOM 树。至于序列化的字节流，
+  则根据上下文使用 <a href=syntax.html#syntax id=术语:syntax-2>the HTML syntax</a> 或 <a href=xhtml.html#the-xhtml-syntax id=术语:the-xhtml-syntax-2>XML 语法</a> 来表示。</p>
 
   <p>在 DOM 结构的上下文中，术语 <a href=https://dom.spec.whatwg.org/#html-document id=术语:html-documents data-x-internal=html-documents>HTML document</a> 和
   <a href=https://dom.spec.whatwg.org/#xml-document id=术语:xml-documents data-x-internal=xml-documents>XML document</a> are used as defined in the DOM
-  specification, and refer specifically to two different modes that <code id=术语:document-2><a href=dom.html#document>Document</a></code> objects
+  specification, and refer specifically to two different modes that <code id=术语:document-3><a href=dom.html#document>Document</a></code> objects
   can find themselves in. <a href=references.html#refsDOM>[DOM]</a> (Such uses are always hyperlinked to their
   definition.)</p>
 
@@ -482,7 +482,7 @@
 
   <dl><dt id=interactive>Web browsers and other interactive user agents<dd>
 
-    <p>Web browsers that support <a id=conformance-classes:the-xhtml-syntax href=xhtml.html#the-xhtml-syntax>XML 语法</a> must process elements and attributes
+    <p>Web browsers that support <a href=xhtml.html#the-xhtml-syntax id=conformance-classes:the-xhtml-syntax>XML 语法</a> must process elements and attributes
     from the <a id=conformance-classes:html-namespace-2 href=https://infra.spec.whatwg.org/#html-namespace data-x-internal=html-namespace-2>HTML namespace</a> found in XML documents as described in this specification,
     so that users can interact with them, unless the semantics of those elements have been
     overridden by other specifications.</p>
@@ -493,7 +493,7 @@
     processor would instead treat the <code id=conformance-classes:the-script-element-2><a href=scripting.html#the-script-element>script</a></code> element as an opaque element that forms
     part of the transform.</p>
 
-    <p>Web browsers that support <a id=conformance-classes:syntax href=syntax.html#syntax>HTML 语法</a> must process documents labeled with an
+    <p>Web browsers that support <a id=conformance-classes:syntax href=syntax.html#syntax>the HTML syntax</a> must process documents labeled with an
     <a id=conformance-classes:html-mime-type href=https://mimesniff.spec.whatwg.org/#html-mime-type data-x-internal=html-mime-type>HTML MIME type</a> as described in this specification, so that users can interact with
     them.</p>
 
@@ -646,7 +646,7 @@
   </p>
 
   <p>For compatibility with existing content and prior specifications, this specification describes
-  two authoring formats: one based on <a href=xhtml.html#the-xhtml-syntax id=conformance-classes:the-xhtml-syntax-2>XML</a>, and one using a <a href=syntax.html#writing>custom format</a> inspired by SGML (referred to as <a id=conformance-classes:syntax-2 href=syntax.html#syntax>HTML 语法</a>).
+  two authoring formats: one based on <a href=xhtml.html#the-xhtml-syntax id=conformance-classes:the-xhtml-syntax-2>XML</a>, and one using a <a href=syntax.html#writing>custom format</a> inspired by SGML (referred to as <a id=conformance-classes:syntax-2 href=syntax.html#syntax>the HTML syntax</a>).
   Implementations must support at least one of these two formats, although supporting both is
   encouraged.</p>
 
@@ -707,7 +707,7 @@
 
    <dt>XML and related specifications<dd>
 
-    <p>Implementations that support <a id=dependencies:the-xhtml-syntax href=xhtml.html#the-xhtml-syntax>XML 语法</a> for HTML must support some version
+    <p>Implementations that support <a href=xhtml.html#the-xhtml-syntax id=dependencies:the-xhtml-syntax>XML 语法</a> for HTML must support some version
     of XML, as well as its corresponding namespaces specification, because that syntax uses an XML
     serialization with namespaces. <a href=references.html#refsXML>[XML]</a> <a href=references.html#refsXMLNS>[XMLNS]</a></p>
 
@@ -716,7 +716,7 @@
     arbitrary content, may "support namespaces" by just asserting that their DOM node analogues are
     in certain namespaces, without actually exposing the namespace strings.</p>
 
-    <p class=note>In <a id=dependencies:syntax href=syntax.html#syntax>HTML 语法</a>, namespace prefixes and namespace declarations
+    <p class=note>In <a id=dependencies:syntax href=syntax.html#syntax>the HTML syntax</a>, namespace prefixes and namespace declarations
     do not have the same effect as in XML. For instance, the colon has no special meaning in HTML
     element names.</p>
 

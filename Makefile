@@ -30,3 +30,9 @@ clean-en:
 
 clean-cache:
 	rm -rf html-build/.cache
+
+update-terms:
+	node ./bin/update-terms.js
+
+term-table:
+	@node ./bin/term-table.js

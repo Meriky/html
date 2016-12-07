@@ -1,4 +1,4 @@
-RESULTS=website/multipage/*.html website/*.html website/*.js
+RESULTS=output/multipage/*.html output/*.html output/*.js
 
 update-source:
 	[ -d html ] || git clone https://github.com/whatwg/html.git --depth=1
@@ -10,7 +10,7 @@ build-en: clean-en
 build-zh:
 	node ./bin/merge.js > html/source
 	[ -d html-build ] || git clone https://github.com/whatwg/html-build.git --depth=1
-	HTML_OUTPUT=$(abspath website) bash html-build/build.sh -n
+	HTML_OUTPUT=$(abspath output) bash html-build/build.sh -n
 	sed -i 's/"\/multipage/"\/html\/multipage/g' $(RESULTS)
 	sed -i "s/'\/multipage/'\/html\/multipage/g" $(RESULTS)
 	sed -i 's/src=\/link-fixup.js/src=\/html\/link-fixup.js/g' $(RESULTS)
@@ -20,8 +20,8 @@ build-zh:
 	sed -i 's/=\/entities.json/=\/html\/entities.json/g' $(RESULTS)
 
 deploy:
-	@echo Make sure website/ has been committed into master branch
-	git subtree push --prefix website origin gh-pages
+	@echo Make sure output/ has been committed into master branch
+	git subtree push --prefix output origin gh-pages
 
 clean-en:
 	rm -rf src/SUMMARY.en.md

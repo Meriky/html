@@ -3,7 +3,7 @@
   <p>该标准所说的属性，指的是 HTML，XML 和 IDL 属性，通常在同一个上下文中。当未具体提及所指时，HTML 和 XML 属性指的是 <dfn
   data-x="">content attributes</dfn>，而 <dfn data-x="">IDL
   attributes</dfn>指的是在 IDL 接口中定义的属性。同样，“属性”这个词也同时指 Javascript 对象属性和 CSS 属性。在可能产生混淆时，
-  该标准使用 <dfn data-x="">object properties</dfn> 和 <span>CSS properties</span> 来区别。</p>
+  该标准使用 <dfn data-x="">object properties</dfn> 和 <dfn data-x="">CSS properties</dfn> 来区别。</p>
 
   <p>一般而言，当该标准申明一个特性可以在 <span data-x="the HTML syntax">HTML 语法</span> 或 <span data-x="the XML syntax">XML 语法</span> 中应用，则在另一个中也可用。
   当一个特性仅在两个语言之一中应用时，该标准将显式申明它不能在另一个语言中使用，
@@ -13,38 +13,32 @@
   亦或是多媒体报告、完整的交互式应用程序。该术语同时指 <code>Document</code> 对象和他们的后裔 DOM 树。至于序列化的字节流，
   则根据上下文使用 <span data-x="the HTML syntax">HTML 语法</span> 或 <span data-x="the XML syntax">XML 语法</span> 来表示。</p>
 
-  <p>在 DOM 结构的上下文中，术语 <span data-x="HTML documents">HTML 文档</span> 和
-  <span data-x="XML documents">XML 文档</span> are used as defined in the DOM
-  specification, and refer specifically to two different modes that <code>Document</code> objects
-  can find themselves in. <ref spec=DOM> (Such uses are always hyperlinked to their
-  definition.)</p>
+  <p>在 DOM 结构的上下文中，使用的术语 <span data-x="HTML documents">HTML 文档</span> 和
+  <span data-x="XML documents">XML 文档</span> 定义在 DOM 标准中，
+  并且特指 <code>Document</code> 对象所处的两种不同模式。 <ref spec=DOM> （这样的使用都会超链接到它们的定义）</p>
 
-  <p>在字节流的上下文中，术语 HTML document 指标记为 <code>text/html</code> 的资源，术语 XML document 指标记为
-  <span>XML MIME type</span> 的资源。</p>
+  <p>在字节流的上下文中，术语 <span data-x="HTML documents">HTML 文档</span> 指标记为 <code>text/html</code> 的资源，
+  术语 <span data-x="XML documents">XML 文档</span> 指标记为 <span>XML MIME type</span> 的资源。</p>
 
   <hr>
 
-  <p>For simplicity, terms such as <dfn data-x="">shown</dfn>, <dfn data-x="">displayed</dfn>, and
-  <dfn data-x="">visible</dfn> might sometimes be used when referring to the way a document is
-  rendered to the user. These terms are not meant to imply a visual medium; they must be considered
-  to apply to other media in equivalent ways.</p>
+  <p>简单起见，像 <dfn data-x="">shown</dfn>, <dfn data-x="">displayed</dfn>, 以及
+  <dfn data-x="">visible</dfn> 这样的术语可能会用来指明文档渲染给用户的方式，
+  这些术语并不是指应用于视觉媒介；必须考虑将它们以等价的方式应用于其他的媒介。</p>
+  <p class="note">译者注：某个元素是visible的并不仅仅指该元素在视觉上可见，比如屏幕阅读器也应将该元素阅读给用户。</p>
 
   <div w-nodev>
 
-  <p>When an algorithm B says to return to another algorithm A, it implies that A called B. Upon
-  returning to A, the implementation must continue from where it left off in calling B. Some
-  algorithms run <dfn data-export="">in parallel</dfn>; this means that the algorithm's subsequent
-  steps are to be run, one after another, at the same time as other logic in the specification (e.g.
-  at the same time as the <span>event loop</span>). This specification does not define the precise
-  mechanism by which this is achieved, be it time-sharing cooperative multitasking, fibers, threads,
-  processes, using different hyperthreads, cores, CPUs, machines, etc. By contrast, an operation
-  that is to run <dfn>immediately</dfn> must interrupt the currently running task, run itself, and
-  then resume the previously running task.</p>
+  <p>当我们说 B 算法返回给 A 算法时，指的是 A 调用了 B。当返回给 A时，
+  该实现必须从离开的时候（即调用 B 时）继续执行。
+  有些算法是<dfn data-export="" data-x="in parallel">并行的</dfn>，
+  这是指该算法后续的步骤会有序执行，但该过程是与本标准中的其他逻辑（例如<span data-x="event loop">事件循环</span>）同时执行的。
+  本标准并未精确地定义该行为的具体机制，例如分时合作式多任务、纤程、线程、进程，可以运行在不同的超线程、核心、CPU、甚至不同的机器上。
+  相反地，<dfn data-x="immediately">立即</dfn>执行的操作必须中断当前正在执行的任务，执行它自己，然后恢复先前正在执行的任务。
 
   </div>
 
   <!-- should find somewhere more appropriate to put this -->
-  <p>The term "transparent black" refers to the color with red, green, blue, and alpha channels all
-  set to zero.</p>
+  <p>术语 "transparent black" 是指 red, green, blue, alpha 通道都设为0的颜色。</p>
 
 

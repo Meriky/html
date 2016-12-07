@@ -18,10 +18,15 @@ build-zh:
 	sed -i 's/=\/images\//=\/html\/images\//g' $(RESULTS)
 	sed -i 's/=\/demos\//=\/html\/demos\//g' $(RESULTS)
 	sed -i 's/=\/entities.json/=\/html\/entities.json/g' $(RESULTS)
+	cat ./output/multipage/fragment-links.json | node ./bin/json-pretify.js > /tmp/a.json
+	cat /tmp/a.json > ./output/multipage/fragment-links.json
 
 deploy:
 	@echo Make sure output/ has been committed into master branch
 	git subtree push --prefix output origin gh-pages
+
+deploy-force:
+	git push origin `git subtree split --prefix output master`:gh-pages --force
 
 clean-en:
 	rm -rf src/SUMMARY.en.md
@@ -31,8 +36,9 @@ clean-en:
 clean-cache:
 	rm -rf html-build/.cache
 
-update-terms:
-	node ./bin/update-terms.js
+update-term:
+	echo "{}" > ./terminology.json
+	node ./bin/update-term.js
 
 term-table:
 	@node ./bin/term-table.js

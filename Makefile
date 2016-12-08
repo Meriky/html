@@ -2,6 +2,7 @@ RESULTS=output/multipage/*.html output/*.html output/*.js
 
 update-source:
 	[ -d html ] || git clone https://github.com/whatwg/html.git --depth=1
+	cd html && git pull && cd ..
 	mv html/source source
 
 build-en: clean-en
@@ -11,13 +12,13 @@ build-zh:
 	node ./bin/merge.js > html/source
 	[ -d html-build ] || git clone https://github.com/whatwg/html-build.git --depth=1
 	HTML_OUTPUT=$(abspath output) bash html-build/build.sh -n
-	sed -i 's/"\/multipage/"\/html\/multipage/g' $(RESULTS)
-	sed -i "s/'\/multipage/'\/html\/multipage/g" $(RESULTS)
-	sed -i 's/src=\/link-fixup.js/src=\/html\/link-fixup.js/g' $(RESULTS)
-	sed -i "s/'\/fonts\//'\/html\/fonts\//g" $(RESULTS)
-	sed -i 's/=\/images\//=\/html\/images\//g' $(RESULTS)
-	sed -i 's/=\/demos\//=\/html\/demos\//g' $(RESULTS)
-	sed -i 's/=\/entities.json/=\/html\/entities.json/g' $(RESULTS)
+	sed -i 's/"\/?multipage/"\/html\/multipage/g' $(RESULTS)
+	sed -i "s/'\/?multipage/'\/html\/multipage/g" $(RESULTS)
+	sed -i 's/=\/?link-fixup.js/=\/html\/link-fixup.js/g' $(RESULTS)
+	sed -i "s/'\/?fonts\//'\/html\/fonts\//g" $(RESULTS)
+	sed -i 's/=\/?images\//=\/html\/images\//g' $(RESULTS)
+	sed -i 's/=\/?demos\//=\/html\/demos\//g' $(RESULTS)
+	sed -i 's/=\/?entities.json/=\/html\/entities.json/g' $(RESULTS)
 	cat ./output/multipage/fragment-links.json | node ./bin/json-pretify.js > /tmp/a.json
 	cat /tmp/a.json > ./output/multipage/fragment-links.json
 

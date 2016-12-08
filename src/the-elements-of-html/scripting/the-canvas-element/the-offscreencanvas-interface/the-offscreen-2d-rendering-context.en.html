@@ -139,6 +139,13 @@ interface <span>OffscreenCanvasRenderingContext2D</span> {
      <span>browsing context</span> <span>event loop</span>) to set the <span
      data-x="offscreencanvas-placeholder">placeholder <code>canvas</code> element</span>'s
      <span>output bitmap</span> to be a reference to <var>image</var>.</p>
+
+     <p class="note">If <var>image</var> has different dimensions than the bitmap previously
+     referenced as the <span data-x="offscreencanvas-placeholder">placeholder <code>canvas</code>
+     element</span>'s <span>output bitmap</span>, then this task will result in a change in
+     the <span data-x="offscreencanvas-placeholder">placeholder <code>canvas</code>
+     element</span>'s <span data-x="intrinsic dimensions">intrinsic size</span>, which may affect
+     document layout.</p>
     </li>
   </ol>
 

@@ -12,8 +12,8 @@ enum <dfn>OffscreenRenderingContextType</dfn> { "<span data-x="offscreen-context
 
 [<span data-x="dom-OffscreenCanvas">Constructor</span>([EnforceRange] unsigned long long width, [EnforceRange] unsigned long long height), Exposed=(Window,Worker)]
 interface <dfn>OffscreenCanvas</dfn> : <span>EventTarget</span> {
-  readonly attribute unsigned long long <span data-x="dom-OffscreenCanvas-width">width</span>;
-  readonly attribute unsigned long long <span data-x="dom-OffscreenCanvas-height">height</span>;
+  attribute unsigned long long <span data-x="dom-OffscreenCanvas-width">width</span>;
+  attribute unsigned long long <span data-x="dom-OffscreenCanvas-height">height</span>;
 
   <span>OffscreenRenderingContext</span>? <span data-x="dom-OffscreenCanvas-getContext">getContext</span>(<span>OffscreenRenderingContextType</span> contextType, any... arguments);
   <span>ImageBitmap</span> <span data-x="dom-OffscreenCanvas-transferToImageBitmap">transferToImageBitmap</span>();
@@ -83,10 +83,9 @@ interface <dfn>OffscreenCanvas</dfn> : <span>EventTarget</span> {
   <p>An <code>OffscreenCanvas</code> object has an internal <dfn
   data-x="offscreencanvas-bitmap">bitmap</dfn> that is initialized when the object
   is created. The width and height of the <span data-x="offscreencanvas-bitmap">bitmap</span> are
-  equal to the values of the <dfn><code data-x="dom-OffscreenCanvas-width">width</code></dfn> and
-  <dfn><code data-x="dom-OffscreenCanvas-height">height</code></dfn> attributes of the
-  <code>OffscreenCanvas</code> object. Initially, all the bitmap's pixels are transparent
-  black.</p>
+  equal to the values of the <code data-x="dom-OffscreenCanvas-width">width</code> and <code
+  data-x="dom-OffscreenCanvas-height">height</code> attributes of the <code>OffscreenCanvas</code>
+  object. Initially, all the bitmap's pixels are transparent black.</p>
 
   <p>An <code>OffscreenCanvas</code> object can have a rendering context bound to it. Initially,
   it does not have a bound rendering context. To keep track of whether it has a rendering context
@@ -139,7 +138,8 @@ interface <dfn>OffscreenCanvas</dfn> : <span>EventTarget</span> {
    data-x="offscreencanvas-context-mode">context mode</span> to <span
    data-x="offscreencanvas-context-detached">detached</span>.</p></li>
 
-   <li><p>Unset this <code>OffscreenCanvas</code> object's bitmap.</p></li>
+   <li><p>Unset this <code>OffscreenCanvas</code> object's <span
+   data-x="offscreencanvas-bitmap">bitmap</span>.</p></li>
 
    <li><p>Return <var>new</var>.</p></li>
   </ol>
@@ -201,6 +201,47 @@ interface <dfn>OffscreenCanvas</dfn> : <span>EventTarget</span> {
   <hr>
 
   </div>
+
+  <dl class="domintro">
+   <dt><var>offscreenCanvas</var> . <code subdfn data-x="dom-OffscreenCanvas-width">width</code> [
+   = <var>value</var> ]</dt>
+
+   <dt><var>offscreenCanvas</var> . <code subdfn data-x="dom-OffscreenCanvas-height">height</code> [
+   = <var>value</var> ]</dt>
+
+   <dd>
+    <p>These attributes return the dimensions of the <code>OffscreenCanvas</code> object's <span
+    data-x="offscreencanvas-bitmap">bitmap</span>.</p>
+
+    <p>They can be set, to replace the <span data-x="offscreencanvas-bitmap">bitmap</span> with a
+    new, transparent black bitmap of the specified dimensions (effectively resizing it).</p>
+   </dd>
+  </dl>
+
+  <div w-nodev>
+
+  <p>If either the <dfn><code data-x="dom-OffscreenCanvas-width">width</code></dfn> or <dfn><code
+  data-x="dom-OffscreenCanvas-height">height</code></dfn> attributes of an
+  <code>OffscreenCanvas</code> object are set (to a new value or to the same value as before) and
+  the <code>OffscreenCanvas</code> object's <span data-x="offscreencanvas-context-mode">context
+  mode</span> is <span data-x="offscreencanvas-context-2d">2d</span>, then replace the
+  <code>OffscreenCanvas</code> object's <span data-x="offscreencanvas-bitmap">bitmap</span> with a
+  new transparent black bitmap and <span>reset the rendering context to its default state</span>.
+  The new bitmap's dimensions are equal to the new values of the <code
+  data-x="dom-OffscreenCanvas-width">width</code> and <code
+  data-x="dom-OffscreenCanvas-height">height</code> attributes.</p>
+
+  <p>The resizing behavior for "<code data-x="offscreen-context-type-webgl">webgl</code>"
+  contexts is defined in the WebGL specification. <ref spec=WEBGL></p>
+
+  </div>
+
+  <p class="note">If an <code>OffscreenCanvas</code> object whose dimensions were changed has
+  a <span data-x="offscreencanvas-placeholder">placeholder <code>canvas</code> element</span>, then
+  the <span data-x="offscreencanvas-placeholder">placeholder <code>canvas</code> element</span>'s
+  <span data-x="intrinsic dimensions">intrinsic size</span> will only be updated via the <code
+  data-x="offscreencontext-commit">commit()</code> method of the <code>OffscreenCanvas</code>
+  object's rendering context.</p>
 
   <dl class="domintro">
    <dt><var>promise</var> = <var>offscreenCanvas</var> . <code subdfn

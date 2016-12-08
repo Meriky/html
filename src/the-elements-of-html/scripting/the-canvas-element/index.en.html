@@ -157,12 +157,54 @@ callback <dfn>BlobCallback</dfn> = void (<span>Blob</span>? blob);</pre>
 
   <p>Whenever the <code data-x="attr-canvas-width">width</code> and <code
   data-x="attr-canvas-height">height</code> content attributes are set, removed, changed, or
-  redundantly set to the value they already have, if the <span
-  data-x="concept-canvas-context-mode">canvas context mode</span> is <span
-  data-x="concept-canvas-2d">2d</span>, then the user agent must <span
-  data-x="concept-canvas-set-bitmap-dimensions">set bitmap dimensions</span> to the numeric values
-  of the <code data-x="attr-canvas-width">width</code> and <code
-  data-x="attr-canvas-height">height</code> content attributes.</p>
+  redundantly set to the value they already have, then the user agent must perform the action
+  from the row of the following table that corresponds to the <code>canvas</code> element's <span
+  data-x="concept-canvas-context-mode">context mode</span>.</p>
+
+  <table>
+   <thead>
+    <tr>
+     <th>
+      <p><span data-x="concept-canvas-context-mode">Context Mode</span></p>
+     <th>
+      <p>Action</p>
+
+   <tbody>
+    <tr>
+     <th>
+      <p><span data-x="concept-canvas-2d">2d</span></p>
+     <td>
+      <p>Follow the steps to <span data-x="concept-canvas-set-bitmap-dimensions">set bitmap
+      dimensions</span> to the numeric values of the <code data-x="attr-canvas-width">width</code>
+      and <code data-x="attr-canvas-height">height</code> content attributes.</p>
+
+    <tr>
+     <th>
+      <p><span data-x="concept-canvas-webgl">webgl</span></p>
+     <td>
+      <p>Follow the behavior defined in the WebGL specification. <ref spec=WEBGL></p>
+
+    <tr>
+     <th>
+      <p><span data-x="concept-canvas-bitmaprenderer">bitmaprenderer</span></p>
+     <td>
+      <p>If the context's <span data-x="concept-ImageBitmapRenderingContext-bitmap-mode">bitmap
+      mode</span> is set to <span data-x="concept-ImageBitmapRenderingContext-blank">blank</span>,
+      run the steps to <span>set an <code>ImageBitmapRenderingContext</code>'s output bitmap</span>,
+      passing the <code>canvas</code> element's rendering context.</p>
+
+    <tr>
+     <th>
+      <p><span data-x="concept-canvas-placeholder">placeholder</span></p>
+     <td>
+      <p>Do nothing.</p>
+
+    <tr>
+     <th>
+      <p><span data-x="concept-canvas-none">none</span></p>
+     <td>
+      <p>Do nothing.</p>
+  </table>
 
   <p>The <dfn><code data-x="dom-canvas-width">width</code></dfn> and <dfn><code data-x="dom-canvas-height">height</code></dfn> IDL attributes must <span>reflect</span> the
   respective content attributes of the same name, with the same defaults.</p>

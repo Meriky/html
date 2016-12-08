@@ -23,7 +23,7 @@ build-zh:
 
 deploy:
 	@echo Make sure output/ has been committed into master branch
-	git subtree push --prefix output origin gh-pages
+	git subtree push --prefix=output --squash origin gh-pages
 
 deploy-force:
 	git push origin `git subtree split --prefix output master`:gh-pages --force

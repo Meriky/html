@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/html/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard.css><script defer="" src=https://resources.whatwg.org/dfn.js></script><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard.css><script defer="" src=https://resources.whatwg.org/dfn.js></script><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -145,23 +145,23 @@
    #table-example-1 * { font-family: "Essays1743", serif; line-height: 1.01em; }
    @font-face {
      font-family: 'Essays1743';
-     src: url('/html/fonts/Essays1743.ttf');
+     src: url('/fonts/Essays1743.ttf');
    }
    @font-face {
      font-family: 'Essays1743';
      font-weight: bold;
-     src: url('/html/fonts/Essays1743-Bold.ttf');
+     src: url('/fonts/Essays1743-Bold.ttf');
    }
    @font-face {
      font-family: 'Essays1743';
      font-style: italic;
-     src: url('/html/fonts/Essays1743-Italic.ttf');
+     src: url('/fonts/Essays1743-Italic.ttf');
    }
    @font-face {
      font-family: 'Essays1743';
      font-style: italic;
      font-weight: bold;
-     src: url('/html/fonts/Essays1743-BoldItalic.ttf');
+     src: url('/fonts/Essays1743-BoldItalic.ttf');
    }
 
    @media (max-width: 767px) {
@@ -177,7 +177,7 @@
   <script data-file-issue-url=https://github.com/whatwg/html/issues/new src=https://resources.whatwg.org/file-issue.js async=""></script>
   <header id=head class="head with-buttons">
    <p><a href=https://whatwg.org/ class=logo><img alt=WHATWG src=https://resources.whatwg.org/logo.svg width=100 height=100></a></p>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>7 December 2016</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>9 December 2016</span></h2></hgroup>
    
    
   </header>
@@ -1982,7 +1982,7 @@ interface <dfn id=htmlbodyelement>HTMLBodyElement</dfn> : <a id=the-body-element
 
   <p class=note>When used specifically with content to be redistributed in syndication, the
   <code id=the-article-element:the-article-element-8><a href=#the-article-element>article</a></code> element is similar in purpose to the <code>entry</code> element in
-  Atom. <a href=references.html#refsATOM>[ATOM]</a></p>
+  Atom. <a href=references.html#refsATOM>[ATOM]</a>
 
   <p class=note>The schema.org microdata vocabulary can be used to provide the publication date
   for an <code id=the-article-element:the-article-element-9><a href=#the-article-element>article</a></code> element, using one of the CreativeWork subtypes.</p>
@@ -3238,7 +3238,7 @@ Space is not the only void</pre>
 
    <p>The following image shows what a rendered view of the outline might look like.</p>
 
-   <p><img src=/html/images/outline.svg width=465 alt="Top-level section with the
+   <p><img src=/images/outline.svg width=465 alt="Top-level section with the
    multi-level heading &quot;HTML: Living Standard — Last Updated 12 August 2016&quot; and two
    subsections; &quot;Table of contents&quot; and &quot;First section&quot;." height=120></p>
   </div>
@@ -5424,12 +5424,12 @@ interface <dfn id=htmlanchorelement>HTMLAnchorElement</dfn> : <a id=the-a-elemen
 
   <ol><li><p>If the <code id=the-a-element:the-a-element-8><a href=#the-a-element>a</a></code> element's <a id=the-a-element:node-document href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a> is not <a id=the-a-element:fully-active href=browsers.html#fully-active>fully active</a>, then abort these steps.<li>
 
-    <p>If either the <code id=the-a-element:the-a-element-9><a href=#the-a-element>a</a></code> element has a <code id=the-a-element:attr-hyperlink-download-4><a href=#attr-hyperlink-download>download</a></code> attribute and the algorithm is not
-    <a id=the-a-element:triggered-by-user-activation href=interaction.html#triggered-by-user-activation>triggered by user activation</a>; or, if the user has not indicated a specific
-    <a id=the-a-element:browsing-context-2 href=browsers.html#browsing-context>browsing context</a> for following the link, and the element's <code id=the-a-element:attr-hyperlink-target-4><a href=#attr-hyperlink-target>target</a></code> attribute is present, and applying <a id=the-a-element:the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name href=browsers.html#the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name>the rules
-    for choosing a browsing context given a browsing context name</a>, using the value of the
-    <code id=the-a-element:attr-hyperlink-target-5><a href=#attr-hyperlink-target>target</a></code> attribute as the browsing context name, would
-    result in there not being a chosen browsing context, then run these substeps:</p>
+    <p>If the user has not indicated a specific <a id=the-a-element:browsing-context-2 href=browsers.html#browsing-context>browsing context</a> for following the
+    link, and the element's <code id=the-a-element:attr-hyperlink-target-4><a href=#attr-hyperlink-target>target</a></code> attribute is present,
+    and applying <a id=the-a-element:the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name href=browsers.html#the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name>the rules for choosing a browsing context given a browsing context
+    name</a>, using the value of the <code id=the-a-element:attr-hyperlink-target-5><a href=#attr-hyperlink-target>target</a></code> attribute
+    as the browsing context name, would result in there not being a chosen browsing context, then
+    run these substeps:</p>
 
     <ol><li><p>If there is an <a id=the-a-element:entry-settings-object href=webappapis.html#entry-settings-object>entry settings object</a>, throw an
      <a id=the-a-element:invalidaccesserror href=https://heycam.github.io/webidl/#invalidaccesserror data-x-internal=invalidaccesserror>"<code>InvalidAccessError</code>"</a> <code id=the-a-element:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>Abort these steps without following the hyperlink.</ol>
@@ -5449,7 +5449,7 @@ interface <dfn id=htmlanchorelement>HTMLAnchorElement</dfn> : <a id=the-a-elemen
 
    <li><p>Finally, the user agent must <a href=#following-hyperlinks-2 id=the-a-element:following-hyperlinks-2-2>follow the
    hyperlink</a> or <a href=#downloading-hyperlinks id=the-a-element:downloading-hyperlinks-2>download the hyperlink</a> created
-   by the <code id=the-a-element:the-a-element-10><a href=#the-a-element>a</a></code> element, as determined by the <code id=the-a-element:attr-hyperlink-download-5><a href=#attr-hyperlink-download>download</a></code> attribute and any expressed user preference,
+   by the <code id=the-a-element:the-a-element-9><a href=#the-a-element>a</a></code> element, as determined by the <code id=the-a-element:attr-hyperlink-download-4><a href=#attr-hyperlink-download>download</a></code> attribute and any expressed user preference,
    passing <var>hyperlink suffix</var>, if the steps above defined it.</ol>
 
   
@@ -5483,7 +5483,7 @@ interface <dfn id=htmlanchorelement>HTMLAnchorElement</dfn> : <a id=the-a-elemen
 
   <div class=example>
 
-   <p>The <code id=the-a-element:the-a-element-11><a href=#the-a-element>a</a></code> element may be wrapped around entire paragraphs, lists, tables, and so
+   <p>The <code id=the-a-element:the-a-element-10><a href=#the-a-element>a</a></code> element may be wrapped around entire paragraphs, lists, tables, and so
    forth, even entire sections, so long as there is no interactive content within (e.g. buttons or
    other links). This example shows how this can be used to make an entire advertising block into a
    link:</p>
@@ -6379,7 +6379,7 @@ this specification: the &lt;abbr>WHATWG&lt;/abbr> and the
 
    <p>This might be rendered as:</p>
 
-   <p><img src=/html/images/sample-ruby-ja.png width=171 alt="The two main ideographs, each with its annotation in hiragana rendered in a smaller font above it." height=78></p>
+   <p><img src=/images/sample-ruby-ja.png width=171 alt="The two main ideographs, each with its annotation in hiragana rendered in a smaller font above it." height=78></p>
 
   </div>
 
@@ -6393,7 +6393,7 @@ this specification: the &lt;abbr>WHATWG&lt;/abbr> and the
 
    <p>This might be rendered as:</p>
 
-   <p><img src=/html/images/sample-ruby-bopomofo.png width=78 alt="The two main ideographs, each with its bopomofo annotation rendered in a smaller font next to it." height=100></p>
+   <p><img src=/images/sample-ruby-bopomofo.png width=78 alt="The two main ideographs, each with its bopomofo annotation rendered in a smaller font next to it." height=100></p>
 
   </div>
 
@@ -6407,7 +6407,7 @@ this specification: the &lt;abbr>WHATWG&lt;/abbr> and the
 
    <p>This might be rendered as:</p>
 
-   <p><img src=/html/images/sample-ruby-pinyin.png width=173 alt="The two main ideographs, each with its pinyin annotation rendered in a smaller font above it." height=79></p>
+   <p><img src=/images/sample-ruby-pinyin.png width=173 alt="The two main ideographs, each with its pinyin annotation rendered in a smaller font above it." height=79></p>
 
   </div>
 
@@ -6468,13 +6468,13 @@ this specification: the &lt;abbr>WHATWG&lt;/abbr> and the
    use <code id=the-rp-element:the-rp-element-7><a href=#the-rp-element>rp</a></code> so that in legacy user agents the readings are in parentheses:</p>
 
    <pre lang=ja>...
-&lt;ruby>漢&lt;rp> (&lt;/rp>&lt;rt>かん&lt;/rt>&lt;rp>) &lt;/rp>字&lt;rp> (&lt;/rp>&lt;rt>じ&lt;/rt>&lt;rp>) &lt;/rp>&lt;/ruby>
+&lt;ruby>漢&lt;rp>（&lt;/rp>&lt;rt>かん&lt;/rt>&lt;rp>）&lt;/rp>字&lt;rp>（&lt;/rp>&lt;rt>じ&lt;/rt>&lt;rp>）&lt;/rp>&lt;/ruby>
 ...</pre>
 
    <p>In conforming user agents the rendering would be as above, but in user agents that do not
    support ruby, the rendering would be:</p>
 
-   <pre lang=ja>... 漢 (かん) 字 (じ) ...</pre>
+   <pre lang=ja>... 漢（かん）字（じ）...</pre>
 
   </div>
 
@@ -7373,12 +7373,12 @@ wormhole connection.&lt;/mark>&lt;/p></pre>
 &lt;/ul></pre>
 
    <figure>
-    <img src=/html/images/sample-bdi.png alt="">
+    <img src=/images/sample-bdi.png alt="">
     <figcaption>When using the <code id=the-bdi-element:the-bdi-element-3><a href=#the-bdi-element>bdi</a></code> element, the username acts as expected.</figcaption>
    </figure>
 
    <figure>
-    <img src=/html/images/sample-not-bdi.png alt="">
+    <img src=/images/sample-not-bdi.png alt="">
     <figcaption>If the <code id=the-bdi-element:the-bdi-element-4><a href=#the-bdi-element>bdi</a></code> element were to be replaced by a <code id=the-bdi-element:the-b-element><a href=#the-b-element>b</a></code> element, the username would confuse the bidirectional algorithm and the third bullet would end up saying "User 3 :", followed by the Arabic name (right-to-left), followed by "posts" and a period.</figcaption>
    </figure>
 

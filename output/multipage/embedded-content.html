@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/html/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard.css><script defer="" src=https://resources.whatwg.org/dfn.js></script><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard.css><script defer="" src=https://resources.whatwg.org/dfn.js></script><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -145,23 +145,23 @@
    #table-example-1 * { font-family: "Essays1743", serif; line-height: 1.01em; }
    @font-face {
      font-family: 'Essays1743';
-     src: url('/html/fonts/Essays1743.ttf');
+     src: url('/fonts/Essays1743.ttf');
    }
    @font-face {
      font-family: 'Essays1743';
      font-weight: bold;
-     src: url('/html/fonts/Essays1743-Bold.ttf');
+     src: url('/fonts/Essays1743-Bold.ttf');
    }
    @font-face {
      font-family: 'Essays1743';
      font-style: italic;
-     src: url('/html/fonts/Essays1743-Italic.ttf');
+     src: url('/fonts/Essays1743-Italic.ttf');
    }
    @font-face {
      font-family: 'Essays1743';
      font-style: italic;
      font-weight: bold;
-     src: url('/html/fonts/Essays1743-BoldItalic.ttf');
+     src: url('/fonts/Essays1743-BoldItalic.ttf');
    }
 
    @media (max-width: 767px) {
@@ -177,7 +177,7 @@
   <script data-file-issue-url=https://github.com/whatwg/html/issues/new src=https://resources.whatwg.org/file-issue.js async=""></script>
   <header id=head class="head with-buttons">
    <p><a href=https://whatwg.org/ class=logo><img alt=WHATWG src=https://resources.whatwg.org/logo.svg width=100 height=100></a></p>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>7 December 2016</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>9 December 2016</span></h2></hgroup>
    
    
   </header>
@@ -6055,7 +6055,7 @@ interface <dfn id=htmlmediaelement>HTMLMediaElement</dfn> : <a id=media-elements
   <a href=#media-resource id=offsets-into-the-media-resource:media-resource-12>media resource</a>. In the even rarer case of a <a href=#media-resource id=offsets-into-the-media-resource:media-resource-13>media resource</a> with no
   explicit timings of any kind, not even frame durations, the user agent must itself determine the
   time for each frame in a user-agent-defined manner.
-  <a id=offsets-into-the-media-resource:fingerprinting-vector title="There is a potential fingerprinting vector here." href=introduction.html#fingerprinting-vector class=fingerprint><img alt="(This is a fingerprinting vector.)" src=/html/images/fingerprint.png width=46 height=64></a>
+  <a id=offsets-into-the-media-resource:fingerprinting-vector title="There is a potential fingerprinting vector here." href=introduction.html#fingerprinting-vector class=fingerprint><img alt="(This is a fingerprinting vector.)" src=/images/fingerprint.png width=46 height=64></a>
   </p>
 
   <p class=note>An example of a file format with no explicit timeline but with explicit frame
@@ -9575,21 +9575,19 @@ interface <dfn id=htmlareaelement>HTMLAreaElement</dfn> : <a id=the-area-element
   <ol><li><p>If the <code id=the-area-element:the-area-element-14><a href=#the-area-element>area</a></code> element's <a id=the-area-element:node-document href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a> is not <a id=the-area-element:fully-active href=browsers.html#fully-active>fully active</a>,
    then abort these steps.<li>
 
-    <p>If the <code id=the-area-element:the-area-element-15><a href=#the-area-element>area</a></code> element has a <code id=the-area-element:attr-hyperlink-download-4><a href=semantics.html#attr-hyperlink-download>download</a></code>
-    attribute and the algorithm is not <a id=the-area-element:triggered-by-user-activation href=interaction.html#triggered-by-user-activation>triggered by user activation</a>; or, if the user
-    has not indicated a specific <a id=the-area-element:browsing-context-2 href=browsers.html#browsing-context>browsing context</a> for following the link, and the
-    element's <code id=the-area-element:attr-hyperlink-target-4><a href=semantics.html#attr-hyperlink-target>target</a></code> attribute is present, and applying
-    <a id=the-area-element:the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name href=browsers.html#the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name>the rules for choosing a browsing context given a browsing context name</a>, using the
-    value of the <code id=the-area-element:attr-hyperlink-target-5><a href=semantics.html#attr-hyperlink-target>target</a></code> attribute as the browsing
-    context name, would result in there not being a chosen browsing context, then run these
-    substeps:</p>
+    <p>If the user has not indicated a specific <a id=the-area-element:browsing-context-2 href=browsers.html#browsing-context>browsing context</a> for following the
+    link, and the element's <code id=the-area-element:attr-hyperlink-target-4><a href=semantics.html#attr-hyperlink-target>target</a></code> attribute is present,
+    and applying <a id=the-area-element:the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name href=browsers.html#the-rules-for-choosing-a-browsing-context-given-a-browsing-context-name>the rules for choosing a browsing context given a browsing context
+    name</a>, using the value of the <code id=the-area-element:attr-hyperlink-target-5><a href=semantics.html#attr-hyperlink-target>target</a></code> attribute
+    as the browsing context name, would result in there not being a chosen browsing context, then
+    run these substeps:</p>
 
     <ol><li><p>If there is an <a id=the-area-element:entry-settings-object href=webappapis.html#entry-settings-object>entry settings object</a>, throw an
      <a id=the-area-element:invalidaccesserror href=https://heycam.github.io/webidl/#invalidaccesserror data-x-internal=invalidaccesserror>"<code>InvalidAccessError</code>"</a> <code id=the-area-element:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>Abort these steps without following the hyperlink.</ol>
 
    <li><p>Otherwise, the user agent must <a href=semantics.html#following-hyperlinks-2 id=the-area-element:following-hyperlinks-2-2>follow the
    hyperlink</a> or <a href=semantics.html#downloading-hyperlinks id=the-area-element:downloading-hyperlinks-2>download the hyperlink</a> created
-   by the <code id=the-area-element:the-area-element-16><a href=#the-area-element>area</a></code> element, if any, and as determined by the <code id=the-area-element:attr-hyperlink-download-5><a href=semantics.html#attr-hyperlink-download>download</a></code> attribute and any expressed user
+   by the <code id=the-area-element:the-area-element-15><a href=#the-area-element>area</a></code> element, if any, and as determined by the <code id=the-area-element:attr-hyperlink-download-4><a href=semantics.html#attr-hyperlink-download>download</a></code> attribute and any expressed user
    preference.</ol>
 
   <p>The IDL attributes <dfn id=dom-area-alt><code>alt</code></dfn>, <dfn id=dom-area-coords><code>coords</code></dfn>, <dfn id=dom-area-target><code>target</code></dfn>, <dfn id=dom-area-download><code>download</code></dfn>, <dfn id=dom-area-ping><code>ping</code></dfn>, and <dfn id=dom-area-rel><code>rel</code></dfn>,
@@ -9631,7 +9629,7 @@ interface <dfn id=htmlareaelement>HTMLAreaElement</dfn> : <a id=the-area-element
 
    <p>Consider an image that looks as follows:</p>
 
-   <p><img src=/html/images/sample-usemap.png width=600 alt="A line with four shapes in it, equally spaced: a red hollow box, a green circle, a blue triangle, and a yellow four-pointed star." height=150></p>
+   <p><img src=/images/sample-usemap.png width=600 alt="A line with four shapes in it, equally spaced: a red hollow box, a green circle, a blue triangle, and a yellow four-pointed star." height=150></p>
 
    <p>If we wanted just the colored areas to be clickable, we could do it as follows:</p>
 

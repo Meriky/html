@@ -12,13 +12,14 @@ build-zh:
 	node ./bin/merge.js > html/source
 	[ -d html-build ] || git clone https://github.com/whatwg/html-build.git --depth=1
 	HTML_OUTPUT=$(abspath output) bash html-build/build.sh -n
-	sed -i -e 's/"\/?multipage/"\/html\/multipage/g' \
-		-e "s/'\/?multipage/'\/html\/multipage/g" \
-	    -e 's/=\/?link-fixup.js/=\/html\/link-fixup.js/g' \
-	    -e "s/'\/?fonts\//'\/html\/fonts\//g" \
-	    -e 's/=\/?images\//=\/html\/images\//g' \
-	    -e 's/=\/?demos\//=\/html\/demos\//g' \
-	    -e 's/=\/?entities.json/=\/html\/entities.json/g' \
+	sed -i \
+		-e 's/"\/\?multipage/"\/html\/multipage/g' \
+		-e "s/'\/\?multipage/'\/html\/multipage/g" \
+		-e 's/=\/\?link-fixup.js/=\/html\/link-fixup.js/g' \
+		-e "s/'\/\?fonts\//'\/html\/fonts\//g" \
+		-e 's/=\/\?images\//=\/html\/images\//g' \
+		-e 's/=\/\?demos\//=\/html\/demos\//g' \
+		-e 's/=\/\?entities.json/=\/html\/entities.json/g' \
 		$(RESULTS)
 	cat ./output/multipage/fragment-links.json | node ./bin/json-pretify.js > /tmp/a.json
 	cat /tmp/a.json > ./output/multipage/fragment-links.json

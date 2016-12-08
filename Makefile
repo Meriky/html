@@ -37,8 +37,4 @@ clean-cache:
 	rm -rf html-build/.cache
 
 update-term:
-	echo "{}" > ./terminology.json
 	node ./bin/update-term.js
-
-term-table:
-	@node ./bin/term-table.js

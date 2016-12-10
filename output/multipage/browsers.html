@@ -177,7 +177,7 @@
   <script data-file-issue-url=https://github.com/whatwg/html/issues/new src=https://resources.whatwg.org/file-issue.js async=""></script>
   <header id=head class="head with-buttons">
    <p><a href=https://whatwg.org/ class=logo><img alt=WHATWG src=https://resources.whatwg.org/logo.svg width=100 height=100></a></p>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>9 December 2016</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>10 December 2016</span></h2></hgroup>
    
    
   </header>
@@ -1121,7 +1121,7 @@ interface <dfn id=window data-dfn-type=interface data-export="">Window</dfn> : <
   [Unforgeable] readonly attribute <a id=the-window-object:document href=dom.html#document>Document</a> <a href=#dom-document-2 id=the-window-object:dom-document-2>document</a>;
   attribute DOMString <a href=#dom-name id=the-window-object:dom-name>name</a>; 
   [PutForwards=<a href=#dom-location-href id=the-window-object:dom-location-href>href</a>, Unforgeable] readonly attribute <a href=#location id=the-window-object:location>Location</a> <a href=#dom-location id=the-window-object:dom-location>location</a>;
-  readonly attribute <a href=#history-3 id=the-window-object:history-3>History</a> <a href=#dom-history id=the-window-object:dom-history>history</a>;
+  readonly attribute <a href=#history-2 id=the-window-object:history-2>History</a> <a href=#dom-history id=the-window-object:dom-history>history</a>;
   readonly attribute <a id=the-window-object:customelementregistry href=scripting.html#customelementregistry>CustomElementRegistry</a> <a href=scripting.html#dom-window-customelements id=the-window-object:dom-window-customelements>customElements</a>;
   [Replaceable] readonly attribute <a href=#barprop id=the-window-object:barprop>BarProp</a> <a href=#dom-window-locationbar id=the-window-object:dom-window-locationbar>locationbar</a>;
   [Replaceable] readonly attribute <a href=#barprop id=the-window-object:barprop-2>BarProp</a> <a href=#dom-window-menubar id=the-window-object:dom-window-menubar>menubar</a>;
@@ -2266,13 +2266,13 @@ callback <dfn id=framerequestcallback>FrameRequestCallback</dfn> = void (<a id=t
   <hr>
 
   <p>Each <code id=the-session-history-of-browsing-contexts:document-8><a href=dom.html#document>Document</a></code> object in a <a href=#browsing-context id=the-session-history-of-browsing-contexts:browsing-context-4>browsing context</a>'s <a href=#session-history id=the-session-history-of-browsing-contexts:session-history>session
-  history</a> is associated with a unique <code id=the-session-history-of-browsing-contexts:history-3><a href=#history-3>History</a></code> object which must all model the
+  history</a> is associated with a unique <code id=the-session-history-of-browsing-contexts:history-2><a href=#history-2>History</a></code> object which must all model the
   same underlying <a href=#session-history id=the-session-history-of-browsing-contexts:session-history-2>session history</a>.</p>
 
   
 
   <p>The <dfn id=dom-history><code>history</code></dfn> attribute of the <code id=the-session-history-of-browsing-contexts:window><a href=#window>Window</a></code>
-  interface must return the object implementing the <code id=the-session-history-of-browsing-contexts:history-3-2><a href=#history-3>History</a></code> interface for this
+  interface must return the object implementing the <code id=the-session-history-of-browsing-contexts:history-2-2><a href=#history-2>History</a></code> interface for this
   <code id=the-session-history-of-browsing-contexts:window-2><a href=#window>Window</a></code> object's <a href=#concept-document-window id=the-session-history-of-browsing-contexts:concept-document-window>associated
   <code>Document</code></a>.</p>
 
@@ -2370,11 +2370,11 @@ callback <dfn id=framerequestcallback>FrameRequestCallback</dfn> = void (<a id=t
 
 
 
-  <h4 id=the-history-interface>7.7.2 The <code id=the-history-interface:history-3><a href=#history-3>History</a></code> interface<a href=#the-history-interface class=self-link></a></h4>
+  <h4 id=the-history-interface>7.7.2 The <code id=the-history-interface:history-2><a href=#history-2>History</a></code> interface<a href=#the-history-interface class=self-link></a></h4>
 
   <pre class=idl>enum <dfn id=scrollrestoration>ScrollRestoration</dfn> { "<a href=#dom-scrollrestoration-auto id=the-history-interface:dom-scrollrestoration-auto>auto</a>", "<a href=#dom-scrollrestoration-manual id=the-history-interface:dom-scrollrestoration-manual>manual</a>" };
 
-interface <dfn id=history-3>History</dfn> {
+interface <dfn id=history-2>History</dfn> {
   readonly attribute unsigned long <a href=#dom-history-length id=the-history-interface:dom-history-length>length</a>;
   attribute <a href=#scrollrestoration id=the-history-interface:scrollrestoration>ScrollRestoration</a> <a href=#dom-history-scroll-restoration id=the-history-interface:dom-history-scroll-restoration>scrollRestoration</a>;
   readonly attribute any <a href=#dom-history-state id=the-history-interface:dom-history-state>state</a>;
@@ -2460,9 +2460,9 @@ interface <dfn id=history-3>History</dfn> {
   
 
   <p>The <dfn id=dom-history-length><code>length</code></dfn> attribute of the
-  <code id=the-history-interface:history-3-2><a href=#history-3>History</a></code> interface, on getting, must return the number of entries in the
+  <code id=the-history-interface:history-2-2><a href=#history-2>History</a></code> interface, on getting, must return the number of entries in the
   <a href=#top-level-browsing-context id=the-history-interface:top-level-browsing-context-3>top-level browsing context</a>'s <a href=#joint-session-history id=the-history-interface:joint-session-history-8>joint session history</a>. If this
-  <code id=the-history-interface:history-3-3><a href=#history-3>History</a></code> object is associated with a <code id=the-history-interface:document-3><a href=dom.html#document>Document</a></code> that is not
+  <code id=the-history-interface:history-2-3><a href=#history-2>History</a></code> object is associated with a <code id=the-history-interface:document-3><a href=dom.html#document>Document</a></code> that is not
   <a href=#fully-active id=the-history-interface:fully-active-2>fully active</a>, getting must instead throw a <a id=the-history-interface:securityerror href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a>
   <code id=the-history-interface:domexception><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.</p>
 
@@ -2472,13 +2472,13 @@ interface <dfn id=history-3>History</dfn> {
   of the History interface, on getting, must return the <a href=#scroll-restoration-mode id=the-history-interface:scroll-restoration-mode-3>scroll restoration mode</a> of the
   current entry in the <a href=#session-history id=the-history-interface:session-history-7>session history</a>. On setting, the <a href=#scroll-restoration-mode id=the-history-interface:scroll-restoration-mode-4>scroll restoration mode
   </a> of the current entry in the <a href=#session-history id=the-history-interface:session-history-8>session history</a> must be set to the new
-  value.  If this <code id=the-history-interface:history-3-4><a href=#history-3>History</a></code> object is associated with a <code id=the-history-interface:document-4><a href=dom.html#document>Document</a></code> that is
+  value.  If this <code id=the-history-interface:history-2-4><a href=#history-2>History</a></code> object is associated with a <code id=the-history-interface:document-4><a href=dom.html#document>Document</a></code> that is
   not <a href=#fully-active id=the-history-interface:fully-active-3>fully active</a>, both getting and setting must instead throw a
   <a id=the-history-interface:securityerror-2 href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=the-history-interface:domexception-2><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.</p>
 
   <p>The <dfn id=dom-history-state><code>state</code></dfn> attribute of the
-  <code id=the-history-interface:history-3-5><a href=#history-3>History</a></code> interface, on getting, must return the last value it was set to by the user
-  agent. If this <code id=the-history-interface:history-3-6><a href=#history-3>History</a></code> object is associated with a <code id=the-history-interface:document-5><a href=dom.html#document>Document</a></code> that is
+  <code id=the-history-interface:history-2-5><a href=#history-2>History</a></code> interface, on getting, must return the last value it was set to by the user
+  agent. If this <code id=the-history-interface:history-2-6><a href=#history-2>History</a></code> object is associated with a <code id=the-history-interface:document-5><a href=dom.html#document>Document</a></code> that is
   not <a href=#fully-active id=the-history-interface:fully-active-4>fully active</a>, getting must instead throw a
   <a id=the-history-interface:securityerror-3 href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=the-history-interface:domexception-3><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>. Initially, its value must be
   null.</p>
@@ -2487,18 +2487,18 @@ interface <dfn id=history-3>History</dfn> {
   invoked, if <var>delta</var> is zero, the user agent must act as if the
   <code id=the-history-interface:dom-location-reload><a href=#dom-location-reload>location.reload()</a></code> method was called instead. Otherwise,
   the user agent must <a href=#traverse-the-history-by-a-delta id=the-history-interface:traverse-the-history-by-a-delta>traverse the history by a delta</a> whose value is
-  <var>delta</var>. If this <code id=the-history-interface:history-3-7><a href=#history-3>History</a></code> object is associated with a <code id=the-history-interface:document-6><a href=dom.html#document>Document</a></code>
+  <var>delta</var>. If this <code id=the-history-interface:history-2-7><a href=#history-2>History</a></code> object is associated with a <code id=the-history-interface:document-6><a href=dom.html#document>Document</a></code>
   that is not <a href=#fully-active id=the-history-interface:fully-active-5>fully active</a>, invoking must instead throw a
   <a id=the-history-interface:securityerror-4 href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=the-history-interface:domexception-4><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.</p>
 
   <p>When the <dfn id=dom-history-back><code>back()</code></dfn> method is invoked, the user
-  agent must <a href=#traverse-the-history-by-a-delta id=the-history-interface:traverse-the-history-by-a-delta-2>traverse the history by a delta</a> −1. If this <code id=the-history-interface:history-3-8><a href=#history-3>History</a></code>
+  agent must <a href=#traverse-the-history-by-a-delta id=the-history-interface:traverse-the-history-by-a-delta-2>traverse the history by a delta</a> −1. If this <code id=the-history-interface:history-2-8><a href=#history-2>History</a></code>
   object is associated with a <code id=the-history-interface:document-7><a href=dom.html#document>Document</a></code> that is not <a href=#fully-active id=the-history-interface:fully-active-6>fully active</a>,
   invoking must instead throw a <a id=the-history-interface:securityerror-5 href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a>
   <code id=the-history-interface:domexception-5><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.</p>
 
   <p>When the <dfn id=dom-history-forward><code>forward()</code></dfn> method is invoked, the
-  user agent must <a href=#traverse-the-history-by-a-delta id=the-history-interface:traverse-the-history-by-a-delta-3>traverse the history by a delta</a> +1. If this <code id=the-history-interface:history-3-9><a href=#history-3>History</a></code>
+  user agent must <a href=#traverse-the-history-by-a-delta id=the-history-interface:traverse-the-history-by-a-delta-3>traverse the history by a delta</a> +1. If this <code id=the-history-interface:history-2-9><a href=#history-2>History</a></code>
   object is associated with a <code id=the-history-interface:document-8><a href=dom.html#document>Document</a></code> that is not <a href=#fully-active id=the-history-interface:fully-active-7>fully active</a>,
   invoking must instead throw a <a id=the-history-interface:securityerror-6 href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a>
   <code id=the-history-interface:domexception-6><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.</p>
@@ -2584,16 +2584,16 @@ interface <dfn id=history-3>History</dfn> {
   <p>When either of these methods is invoked, the user agent must run the following steps:</p>
 
   <ol><li><p>Let <var>document</var> be the unique <code id=the-history-interface:document-12><a href=dom.html#document>Document</a></code> object this
-   <code id=the-history-interface:history-3-10><a href=#history-3>History</a></code> object is associated with.<li><p>If <var>document</var> is not <a href=#fully-active id=the-history-interface:fully-active-8>fully active</a>, throw a
+   <code id=the-history-interface:history-2-10><a href=#history-2>History</a></code> object is associated with.<li><p>If <var>document</var> is not <a href=#fully-active id=the-history-interface:fully-active-8>fully active</a>, throw a
    <a id=the-history-interface:securityerror-7 href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=the-history-interface:domexception-7><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>.<li><p>Optionally, abort these steps. (For example, the user agent might disallow calls to these
    methods that are invoked on a timer, or from event listeners that are not triggered in response
-   to a clear user action, or that are invoked in rapid succession.)<li><p>Let <var>targetRealm</var> be this <code id=the-history-interface:history-3-11><a href=#history-3>History</a></code> object's <a href=webappapis.html#concept-relevant-realm id=the-history-interface:concept-relevant-realm>relevant Realm</a>.<li><p>Let <var>cloned data</var> be <a id=the-history-interface:structuredclone href=infrastructure.html#structuredclone>StructuredClone</a>(<var>data</var>,
+   to a clear user action, or that are invoked in rapid succession.)<li><p>Let <var>targetRealm</var> be this <code id=the-history-interface:history-2-11><a href=#history-2>History</a></code> object's <a href=webappapis.html#concept-relevant-realm id=the-history-interface:concept-relevant-realm>relevant Realm</a>.<li><p>Let <var>cloned data</var> be <a id=the-history-interface:structuredclone href=infrastructure.html#structuredclone>StructuredClone</a>(<var>data</var>,
    <var>targetRealm</var>). Rethrow any exceptions.<li>
 
     <p>If the third argument is not null, run these substeps:</p>
 
     <ol><li><a href=infrastructure.html#parse-a-url id=the-history-interface:parse-a-url>Parse</a> the value of the third argument, relative to the
-     <a id=the-history-interface:relevant-settings-object href=webappapis.html#relevant-settings-object>relevant settings object</a> of this <code id=the-history-interface:history-3-12><a href=#history-3>History</a></code> object.<li>If that fails, throw a <a id=the-history-interface:securityerror-8 href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=the-history-interface:domexception-8><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>
+     <a id=the-history-interface:relevant-settings-object href=webappapis.html#relevant-settings-object>relevant settings object</a> of this <code id=the-history-interface:history-2-12><a href=#history-2>History</a></code> object.<li>If that fails, throw a <a id=the-history-interface:securityerror-8 href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=the-history-interface:domexception-8><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code>
      and abort these steps.<li><p>Let <var>new URL</var> be the <a id=the-history-interface:resulting-url-record href=infrastructure.html#resulting-url-record>resulting URL record</a>.<li>Compare <var>new URL</var> to <var>document</var>'s <a href=https://dom.spec.whatwg.org/#concept-document-url id="the-history-interface:the-document's-address" data-x-internal="the-document's-address">URL</a>. If any component of these two <a href=https://url.spec.whatwg.org/#concept-url id=the-history-interface:url-record data-x-internal=url-record>URL records</a> differ other than the <a href=https://url.spec.whatwg.org/#concept-url-path id=the-history-interface:concept-url-path data-x-internal=concept-url-path>path</a>,
      <a href=https://url.spec.whatwg.org/#concept-url-query id=the-history-interface:concept-url-query data-x-internal=concept-url-query>query</a>, and <a href=https://url.spec.whatwg.org/#concept-url-fragment id=the-history-interface:concept-url-fragment data-x-internal=concept-url-fragment>fragment</a> components, then throw a
      <a id=the-history-interface:securityerror-9 href=https://heycam.github.io/webidl/#securityerror data-x-internal=securityerror>"<code>SecurityError</code>"</a> <code id=the-history-interface:domexception-9><a data-x-internal=domexception href=https://heycam.github.io/webidl/#dfn-DOMException>DOMException</a></code> and abort these steps.<li>If the <a href=https://url.spec.whatwg.org/#concept-url-origin id=the-history-interface:concept-url-origin data-x-internal=concept-url-origin>origin</a> of <var>new URL</var> is not
@@ -2778,7 +2778,7 @@ State: &lt;OUTPUT NAME=I>1&lt;/OUTPUT> &lt;INPUT VALUE="Increment" TYPE=BUTTON O
 
   <p><i>This section is non-normative.</i></p>
 
-  <p>The <code id=history-notes:history-3><a href=#history-3>History</a></code> interface is not meant to place restrictions on how implementations
+  <p>The <code id=history-notes:history-2><a href=#history-2>History</a></code> interface is not meant to place restrictions on how implementations
   represent the session history to the user.</p>
 
   <p>For example, session history could be implemented in a tree-like manner, with each page having
@@ -3790,7 +3790,7 @@ State: &lt;OUTPUT NAME=I>1&lt;/OUTPUT> &lt;INPUT VALUE="Increment" TYPE=BUTTON O
         <p class=note>This <a href=#history-notes>doesn't necessarily have to affect</a> the
         user agent's user interface.</p>
 
-       <li><p>Append a new entry at the end of the <code id=navigating-across-documents:history-3><a href=#history-3>History</a></code> object representing the new
+       <li><p>Append a new entry at the end of the <code id=navigating-across-documents:history-2><a href=#history-2>History</a></code> object representing the new
        resource and its <code id=navigating-across-documents:document-20><a href=dom.html#document>Document</a></code> object, related state, and the default <a href=#scroll-restoration-mode id=navigating-across-documents:scroll-restoration-mode>scroll
        restoration mode</a> of "<code id=navigating-across-documents:dom-scrollrestoration-auto><a href=#dom-scrollrestoration-auto>auto</a></code>".<li><p><a href=#traverse-the-history id=navigating-across-documents:traverse-the-history-2>Traverse the history</a> to the new entry. If the navigation was initiated
        with <a href=#replacement-enabled id=navigating-across-documents:replacement-enabled-2>replacement enabled</a>, then the traversal must itself be initiated with
@@ -4080,7 +4080,7 @@ State: &lt;OUTPUT NAME=I>1&lt;/OUTPUT> &lt;INPUT VALUE="Increment" TYPE=BUTTON O
 
    <li><p>Remove any <a href=webappapis.html#concept-task id=scroll-to-fragid:concept-task>tasks</a> queued by the <a id=scroll-to-fragid:history-traversal-task-source href=webappapis.html#history-traversal-task-source>history traversal
    task source</a> that are associated with any <code id=scroll-to-fragid:document><a href=dom.html#document>Document</a></code> objects in the
-   <a href=#top-level-browsing-context id=scroll-to-fragid:top-level-browsing-context>top-level browsing context</a>'s <a href=#document-family id=scroll-to-fragid:document-family>document family</a>.<li><p>Append a new entry at the end of the <code id=scroll-to-fragid:history-3><a href=#history-3>History</a></code> object representing the new
+   <a href=#top-level-browsing-context id=scroll-to-fragid:top-level-browsing-context>top-level browsing context</a>'s <a href=#document-family id=scroll-to-fragid:document-family>document family</a>.<li><p>Append a new entry at the end of the <code id=scroll-to-fragid:history-2><a href=#history-2>History</a></code> object representing the new
    resource and its <code id=scroll-to-fragid:document-2><a href=dom.html#document>Document</a></code> object, related state, and <a href=#current-entry id=scroll-to-fragid:current-entry-3>current entry</a>'s
    <a href=#scroll-restoration-mode id=scroll-to-fragid:scroll-restoration-mode>scroll restoration mode</a>. Its <a id=scroll-to-fragid:url href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a> must be set to the address to which
    the user agent was <a href=#navigate id=scroll-to-fragid:navigate>navigating</a>. The title must be left
@@ -4185,7 +4185,7 @@ State: &lt;OUTPUT NAME=I>1&lt;/OUTPUT> &lt;INPUT VALUE="Increment" TYPE=BUTTON O
 
    <li><p>If the <a href=#current-entry id=history-traversal:current-entry>current entry</a>'s title was not set by the <code id=history-traversal:dom-history-pushstate><a href=#dom-history-pushstate>pushState()</a></code> or <code id=history-traversal:dom-history-replacestate><a href=#dom-history-replacestate>replaceState()</a></code> methods, then set its title to the value
    returned by the <code id=history-traversal:document.title><a href=dom.html#document.title>document.title</a></code> IDL attribute.<li><p>If appropriate, update the <a href=#current-entry id=history-traversal:current-entry-2>current entry</a> in the <a href=#browsing-context id=history-traversal:browsing-context-2>browsing
-   context</a>'s <code id=history-traversal:document-3><a href=dom.html#document>Document</a></code> object's <code id=history-traversal:history-3><a href=#history-3>History</a></code> object to reflect any state
+   context</a>'s <code id=history-traversal:document-3><a href=dom.html#document>Document</a></code> object's <code id=history-traversal:history-2><a href=#history-2>History</a></code> object to reflect any state
    that the user agent wishes to persist. The entry is then said to be <a href=#an-entry-with-persisted-user-state id=history-traversal:an-entry-with-persisted-user-state>an entry with persisted
    user state</a>.<li><p>If <var>entry</var> has a different <code id=history-traversal:document-4><a href=dom.html#document>Document</a></code> object than the <a href=#current-entry id=history-traversal:current-entry-3>current
    entry</a>, then run the following substeps:</p>

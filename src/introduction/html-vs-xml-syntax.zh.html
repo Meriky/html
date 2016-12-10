@@ -1,0 +1,30 @@
+  <h3 id="html-vs-xhtml">HTML 和 XML 语法</h3>
+
+  <!-- NON-NORMATIVE SECTION -->
+
+  <p>本标准定义了一个描述文档和应用的抽象语言，以及一些 API 来与使用该语言的资源的内存表示进行交互。</p>
+
+  <p>这一内存表示又称为 "DOM HTML"，或简称为 "DOM"。</p>
+
+  <p>对于传输使用了该抽象语言的资源，有很多不同的具体语法。本标准中定义了其中两种。</p>
+
+  <p>第一个这样的具体语法是 HTML 语法。这是对多数作者推荐的格式，它与多数遗留的 Web 浏览器相兼容。
+  如果一个文档以<code>text/html</code> <span>MIME type</span>进行传输，
+  然后它将会被 Web 浏览器作为 HTML 文档处理。
+  本标准定义了最新的 HTML 语法，简单地称为 "HTML"。</p>
+
+  <p>第二个具体的语法是 XML。当一篇文档以<span>XML MIME type</span>（比如<code>application/xhtml+xml</code>）
+  传输时，它将会被 Web 浏览器当做 XML 文档处理，被 XML 处理器解析。
+  作者需要注意 XML 和 HTML 的处理存在差别；具体地，即使很小的语法错误都将阻止 XML 文档的完整渲染，
+  然而它们在 HTML 语法中将会被忽略。</p>
+
+  <p class="note">给 HTML 用的 XML 语法此前被称为 "XHTML"，但本标准不适用该术语
+  （原因之一是 MathML 和 SVG 的 HTML 语法中未使用该术语）。</p>
+
+  <p>DOM，HTML 语法，XML 语法不能用来表示同样的内容。
+  例如 HTML 语法不能表示命名空间，但 DOM 和 XML 语法却支持。
+  类似地，HTML 语法可以表示使用 <code>noscript</code> 特性的文档，
+  但 DOM 和 XML 语法却不能。
+  包含 "<code data-x="">--&gt;</code>" 的注释只能在 DOM 中表示，HTML 和 XML 语法却不行。</p>
+
+

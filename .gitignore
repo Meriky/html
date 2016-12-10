@@ -36,8 +36,8 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-html
-html-build
-source
+/html
+/html-build
+/source
 .*.swp
 .*.swo

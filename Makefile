@@ -1,4 +1,5 @@
-RESULTS=output/multipage/*.html output/*.html output/*.js
+OUTPUT=$(abspath output/html)
+RESULTS=$(OUTPUT)/multipage/*.html $(OUTPUT)/*.html $(OUTPUT)/*.js
 
 update-source:
 	[ -d html ] || git clone https://github.com/whatwg/html.git --depth=1
@@ -11,7 +12,7 @@ build-en: clean-en
 build-zh:
 	node ./bin/merge.js > html/source
 	[ -d html-build ] || git clone https://github.com/whatwg/html-build.git --depth=1
-	HTML_OUTPUT=$(abspath output) bash html-build/build.sh -n
+	HTML_OUTPUT=$(OUTPUT) bash html-build/build.sh -n
 	sed -i \
 		-e 's/"\/\?multipage/"\/html\/multipage/g' \
 		-e "s/'\/\?multipage/'\/html\/multipage/g" \
@@ -21,15 +22,13 @@ build-zh:
 		-e 's/=\/\?demos\//=\/html\/demos\//g' \
 		-e 's/=\/\?entities.json/=\/html\/entities.json/g' \
 		$(RESULTS)
-	cat ./output/multipage/fragment-links.json | node ./bin/json-pretify.js > /tmp/a.json
-	cat /tmp/a.json > ./output/multipage/fragment-links.json
+	node ./bin/json-pretify.js ${OUTPUT}/multipage/fragment-links.json
 
 deploy:
-	@echo Make sure output/ has been committed into master branch
-	git subtree push --prefix=output --squash origin gh-pages
+	git subtree push --prefix=${OUTPUT} --squash origin gh-pages
 
 deploy-force:
-	git push origin `git subtree split --prefix output master`:gh-pages --force
+	git push origin `git subtree split --prefix ${OUTPUT} master`:gh-pages --force
 
 clean-en:
 	rm -rf src/SUMMARY.en.md
@@ -41,3 +40,8 @@ clean-cache:
 
 update-term:
 	node ./bin/update-term.js
+
+# `npm install http-server` first
+serve:
+	echo open http://localhost:8899/html
+	http-server -p 8899 ./output

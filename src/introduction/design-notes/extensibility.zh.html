@@ -1,0 +1,41 @@
+  <h4>可扩展性</h4>
+
+  <!-- NON-NORMATIVE SECTION -->
+
+  <p>HTML 有广泛的可扩展性机制，可用来安全地添加语义：</p>
+
+  <ul>
+
+   <li><p>作者可以使用 <code data-x="attr-class">class</code> 属性来扩展元素，
+   在使用最接近的 "真实" HTML 元素的同时，也等效于创建了他们自己的元素，
+   因此不知道该扩展的浏览器和其他工具仍然可以在某种程度上很好地支持。
+   比如微格式就是使用的这种策略。</p></li>
+
+   <li><p>作者可以使用<code data-x="attr-data-*">data-*=""</code>属性来包含数据，
+   在客户端脚本或服务器端的站点脚本中加以处理。可以保证浏览器永远不会碰这些数据，
+   使得脚本可以在 HTML 元素中引入数据，并在后续脚本中寻找或者处理。</p></li>
+
+   <li><p>通过<code data-x="meta">&lt;meta name="" content=""></code> 机制，
+   作者可以为<span data-x="concept-meta-extensions">预定义的元数据名称的集合注册扩展</span>
+   来引入页面级别的元数据。</p></li>
+
+   <li><p>通过<code data-x="attr-hyperlink-rel">rel=""</code> 机制，
+   作者可以通过<span data-x="concept-rel-extensions">为预定义的链接类型注册扩展</span>，
+   来给链接标注特定的含义。微格式也使用了这种机制。</p></li>
+
+   <li><p>作者可以使用 <code data-x="script">&lt;script type=""></code> 来内嵌自定义类型的原始数据，
+   用于在内联脚本或服务器端脚本中做进一步处理。</p></li>
+
+   <li><p>使用<code>embed</code>元素，作者可以创建 <span data-x="plugin">插件</span> 和调用他们。
+   这就是 Flash 的工作原理。</p></li>
+
+   <li><p>作者可以使用 JavaScript 原型机制来扩展 API。这在脚本库中有广泛的使用。</p></li>
+
+   <li><p>作者可以使用微数据特性（<code data-x="attr-itemscope">itemscope=""</code> 和 <code data-x="attr-itemprop">itemprop=""</code>属性）
+   来嵌入嵌套的键值对数据，以供其他应用和站点共享。</p></li>
+
+  </ul>
+
+
+
+

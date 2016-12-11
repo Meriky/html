@@ -177,7 +177,7 @@
   <script data-file-issue-url=https://github.com/whatwg/html/issues/new src=https://resources.whatwg.org/file-issue.js async=""></script>
   <header id=head class="head with-buttons">
    <p><a href=https://whatwg.org/ class=logo><img alt=WHATWG src=https://resources.whatwg.org/logo.svg width=100 height=100></a></p>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>10 December 2016</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>11 December 2016</span></h2></hgroup>
    
    
   </header>
@@ -194,7 +194,7 @@
 
   
 
-  <nav><a href=index.html>Table of Contents</a> — <a href=infrastructure.html>2 通用基础设施 →</a></nav><ol class=toc><li id=toc-introduction><a href=introduction.html#introduction>1 概述</a><ol><li><a href=introduction.html#abstract>1.1 本标准的适用范围</a><li><a href=introduction.html#is-this-html5?>1.2 Is this HTML5?</a><li><a href=introduction.html#background>1.3 Background</a><li><a href=introduction.html#受众>1.4 受众</a><li><a href=introduction.html#范围>1.5 范围</a><li><a href=introduction.html#历史>1.6 历史</a><li><a href=introduction.html#design-notes>1.7 Design notes</a><ol><li><a href=introduction.html#serialisability-of-script-execution>1.7.1 Serializability of script execution</a><li><a href=introduction.html#compliance-with-other-specifications>1.7.2 Compliance with other specifications</a><li><a href=introduction.html#extensibility>1.7.3 Extensibility</a></ol><li><a href=introduction.html#html-vs-xhtml>1.8 HTML 和 XML 语法</a><li><a href=introduction.html#structure-of-this-specification>1.9 Structure of this specification</a><ol><li><a href=introduction.html#how-to-read-this-specification>1.9.1 How to read this specification</a><li><a href=introduction.html#typographic-conventions>1.9.2 Typographic conventions</a></ol><li><a href=introduction.html#fingerprint>1.10 Privacy concerns</a><ol><li><a href=introduction.html#fingerprint-postMessage>1.10.1 Cross-site communication</a></ol><li><a href=introduction.html#a-quick-introduction-to-html>1.11 A quick introduction to HTML</a><ol><li><a href=introduction.html#writing-secure-applications-with-html>1.11.1 Writing secure applications with HTML</a><li><a href=introduction.html#common-pitfalls-to-avoid-when-using-the-scripting-apis>1.11.2 Common pitfalls to avoid when using the scripting APIs</a><li><a href=introduction.html#how-to-catch-mistakes-when-writing-html:-validators-and-conformance-checkers>1.11.3 How to catch mistakes when writing HTML: validators and conformance checkers</a></ol><li><a href=introduction.html#conformance-requirements-for-authors>1.12 Conformance requirements for authors</a><ol><li><a href=introduction.html#presentational-markup>1.12.1 Presentational markup</a><li><a href=introduction.html#syntax-errors>1.12.2 Syntax errors</a><li><a href=introduction.html#restrictions-on-content-models-and-on-attribute-values>1.12.3 Restrictions on content models and on attribute values</a></ol><li><a href=introduction.html#推荐阅读>1.13 推荐阅读</a></ol></ol><h2 id=introduction>1 概述<a href=#introduction class=self-link></a></h2><div class=status><input onclick=toggleStatus(this) value=⋰ type=button><p class=bugs><strong>Spec bugs:</strong> <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=23036" title="Either drop all mention of mutation events, or specify them in full detail">23036</a></div>
+  <nav><a href=index.html>Table of Contents</a> — <a href=infrastructure.html>2 通用基础设施 →</a></nav><ol class=toc><li id=toc-introduction><a href=introduction.html#introduction>1 概述</a><ol><li><a href=introduction.html#abstract>1.1 本标准的适用范围</a><li><a href=introduction.html#is-this-html5?>1.2 这是 HTML5 吗?</a><li><a href=introduction.html#背景>1.3 背景</a><li><a href=introduction.html#受众>1.4 受众</a><li><a href=introduction.html#范围>1.5 范围</a><li><a href=introduction.html#历史>1.6 历史</a><li><a href=introduction.html#设计笔记>1.7 设计笔记</a><ol><li><a href=introduction.html#serialisability-of-script-execution>1.7.1 脚本执行的可串行性</a><li><a href=introduction.html#与其他标准的兼容性>1.7.2 与其他标准的兼容性</a><li><a href=introduction.html#可扩展性>1.7.3 可扩展性</a></ol><li><a href=introduction.html#html-vs-xhtml>1.8 HTML 和 XML 语法</a><li><a href=introduction.html#本标准的结构>1.9 本标准的结构</a><ol><li><a href=introduction.html#how-to-read-this-specification>1.9.1 How to read this specification</a><li><a href=introduction.html#typographic-conventions>1.9.2 Typographic conventions</a></ol><li><a href=introduction.html#fingerprint>1.10 隐私问题</a><ol><li><a href=introduction.html#fingerprint-postMessage>1.10.1 跨站通信</a></ol><li><a href=introduction.html#html-的简单介绍>1.11 HTML 的简单介绍</a><ol><li><a href=introduction.html#writing-secure-applications-with-html>1.11.1 Writing secure applications with HTML</a><li><a href=introduction.html#使用脚本-api-时常见的陷阱>1.11.2 使用脚本 API 时常见的陷阱</a><li><a href=introduction.html#编写-html-时如何发现错误：验证器和一致性检查器>1.11.3 编写 HTML 时如何发现错误：验证器和一致性检查器</a></ol><li><a href=introduction.html#conformance-requirements-for-authors>1.12 Conformance requirements for authors</a><ol><li><a href=introduction.html#presentational-markup>1.12.1 Presentational markup</a><li><a href=introduction.html#syntax-errors>1.12.2 Syntax errors</a><li><a href=introduction.html#restrictions-on-content-models-and-on-attribute-values>1.12.3 Restrictions on content models and on attribute values</a></ol><li><a href=introduction.html#推荐阅读>1.13 推荐阅读</a></ol></ol><h2 id=introduction>1 概述<a href=#introduction class=self-link></a></h2><div class=status><input onclick=toggleStatus(this) value=⋰ type=button><p class=bugs><strong>Spec bugs:</strong> <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=23036" title="Either drop all mention of mutation events, or specify them in full detail">23036</a></div>
 
   
 
@@ -219,29 +219,26 @@
   
 
 
-  <h3 id=is-this-html5?>1.2 Is this HTML5?<a href=#is-this-html5? class=self-link></a></h3>
+  <h3 id=is-this-html5?>1.2 这是 HTML5 吗?<a href=#is-this-html5? class=self-link></a></h3>
 
   <p><i>This section is non-normative.</i></p>
 
-  <p>In short: Yes.</p>
+  <p>答案是：是的。</p>
 
-  <p>In more length: The term "HTML5" is widely used as a buzzword to refer to modern Web
-  technologies, many of which (though by no means all) are developed at the WHATWG. This document is
-  one such; others are available from <a href=https://whatwg.org/specs/>the WHATWG
-  specification index</a>.</p>
+  <p>详细地说，广义的 "HTML5" 是指一系列的现代 Web 技术。
+  这些技术中很多都由 WHATWG 开发，本文档就是其中之一。
+  其他的可以在这里访问：
+  <a href=https://whatwg.org/specs/>the WHATWG specification index</a>。</p>
 
-  <p class=note>Although we have asked them to stop doing so, the W3C also republishes some parts
-  of this specification as separate documents.</p>
+  <p class=note>W3C 也在以独立的文档发布本标准中的部分内容，尽管我们已要求他们停止这样做。</p>
 
 
-  <h3 id=background>1.3 Background<a href=#background class=self-link></a></h3>
+  <h3 id=背景>1.3 背景<a href=#背景 class=self-link></a></h3>
 
   <p><i>This section is non-normative.</i></p>
 
-  <p>HTML is the World Wide Web's core markup language. Originally, HTML was primarily designed as a
-  language for semantically describing scientific documents. Its general design, however, has
-  enabled it to be adapted, over the subsequent years, to describe a number of other types of
-  documents and even applications.</p>
+  <p>HTML 是万维网的核心标记语言。最初 HTML 主要设计为在语义级别描述科学文档的语言。
+  然而它的总体设计使它在接下来的几年中能够适配一些其他类型的文档，甚至包括应用程序。</p>
 
 
   <h3 id=受众>1.4 受众<a href=#受众 class=self-link></a></h3>
@@ -339,76 +336,63 @@
 
 
 
-  <h3 id=design-notes>1.7 Design notes<a href=#design-notes class=self-link></a></h3>
+  <h3 id=设计笔记>1.7 设计笔记<a href=#设计笔记 class=self-link></a></h3>
 
   <p><i>This section is non-normative.</i></p>
 
-  <p>It must be admitted that many aspects of HTML appear at first glance to be nonsensical and
-  inconsistent.</p>
+  <p>必须承认 HTML 的很多方面乍一看毫无意义或者不太一致。</p>
 
-  <p>HTML, its supporting DOM APIs, as well as many of its supporting technologies, have been
-  developed over a period of several decades by a wide array of people with different priorities
-  who, in many cases, did not know of each other's existence.</p>
+  <p>HTML，它的 DOM API，以及很多其他的支持技术是由互不相识的有着不同目的的人，经数十年开发完成。</p>
 
-  <p>Features have thus arisen from many sources, and have not always been designed in especially
-  consistent ways. Furthermore, because of the unique characteristics of the Web, implementation
-  bugs have often become de-facto, and now de-jure, standards, as content is often unintentionally
-  written in ways that rely on them before they can be fixed.</p>
+  <p>因此特性的出现有着不同的来源，也未经专门的一致的方式设计。
+  而且由于 Web 独有的特点，实现的 Bug 常常会变成事实上的惯例，以及现在合法的、标准的行为。
+  因为编写的内容常常会无意地依赖于这些未能及时修复的实现。</p>
 
-  <p>Despite all this, efforts have been made to adhere to certain design goals. These are described
-  in the next few subsections.</p>
+  <p>尽管这样，人们还是为坚持某些设计目标而付出努力。在接下来的几个小节中描述了这些努力。</p>
 
 
   
 
-  <h4 id=serialisability-of-script-execution>1.7.1 Serializability of script execution<a href=#serialisability-of-script-execution class=self-link></a></h4>
+  <h4 id=serialisability-of-script-execution>1.7.1 脚本执行的可串行性<a href=#serialisability-of-script-execution class=self-link></a></h4>
 
   <p><i>This section is non-normative.</i></p>
 
-  <p>To avoid exposing Web authors to the complexities of multithreading, the HTML and DOM APIs are
-  designed such that no script can ever detect the simultaneous execution of other scripts. Even
-  with <a href=workers.html#worker id=serialisability-of-script-execution:worker>workers</a>, the intent is that the behavior of implementations can
-  be thought of as completely serializing the execution of all scripts in all <a href=browsers.html#browsing-context id=serialisability-of-script-execution:browsing-context>browsing contexts</a>.</p>
+  <p>为了避免让 Web 作者处理多线程的复杂性，HTML 和 DOM API 的设计使得脚本无法检测同时运行的其他脚本。
+  甚至在使用 <a href=workers.html#worker id=serialisability-of-script-execution:worker>workers</a> 时，设计意图中实现的行为可以被认为是
+  在所有 <a href=browsers.html#browsing-context id=serialisability-of-script-execution:browsing-context>浏览上下文</a> 中串行地执行所有脚本。</p>
 
   
 
 
 
-  <h4 id=compliance-with-other-specifications>1.7.2 Compliance with other specifications<a href=#compliance-with-other-specifications class=self-link></a></h4>
+  <h4 id=与其他标准的兼容性>1.7.2 与其他标准的兼容性<a href=#与其他标准的兼容性 class=self-link></a></h4>
 
   <p><i>This section is non-normative.</i></p>
 
-  <p>This specification interacts with and relies on a wide variety of other specifications. In
-  certain circumstances, unfortunately, conflicting needs have led to this specification violating
-  the requirements of these other specifications. Whenever this has occurred, the transgressions
-  have each been noted as a "<dfn id=willful-violation>willful violation</dfn>", and the reason for the violation has
-  been noted.</p>
+  <p>本标准和多种多样的其他有相互影响和依赖。很不幸在某些情况下，相互冲突的需求使得本标准违反了其他标准的要求。
+  当这种情况发生时，每一项冲突都会标记为 "<dfn id=willful-violation>willful violation</dfn>"，而且会说明该冲突的原因。</p>
 
 
 
-  <h4 id=extensibility>1.7.3 Extensibility<a href=#extensibility class=self-link></a></h4>
+  <h4 id=可扩展性>1.7.3 可扩展性<a href=#可扩展性 class=self-link></a></h4>
 
   <p><i>This section is non-normative.</i></p>
 
-  <p>HTML has a wide array of extensibility mechanisms that can be used for adding semantics in a
-  safe manner:</p>
+  <p>HTML 有广泛的可扩展性机制，可用来安全地添加语义：</p>
 
-  <ul><li><p>Authors can use the <code id=extensibility:classes><a href=dom.html#classes>class</a></code> attribute to extend elements,
-   effectively creating their own elements, while using the most applicable existing "real" HTML
-   element, so that browsers and other tools that don't know of the extension can still support it
-   somewhat well. This is the tack used by microformats, for example.<li><p>Authors can include data for inline client-side scripts or server-side site-wide scripts
-   to process using the <code id=extensibility:attr-data-*><a href=dom.html#attr-data-*>data-*=""</a></code> attributes. These are guaranteed
-   to never be touched by browsers, and allow scripts to include data on HTML elements that scripts
-   can then look for and process.<li><p>Authors can use the <code id=extensibility:the-meta-element><a href=semantics.html#the-meta-element>&lt;meta name="" content=""></a></code> mechanism to
-   include page-wide metadata by registering <a href=semantics.html#concept-meta-extensions id=extensibility:concept-meta-extensions>extensions to
-   the predefined set of metadata names</a>.<li><p>Authors can use the <code id=extensibility:attr-hyperlink-rel><a href=semantics.html#attr-hyperlink-rel>rel=""</a></code> mechanism to annotate
-   links with specific meanings by registering <a href=semantics.html#concept-rel-extensions id=extensibility:concept-rel-extensions>extensions to
-   the predefined set of link types</a>. This is also used by microformats.<li><p>Authors can embed raw data using the <code id=extensibility:the-script-element><a href=scripting.html#the-script-element>&lt;script type=""></a></code>
-   mechanism with a custom type, for further handling by inline or server-side scripts.<li><p>Authors can create <a href=infrastructure.html#plugin id=extensibility:plugin>plugins</a> and invoke them using the
-   <code id=extensibility:the-embed-element><a href=embedded-content.html#the-embed-element>embed</a></code> element. This is how Flash works.<li><p>Authors can extend APIs using the JavaScript prototyping mechanism. This is widely used by
-   script libraries, for instance.<li><p>Authors can use the microdata feature (the <code id=extensibility:attr-itemscope><a href=microdata.html#attr-itemscope>itemscope=""</a></code> and <code id=extensibility:names:-the-itemprop-attribute><a href=microdata.html#names:-the-itemprop-attribute>itemprop=""</a></code>
-   attributes) to embed nested name-value pairs of data to be shared with other applications and
-   sites.</ul>
+  <ul><li><p>作者可以使用 <code id=可扩展性:classes><a href=dom.html#classes>class</a></code> 属性来扩展元素，
+   在使用最接近的 "真实" HTML 元素的同时，也等效于创建了他们自己的元素，
+   因此不知道该扩展的浏览器和其他工具仍然可以在某种程度上很好地支持。
+   比如微格式就是使用的这种策略。<li><p>作者可以使用<code id=可扩展性:attr-data-*><a href=dom.html#attr-data-*>data-*=""</a></code>属性来包含数据，
+   在客户端脚本或服务器端的站点脚本中加以处理。可以保证浏览器永远不会碰这些数据，
+   使得脚本可以在 HTML 元素中引入数据，并在后续脚本中寻找或者处理。<li><p>通过<code id=可扩展性:the-meta-element><a href=semantics.html#the-meta-element>&lt;meta name="" content=""></a></code> 机制，
+   作者可以为<a href=semantics.html#concept-meta-extensions id=可扩展性:concept-meta-extensions>预定义的元数据名称的集合注册扩展</a>
+   来引入页面级别的元数据。<li><p>通过<code id=可扩展性:attr-hyperlink-rel><a href=semantics.html#attr-hyperlink-rel>rel=""</a></code> 机制，
+   作者可以通过<a href=semantics.html#concept-rel-extensions id=可扩展性:concept-rel-extensions>为预定义的链接类型注册扩展</a>，
+   来给链接标注特定的含义。微格式也使用了这种机制。<li><p>作者可以使用 <code id=可扩展性:the-script-element><a href=scripting.html#the-script-element>&lt;script type=""></a></code> 来内嵌自定义类型的原始数据，
+   用于在内联脚本或服务器端脚本中做进一步处理。<li><p>使用<code id=可扩展性:the-embed-element><a href=embedded-content.html#the-embed-element>embed</a></code>元素，作者可以创建 <a href=infrastructure.html#plugin id=可扩展性:plugin>插件</a> 和调用他们。
+   这就是 Flash 的工作原理。<li><p>作者可以使用 JavaScript 原型机制来扩展 API。这在脚本库中有广泛的使用。<li><p>作者可以使用微数据特性（<code id=可扩展性:attr-itemscope><a href=microdata.html#attr-itemscope>itemscope=""</a></code> 和 <code id=可扩展性:names:-the-itemprop-attribute><a href=microdata.html#names:-the-itemprop-attribute>itemprop=""</a></code>属性）
+   来嵌入嵌套的键值对数据，以供其他应用和站点共享。</ul>
 
 
 
@@ -443,36 +427,27 @@
   包含 "<code>--></code>" 的注释只能在 DOM 中表示，HTML 和 XML 语法却不行。</p>
 
 
-  <h3 id=structure-of-this-specification>1.9 Structure of this specification<a href=#structure-of-this-specification class=self-link></a></h3>
+  <h3 id=本标准的结构>1.9 本标准的结构<a href=#本标准的结构 class=self-link></a></h3>
 
   <p><i>This section is non-normative.</i></p>
 
-  <p>This specification is divided into the following major sections:</p>
+  <p>本标准分为以下主要的部分：</p>
 
-  <dl><dt><a href=#introduction>Introduction</a><dd>Non-normative materials providing a context for the HTML standard.<dt><a href=infrastructure.html#infrastructure>Common infrastructure</a><dd>The conformance classes, algorithms, definitions, and the common underpinnings of the rest of
-   the specification.<dt><a href=dom.html#dom>Semantics, structure, and APIs of HTML documents</a><dd>Documents are built from elements. These elements form a tree using the DOM. This section
-   defines the features of this DOM, as well as introducing the features common to all elements, and
-   the concepts used in defining elements.<dt><a href=semantics.html#semantics>The elements of HTML</a><dd>Each element has a predefined meaning, which is explained in this section. Rules for authors
-   on how to use the element, along with user agent requirements for how to
-   handle each element, are also given. This includes large signature features of HTML such
-   as video playback and subtitles, form controls and form submission, and a 2D graphics API known
-   as the HTML canvas.<dt><a href=microdata.html#microdata>Microdata</a><dd>This specification introduces a mechanism for adding machine-readable annotations to
-   documents, so that tools can extract trees of name-value pairs from the document. This section
-   describes this mechanism and some algorithms that can be used to convert HTML
-   documents into other formats. This section also defines some sample Microdata vocabularies
-   for contact information, calendar events, and licensing works.<dt><a href=interaction.html#editing>User interaction</a><dd>HTML documents can provide a number of mechanisms for users to interact with and modify
-   content, which are described in this section, such as how focus works, and drag-and-drop.<dt><a href=browsers.html#browsers>Loading Web pages</a><dd>HTML documents do not exist in a vacuum — this section defines many of the features
-   that affect environments that deal with multiple pages, such as Web browsers and offline
-   caching of Web applications.<dt><a href=webappapis.html#webappapis>Web application APIs</a><dd>This section introduces basic features for scripting of applications in HTML.<dt><a href=workers.html#workers>Web workers</a><dd>This section defines an API for background threads in JavaScript.<dt><a href=comms.html#comms>The communication APIs</a><dd>This section describes some mechanisms that applications written in HTML can use to
-   communicate with other applications from different domains running on the same client. It also
-   introduces a server-push event stream mechanism known as Server Sent Events or
-   <code id=structure-of-this-specification:eventsource><a href=comms.html#eventsource>EventSource</a></code>, and a two-way full-duplex socket protocol for scripts known as Web
-   Sockets.
+  <dl><dt><a href=#introduction>概述</a><dd>为 HTML 标准提供上下文的非规范性材料。<dt><a href=infrastructure.html#infrastructure>通用基础设施</a><dd>合规的类、算法、定义、标准其余部分的通用基础。<dt><a href=dom.html#dom>HTML 文档的语义，结构，与 API</a><dd>文档由元素构成，这些元素使用 DOM 组成一棵树。
+   这部分定义了该 DOM 的特性，介绍了所有元素共同的特性，以及在定义元素时用到的概念。<dt><a href=semantics.html#semantics>HTML 元素</a><dd>每个元素都有一个预定义的含义，本章便解释了这些含义。
+   也给出了作者使用这些元素的规则，以及用户代理处理这些元素的要求。
+   这里包含了大量的 HTML 独有的特性，例如视频播放和副标题，表单控件和表单提交，
+   以及名为 HTML canvas 的 2D 图形 API。<dt><a href=microdata.html#microdata>微数据</a><dd>本标准介绍了为文档增加机器可读注解的机制，这样工具可以从文档中抽取键值对的树。
+   这部分文档描述了该机制  和用于将 HTML 文档转换为其他格式的一些算法。
+   这部分还为联系信息、日历事件和许可协议定义了一些示例的微数据词汇。<dt><a href=interaction.html#editing>用户交互</a><dd>HTML 文档可以提供一些用户与内容交互以及用户修改内容的机制，在本章中给出了这些机制的描述。
+   比如焦点的工作机制、以及拖放操作。<dt><a href=browsers.html#browsers>加载 Web 页面</a><dd>HTML 文档不是空中楼阁 — 这部分定义了很多影响处理多页面环境的特性，比如 Web 浏览器和 Web 应用的离线缓存。<dt><a href=webappapis.html#webappapis>Web 应用 API</a><dd>这部分介绍了 HTML 应用脚本的基本特性。<dt><a href=workers.html#workers>Web workers</a><dd>这部分定义了 JavaScript 后台线程的 API。<dt><a href=comms.html#comms>通信 API</a><dd>这部分描述了 HTML 编写的应用可用来与同一客户端中的，不同域名的其他应用通信的一些机制。
+   也介绍了一个服务器推送事件流机制，称为 Server Sent Events 或 <code id=本标准的结构:eventsource><a href=comms.html#eventsource>EventSource</a></code>，
+   以及一个未脚本提供的双向全双工套接字协议，称为 Web Sockets。
 
-   <dt><a href=webstorage.html#webstorage>Web storage</a><dd>This section defines a client-side storage mechanism based on name-value pairs.<dt><a href=syntax.html#syntax>The HTML syntax</a><dt><a href=xhtml.html#xhtml>The XML syntax</a><dd>All of these features would be for naught if they couldn't be represented in a serialized
-   form and sent to other people, and so these sections define the syntaxes of HTML and XML, along with rules for how to parse content using those syntaxes.<dt><a href=rendering.html#rendering>Rendering</a><dd>This section defines the default rendering rules for Web browsers.</dl>
+   <dt><a href=webstorage.html#webstorage>Web storage</a><dd>这部分定义了一个基于键值对的客户端存储机制。<dt><a href=syntax.html#syntax>HTML 语法</a><dt><a href=xhtml.html#xhtml>XML 语法</a><dd>只有表示为序列化的形式并发送给其他人，所有的这些特性才会有意义。
+   所以这两部分定义了 HTML 和 XML 的语法 ，以及如何使用这些语法来解析内容的规则。<dt><a href=rendering.html#rendering>渲染</a><dd>这部分定义了 Web 浏览器默认的渲染规则。</dl>
 
-  <p>There are also some appendices, listing <a href=obsolete.html#obsolete>obsolete features</a> and <a href=iana.html#iana>IANA considerations</a>, and several indices.</p>
+  <p>还有一些附录，列出了 <a href=obsolete.html#obsolete>废弃的特性</a> 和 <a href=iana.html#iana>IANA 考虑</a>，以及一些索引。</p>
 
 
   
@@ -571,90 +546,68 @@
 
 
 
-  <h3 id=fingerprint>1.10 Privacy concerns<a href=#fingerprint class=self-link></a></h3>
+  <h3 id=fingerprint>1.10 隐私问题<a href=#fingerprint class=self-link></a></h3>
 
   <p><i>This section is non-normative.</i></p>
 
-  <p>Some features of HTML trade user convenience for a measure of user privacy.</p>
+  <p>一些 HTML 特性牺牲了用户方便来获得一定的用户隐私。</p>
 
-  <p>In general, due to the Internet's architecture, a user can be distinguished from another by the
-  user's IP address. IP addresses do not perfectly match to a user; as a user moves from device to
-  device, or from network to network, their IP address will change; similarly, NAT routing, proxy
-  servers, and shared computers enable packets that appear to all come from a single IP address to
-  actually map to multiple users. Technologies such as onion routing can be used to further
-  anonymize requests so that requests from a single user at one node on the Internet appear to come
-  from many disparate parts of the network.</p>
+  <p>通常地，由于互联网的架构，用户之间可以通过 IP 地址来加以区分。
+  但 IP 地址不能完美地匹配用户，当用户换用了不同的设备，或切换了网络时，他们的 IP 地址将会变化。
+  类似地，NAT 路由、代理服务器、共享计算机使得看起来都来自同一 IP 地址的网络包事实上来自不同用户。
+  洋葱路由等技术可以用来进一步匿名化请求，
+  使得来自同一互联网节点的同一用户的请求看起来来自联网的很多不同部分。</p>
 
-  <p>However, the IP address used for a user's requests is not the only mechanism by which a user's
-  requests could be related to each other. Cookies, for example, are designed specifically to enable
-  this, and are the basis of most of the Web's session features that enable you to log into a site
-  with which you have an account.</p>
+  <p>然而，用户请求使用的 IP 地址并非将用户请求关联到每个用户的唯一的机制。
+  比如 Cookie 就是专门为此设计的，也是大多数 Web 会话特性的基础。
+  这使得你可以使用账号来登录一个网站。</p>
 
-  <p>There are other mechanisms that are more subtle. Certain characteristics of a user's system can
-  be used to distinguish groups of users from each other; by collecting enough such information, an
-  individual user's browser's "digital fingerprint" can be computed, which can be as good, if not
-  better, as an IP address in ascertaining which requests are from the same user.</p>
+  <p>还有一些更加细微的机制。用户系统的某些特征也可以用来区分用户群体。
+  通过收集足够的信息，可以计算出一个单独用户的浏览器的 "数字指纹"。
+  在确定哪些请求来自同一用户的问题上，该方法不差于 IP 地址。</p>
 
-  <p>Grouping requests in this manner, especially across multiple sites, can be used for both benign
-  (and even arguably positive) purposes, as well as for malevolent purposes. An example of a
-  reasonably benign purpose would be determining whether a particular person seems to prefer sites
-  with dog illustrations as opposed to sites with cat illustrations (based on how often they visit
-  the sites in question) and then automatically using the preferred illustrations on subsequent
-  visits to participating sites. Malevolent purposes, however, could include governments combining
-  information such as the person's home address (determined from the addresses they use when getting
-  driving directions on one site) with their apparent political affiliations (determined by
-  examining the forum sites that they participate in) to determine whether the person should be
-  prevented from voting in an election.</p>
+  <p>这样对请求进行分组（尤其是跨站点）可以用于正当的用途，也可以用于恶意的用户。
+  一个合理的正当用途的例子可能是：基于访问频次来确定一个用户喜欢有狗作为插图的网站还是有猫作为插图的网站，
+  然后在访问这些网站时，自动地使用他所偏好的插图。
+  然而恶意的用途包括：政府将用户的家庭住址（通过他从网站获取导航信息时使用的地址确定）
+  与他的政治偏好（通过检查他参加的论坛网站确定）相关联，来决定是否应该阻止他在选举中投票。</p>
 
-  <p>Since the malevolent purposes can be remarkably evil, user agent implementors are encouraged to
-  consider how to provide their users with tools to minimize leaking information that could be used
-  to fingerprint a user.</p>
+  <p>因为恶意的用途可能会非常邪恶，鼓励用户代理的实现者考虑为他们的用户提供工具，
+  来最小化泄漏可能被用于识别用户的信息。</p>
 
-  <p>Unfortunately, as the first paragraph in this section implies, sometimes there is great benefit
-  to be derived from exposing the very information that can also be used for fingerprinting
-  purposes, so it's not as easy as simply blocking all possible leaks. For instance, the ability to
-  log into a site to post under a specific identity requires that the user's requests be
-  identifiable as all being from the same user, more or less by definition. More subtly, though,
-  information such as how wide text is, which is necessary for many effects that involve drawing
-  text onto a canvas (e.g. any effect that involves drawing a border around the text) also leaks
-  information that can be used to group a user's requests. (In this case, by potentially exposing,
-  via a brute force search, which fonts a user has installed, information which can vary
-  considerably from user to user.)</p>
+  <p>不幸的是（正如本章第一段所暗示的），有时暴露特定的信息（该信息也可能被用来识别用户）可获得非常多好处，
+  所以并直接非阻止所有可能的泄漏那么简单。
+  比如，用户登录一个网站并在特定的认证下发布内容要求该用户的请求可以被识别为都来自同一用户，
+  这差不多也就是登录的定义。更细微地，像文本宽度这样的信息对于很多涉及到绘制文本到画布的效果
+  （例如：任何涉及在文本周围绘制边框的效果）都是必须的，这也会泄漏可以用来对用户请求分组的信息。
+  这种情况下可能暴露了用户装有哪些字体（通过暴力搜索），用户间这一信息的差别可能会相当大。</p>
 
-  <p>Features in this specification which can be <dfn id=fingerprinting-vector>used to
-  fingerprint the user</dfn> are marked as this paragraph is.
+  <p>本标准中可能被用来 <dfn id=fingerprinting-vector>识别用户</dfn> 的特性都有像本段一样的标记。
   <a href=#fingerprinting-vector id=fingerprint:fingerprinting-vector class=fingerprint title="There is a potential fingerprinting vector here."><img alt="(This is a fingerprinting vector.)" src=/html/images/fingerprint.png width=46 height=64></a>
   </p>
 
-  <p>Other features in the platform can be used for the same purpose, though, including, though not
-  limited to:</p>
+  <p>平台中其他可能被用于相同用途的特性包括但不限于：</p>
 
-  <ul><li>The exact list of which features a user agents supports.<li>The maximum allowed stack depth for recursion in script.<li>Features that describe the user's environment, like Media Queries and the <code id=fingerprint:screen><a data-x-internal=screen href=https://drafts.csswg.org/cssom-view/#the-screen-interface>Screen</a></code>
-   object. <a href=references.html#refsMQ>[MQ]</a> <a href=references.html#refsCSSOMVIEW>[CSSOMVIEW]</a><li>The user's time zone.</ul>
+  <ul><li>用户代理支持的特性列表。<li>脚本递归栈允许的最大深度。<li>描述用户环境的特性，比如媒体查询和 <code id=fingerprint:screen><a data-x-internal=screen href=https://drafts.csswg.org/cssom-view/#the-screen-interface>Screen</a></code> 对象。 <a href=references.html#refsMQ>[MQ]</a> <a href=references.html#refsCSSOMVIEW>[CSSOMVIEW]</a><li>用户的时区。</ul>
 
 
-  <h4 id=fingerprint-postMessage>1.10.1 Cross-site communication<a href=#fingerprint-postMessage class=self-link></a></h4>
+  <h4 id=fingerprint-postMessage>1.10.1 跨站通信<a href=#fingerprint-postMessage class=self-link></a></h4>
 
-  <p>The <code id=fingerprint-postMessage:dom-window-postmessage><a href=comms.html#dom-window-postmessage>postMessage()</a></code> API provides a mechanism by
-  which two sites can communicate directly. At first glance, this might appear to open a new way by
-  which the problems described above can occur. However, in practice, multiple mechanisms exist by
-  which two sites can communicate that predate this API: a site embedding another can send data via
-  an <code id=fingerprint-postMessage:the-iframe-element><a href=embedded-content.html#the-iframe-element>iframe</a></code> element's dimensions; a site can use a cross-site image request with a
-  unique identifier known to the server to initiate a server-side data exchange; or indeed the
-  fingerprinting techniques described above can be used by two sites to uniquely identify a visitor
-  such that information can then be exchanged on the server side.</p>
+  <p><code id=fingerprint-postMessage:dom-window-postmessage><a href=comms.html#dom-window-postmessage>postMessage()</a></code> API 提供了两个网站直接通信的机制。
+  乍一看这可能为上述问题的产生提供了新的方式。然而在实践中，网站间通信的很多机制已先于该 API 而存在：
+  网站嵌套另一个网站可通过<code id=fingerprint-postMessage:the-iframe-element><a href=embedded-content.html#the-iframe-element>iframe</a></code>来发送数据；网站可以使用带有服务器可识别标志的跨站图片请求，
+  来发起服务器端的数据交换；还有上述提到的指纹技术可以在网站间唯一地识别访客，然后便可以在服务器端交换信息。</p>
 
-  <p>Fundamentally, users that do not trust a site to treat their information with respect have to
-  avoid visiting that site at all.</p>
+  <p>根本来讲，如果用户不信任某个网站会尊重他们的信息，就应该避免访问那个网站。</p>
 
 
 
 
-  <h3 id=a-quick-introduction-to-html>1.11 A quick introduction to HTML<a href=#a-quick-introduction-to-html class=self-link></a></h3>
+  <h3 id=html-的简单介绍>1.11 HTML 的简单介绍<a href=#html-的简单介绍 class=self-link></a></h3>
 
   <p><i>This section is non-normative.</i></p>
 
-  <p>A basic HTML document looks like this:</p>
+  <p>一个基本的 HTML 文档看起来像这样：</p>
 
   <pre id=intro-early-example>&lt;!DOCTYPE html>
 &lt;html lang="en">
@@ -668,31 +621,30 @@
  &lt;/body>
 &lt;/html></pre>
 
-  <p>HTML documents consist of a tree of elements and text. Each element is denoted in the source by
-  a <a href=syntax.html#syntax-start-tag id=a-quick-introduction-to-html:syntax-start-tag>start tag</a>, such as "<code>&lt;body></code>", and
-  an <a href=syntax.html#syntax-end-tag id=a-quick-introduction-to-html:syntax-end-tag>end tag</a>, such as "<code>&lt;/body></code>".
-  (Certain start tags and end tags can in certain cases be <a href=syntax.html#syntax-tag-omission id=a-quick-introduction-to-html:syntax-tag-omission>omitted</a> and are implied by other tags.)</p>
+  <p>HTML 文档由树状的元素和文本组成。源码中每个元素由
+  一个 <a href=syntax.html#syntax-start-tag id=html-的简单介绍:syntax-start-tag>开始标签</a>（例如 "<code>&lt;body></code>"）
+  和一个 <a href=syntax.html#syntax-end-tag id=html-的简单介绍:syntax-end-tag>结束标签</a>（例如 "<code>&lt;/body></code>"）表示。
+  （某些开始标签和结束标签在某些情况下可以 <a href=syntax.html#syntax-tag-omission id=html-的简单介绍:syntax-tag-omission>省略</a>。）</p>
 
-  <p>Tags have to be nested such that elements are all completely within each other, without
-  overlapping:</p>
+  <p>标签的嵌套必须使所有标签都完全在其他标签内部，不应出现重叠：</p>
 
   <pre class=bad>&lt;p>This is &lt;em>very &lt;strong>wrong&lt;/em>!&lt;/strong>&lt;/p></pre>
   <pre>&lt;p>This &lt;em>is &lt;strong>correct&lt;/strong>.&lt;/em>&lt;/p></pre>
 
-  <p>This specification defines a set of elements that can be used in HTML, along with rules about
-  the ways in which the elements can be nested.</p>
+  <p>本标准定义了 HTML 中使用的一些元素，以及它们的嵌套规则。</p>
 
-  <p>Elements can have attributes, which control how the elements work. In the example below, there
-  is a <a id=a-quick-introduction-to-html:hyperlink href=semantics.html#hyperlink>hyperlink</a>, formed using the <code id=a-quick-introduction-to-html:the-a-element><a href=semantics.html#the-a-element>a</a></code> element and its <code id=a-quick-introduction-to-html:attr-hyperlink-href><a href=semantics.html#attr-hyperlink-href>href</a></code> attribute:</p>
+  <p>元素可以有属性来控制元素的行为。在下面的例子中是一个 <a href=semantics.html#hyperlink id=html-的简单介绍:hyperlink>超链接</a>，
+  由一个<code id=html-的简单介绍:the-a-element><a href=semantics.html#the-a-element>a</a></code>元素和它的 <code id=html-的简单介绍:attr-hyperlink-href><a href=semantics.html#attr-hyperlink-href>href</a></code> 属性组成：</p>
 
   <pre>&lt;a href="demo.html">simple&lt;/a></pre>
 
-  <p><a href=syntax.html#syntax-attributes id=a-quick-introduction-to-html:syntax-attributes>Attributes</a> are placed inside the start tag, and consist
-  of a <a href=syntax.html#syntax-attribute-name id=a-quick-introduction-to-html:syntax-attribute-name>name</a> and a <a href=syntax.html#syntax-attribute-value id=a-quick-introduction-to-html:syntax-attribute-value>value</a>, separated by an "<code>=</code>" character.
-  The attribute value can remain <a href=syntax.html#unquoted>unquoted</a> if it doesn't contain <a href=infrastructure.html#space-character id=a-quick-introduction-to-html:space-character>space characters</a> or any of <code>"</code> <code>'</code> <code>`</code> <code>=</code> <code>&lt;</code> or
-  <code>></code>. Otherwise, it has to be quoted using either single or double quotes.
-  The value, along with the "<code>=</code>" character, can be omitted altogether if the
-  value is the empty string.</p>
+  <p><a href=syntax.html#syntax-attributes id=html-的简单介绍:syntax-attributes>属性</a> 应放置在开始标签中，由
+  <a href=syntax.html#syntax-attribute-name id=html-的简单介绍:syntax-attribute-name>属性名</a> 和 <a href=syntax.html#syntax-attribute-value id=html-的简单介绍:syntax-attribute-value>属性值</a>构成，
+  以 "<code>=</code>" 分隔。
+  如果不包含<a href=infrastructure.html#space-character id=html-的简单介绍:space-character>空格</a><code>"</code> <code>'</code> <code>`</code> <code>=</code> <code>&lt;</code> 或
+  <code>></code>， 属性值可以保持 <a href=syntax.html#unquoted>没有引号</a> ；
+  否则必须使用单引号或双引号。
+  如果属性值是空字符串，属性值以及 "<code>=</code>" 可以一起省略。</p>
 
   <pre>&lt;!-- empty attributes -->
 &lt;input name=address disabled>
@@ -703,70 +655,60 @@
 &lt;input name=address maxlength='200'>
 &lt;input name=address maxlength="200"></pre>
 
-  <p>HTML user agents (e.g. Web browsers) then <i>parse</i> this markup, turning it into a DOM
-  (Document Object Model) tree. A DOM tree is an in-memory representation of a document.</p>
+  <p>HTML 用户代理（比如 Web 浏览器）<i>解析</i>这些标记，把它转化为 DOM（Document Object Model）树。
+  DOM 树是文档在内存中的表示。</p>
 
-  <p>DOM trees contain several kinds of nodes, in particular a <code id=a-quick-introduction-to-html:documenttype><a data-x-internal=documenttype href=https://dom.spec.whatwg.org/#interface-documenttype>DocumentType</a></code> node,
-  <code id=a-quick-introduction-to-html:element><a data-x-internal=element href=https://dom.spec.whatwg.org/#interface-element>Element</a></code> nodes, <code id=a-quick-introduction-to-html:text><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> nodes, <code id=a-quick-introduction-to-html:comment-2><a data-x-internal=comment-2 href=https://dom.spec.whatwg.org/#interface-comment>Comment</a></code> nodes, and in some cases
-  <code id=a-quick-introduction-to-html:processinginstruction><a data-x-internal=processinginstruction href=https://dom.spec.whatwg.org/#interface-processinginstruction>ProcessingInstruction</a></code> nodes.</p>
+  <p>DOM 数包含若干种节点，具体地：<code id=html-的简单介绍:documenttype><a data-x-internal=documenttype href=https://dom.spec.whatwg.org/#interface-documenttype>DocumentType</a></code> 节点、
+  <code id=html-的简单介绍:element><a data-x-internal=element href=https://dom.spec.whatwg.org/#interface-element>Element</a></code>节点、<code id=html-的简单介绍:text><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点、<code id=html-的简单介绍:comment-2><a data-x-internal=comment-2 href=https://dom.spec.whatwg.org/#interface-comment>Comment</a></code> 节点，
+  以及有时会出现的 <code id=html-的简单介绍:processinginstruction><a data-x-internal=processinginstruction href=https://dom.spec.whatwg.org/#interface-processinginstruction>ProcessingInstruction</a></code> 节点。</p>
 
-  <p>The <a href=#intro-early-example>markup snippet at the top of this section</a> would be
-  turned into the following DOM tree:</p>
+  <p><a href=#intro-early-example>本章顶部的代码片段</a>将会转化为下列 DOM 树：</p>
 
-  <ul class=domTree><li class=t10>DOCTYPE: <code>html</code><li class=t1><code id=a-quick-introduction-to-html:the-html-element><a href=semantics.html#the-html-element>html</a></code> <span class=t2><code id=a-quick-introduction-to-html:attr-lang class="attribute name"><a href=dom.html#attr-lang>lang</a></code>="<code class="attribute value">en</code>"</span><ul><li class=t1><code id=a-quick-introduction-to-html:the-head-element><a href=semantics.html#the-head-element>head</a></code><ul><li class=t3><code id=a-quick-introduction-to-html:text-2><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣␣</span><li class=t1><code id=a-quick-introduction-to-html:the-title-element><a href=semantics.html#the-title-element>title</a></code><ul><li class=t3><code id=a-quick-introduction-to-html:text-3><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>Sample page</span></ul><li class=t3><code id=a-quick-introduction-to-html:text-4><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣</span></ul><li class=t3><code id=a-quick-introduction-to-html:text-5><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣</span><li class=t1><code id=a-quick-introduction-to-html:the-body-element><a href=semantics.html#the-body-element>body</a></code><ul><li class=t3><code id=a-quick-introduction-to-html:text-6><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣␣</span><li class=t1><code id=a-quick-introduction-to-html:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements><a href=semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h1</a></code><ul><li class=t3><code id=a-quick-introduction-to-html:text-7><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>Sample page</span></ul><li class=t3><code id=a-quick-introduction-to-html:text-8><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣␣</span><li class=t1><code id=a-quick-introduction-to-html:the-p-element><a href=semantics.html#the-p-element>p</a></code><ul><li class=t3><code id=a-quick-introduction-to-html:text-9><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>This is a </span><li class=t1><code id=a-quick-introduction-to-html:the-a-element-2><a href=semantics.html#the-a-element>a</a></code> <span class=t2><code id=a-quick-introduction-to-html:attr-hyperlink-href-2 class="attribute name"><a href=semantics.html#attr-hyperlink-href>href</a></code>="<code class="attribute value">demo.html</code>"</span><ul><li class=t3><code id=a-quick-introduction-to-html:text-10><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>simple</span></ul><li class=t3><code id=a-quick-introduction-to-html:text-11><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span> sample.</span></ul><li class=t3><code id=a-quick-introduction-to-html:text-12><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣␣</span><li class=t8><code id=a-quick-introduction-to-html:comment-2-2><a data-x-internal=comment-2 href=https://dom.spec.whatwg.org/#interface-comment>#comment</a></code>: <span> this is a comment </span><li class=t3><code id=a-quick-introduction-to-html:text-13><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣⏎</span></ul></ul></ul>
+  <ul class=domTree><li class=t10>DOCTYPE: <code>html</code><li class=t1><code id=html-的简单介绍:the-html-element><a href=semantics.html#the-html-element>html</a></code> <span class=t2><code id=html-的简单介绍:attr-lang class="attribute name"><a href=dom.html#attr-lang>lang</a></code>="<code class="attribute value">en</code>"</span><ul><li class=t1><code id=html-的简单介绍:the-head-element><a href=semantics.html#the-head-element>head</a></code><ul><li class=t3><code id=html-的简单介绍:text-2><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣␣</span><li class=t1><code id=html-的简单介绍:the-title-element><a href=semantics.html#the-title-element>title</a></code><ul><li class=t3><code id=html-的简单介绍:text-3><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>Sample page</span></ul><li class=t3><code id=html-的简单介绍:text-4><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣</span></ul><li class=t3><code id=html-的简单介绍:text-5><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣</span><li class=t1><code id=html-的简单介绍:the-body-element><a href=semantics.html#the-body-element>body</a></code><ul><li class=t3><code id=html-的简单介绍:text-6><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣␣</span><li class=t1><code id=html-的简单介绍:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements><a href=semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h1</a></code><ul><li class=t3><code id=html-的简单介绍:text-7><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>Sample page</span></ul><li class=t3><code id=html-的简单介绍:text-8><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣␣</span><li class=t1><code id=html-的简单介绍:the-p-element><a href=semantics.html#the-p-element>p</a></code><ul><li class=t3><code id=html-的简单介绍:text-9><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>This is a </span><li class=t1><code id=html-的简单介绍:the-a-element-2><a href=semantics.html#the-a-element>a</a></code> <span class=t2><code id=html-的简单介绍:attr-hyperlink-href-2 class="attribute name"><a href=semantics.html#attr-hyperlink-href>href</a></code>="<code class="attribute value">demo.html</code>"</span><ul><li class=t3><code id=html-的简单介绍:text-10><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>simple</span></ul><li class=t3><code id=html-的简单介绍:text-11><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span> sample.</span></ul><li class=t3><code id=html-的简单介绍:text-12><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣␣</span><li class=t8><code id=html-的简单介绍:comment-2-2><a data-x-internal=comment-2 href=https://dom.spec.whatwg.org/#interface-comment>#comment</a></code>: <span> this is a comment </span><li class=t3><code id=html-的简单介绍:text-13><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>⏎␣⏎</span></ul></ul></ul>
 
-  <p>The <a id=a-quick-introduction-to-html:document-element href=https://dom.spec.whatwg.org/#document-element data-x-internal=document-element>document element</a> of this tree is the <code id=a-quick-introduction-to-html:the-html-element-2><a href=semantics.html#the-html-element>html</a></code> element, which is the
-  element always found in that position in HTML documents. It contains two elements,
-  <code id=a-quick-introduction-to-html:the-head-element-2><a href=semantics.html#the-head-element>head</a></code> and <code id=a-quick-introduction-to-html:the-body-element-2><a href=semantics.html#the-body-element>body</a></code>, as well as a <code id=a-quick-introduction-to-html:text-14><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> node between them.</p>
+  <p>树中的<a href=https://dom.spec.whatwg.org/#document-element id=html-的简单介绍:document-element data-x-internal=document-element>document 元素</a> 是 <code id=html-的简单介绍:the-html-element-2><a href=semantics.html#the-html-element>html</a></code> 元素，
+  在 HTML 文档的这一位置总是应该有这样一个元素。它包含两个元素，
+  <code id=html-的简单介绍:the-head-element-2><a href=semantics.html#the-head-element>head</a></code> 和 <code id=html-的简单介绍:the-body-element-2><a href=semantics.html#the-body-element>body</a></code>，以及它们之间的一个 <code id=html-的简单介绍:text-14><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点。</p>
 
-  <p>There are many more <code id=a-quick-introduction-to-html:text-15><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> nodes in the DOM tree than one would initially expect,
-  because the source contains a number of spaces (represented here by "␣") and line breaks
-  ("⏎") that all end up as <code id=a-quick-introduction-to-html:text-16><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> nodes in the DOM. However, for historical
-  reasons not all of the spaces and line breaks in the original markup appear in the DOM. In
-  particular, all the whitespace before <code id=a-quick-introduction-to-html:the-head-element-3><a href=semantics.html#the-head-element>head</a></code> start tag ends up being dropped silently,
-  and all the whitespace after the <code id=a-quick-introduction-to-html:the-body-element-3><a href=semantics.html#the-body-element>body</a></code> end tag ends up placed at the end of the
-  <code id=a-quick-introduction-to-html:the-body-element-4><a href=semantics.html#the-body-element>body</a></code>.</p>
+  <p>DOM 树中的 <code id=html-的简单介绍:text-15><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点比你预想的要多，因为源码包含一些空格（表示为"␣"）和换行（"⏎"），
+  这些都会变成 DOM 中的 <code id=html-的简单介绍:text-16><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点。然而因为历史原因，并非所有这些源码中的空格和换行都出现在 DOM 中。
+  具体地，所有<code id=html-的简单介绍:the-head-element-3><a href=semantics.html#the-head-element>head</a></code>开始标签前的空白都会被悄悄地丢掉，所有<code id=html-的简单介绍:the-body-element-3><a href=semantics.html#the-body-element>body</a></code>结束标签后的空白都会出现在<code id=html-的简单介绍:the-body-element-4><a href=semantics.html#the-body-element>body</a></code>的尾部。</p>
 
-  <p>The <code id=a-quick-introduction-to-html:the-head-element-4><a href=semantics.html#the-head-element>head</a></code> element contains a <code id=a-quick-introduction-to-html:the-title-element-2><a href=semantics.html#the-title-element>title</a></code> element, which itself contains a
-  <code id=a-quick-introduction-to-html:text-17><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> node with the text "Sample page". Similarly, the <code id=a-quick-introduction-to-html:the-body-element-5><a href=semantics.html#the-body-element>body</a></code> element
-  contains an <code id=a-quick-introduction-to-html:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-2><a href=semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h1</a></code> element, a <code id=a-quick-introduction-to-html:the-p-element-2><a href=semantics.html#the-p-element>p</a></code> element, and a comment.</p>
+  <p><code id=html-的简单介绍:the-head-element-4><a href=semantics.html#the-head-element>head</a></code> 元素包含一个 <code id=html-的简单介绍:the-title-element-2><a href=semantics.html#the-title-element>title</a></code> 元素，其中包含一个
+  内容为 "Sample page" 的 <code id=html-的简单介绍:text-17><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>Text</a></code> 节点。类似地，<code id=html-的简单介绍:the-body-element-5><a href=semantics.html#the-body-element>body</a></code> 元素包含一个
+  <code id=html-的简单介绍:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-2><a href=semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h1</a></code> 元素，一个<code id=html-的简单介绍:the-p-element-2><a href=semantics.html#the-p-element>p</a></code> 元素，和一个注释。</p>
 
   <hr>
 
-  <p>This DOM tree can be manipulated from scripts in the page. Scripts (typically in JavaScript)
-  are small programs that can be embedded using the <code id=a-quick-introduction-to-html:the-script-element><a href=scripting.html#the-script-element>script</a></code> element or using <a id=a-quick-introduction-to-html:event-handler-content-attributes href=webappapis.html#event-handler-content-attributes>event
-  handler content attributes</a>. For example, here is a form with a script that sets the value
-  of the form's <code id=a-quick-introduction-to-html:the-output-element><a href=forms.html#the-output-element>output</a></code> element to say "Hello World":</p>
+  <p>页面中的脚本可以操作该 DOM 树。脚本（比如 JavaScript）是可以使用
+  <code id=html-的简单介绍:the-script-element><a href=scripting.html#the-script-element>script</a></code>标签或 <a href=webappapis.html#event-handler-content-attributes id=html-的简单介绍:event-handler-content-attributes>事件处理内容属性</a>内嵌的小程序。
+  比如下面是一个表单，其中的脚本设置了表单中<code id=html-的简单介绍:the-output-element><a href=forms.html#the-output-element>output</a></code>元素的内容并输出 "Hello World"：</p>
 
-  <pre>&lt;<a id=a-quick-introduction-to-html:the-form-element href=forms.html#the-form-element>form</a> <a href=forms.html#attr-form-name id=a-quick-introduction-to-html:attr-form-name>name</a>="main">
- Result: &lt;<a id=a-quick-introduction-to-html:the-output-element-2 href=forms.html#the-output-element>output</a> <a href=forms.html#attr-fe-name id=a-quick-introduction-to-html:attr-fe-name>name</a>="result">&lt;/output>
- &lt;<a id=a-quick-introduction-to-html:the-script-element-2 href=scripting.html#the-script-element>script</a>>
-  <a href=dom.html#document id=a-quick-introduction-to-html:document>document</a>.<a href=dom.html#dom-document-forms id=a-quick-introduction-to-html:dom-document-forms>forms</a>.main.<a href=forms.html#dom-form-elements id=a-quick-introduction-to-html:dom-form-elements>elements</a>.result.<a href=forms.html#dom-output-value id=a-quick-introduction-to-html:dom-output-value>value</a> = 'Hello World';
+  <pre>&lt;<a id=html-的简单介绍:the-form-element href=forms.html#the-form-element>form</a> <a href=forms.html#attr-form-name id=html-的简单介绍:attr-form-name>name</a>="main">
+ Result: &lt;<a id=html-的简单介绍:the-output-element-2 href=forms.html#the-output-element>output</a> <a href=forms.html#attr-fe-name id=html-的简单介绍:attr-fe-name>name</a>="result">&lt;/output>
+ &lt;<a id=html-的简单介绍:the-script-element-2 href=scripting.html#the-script-element>script</a>>
+  <a href=dom.html#document id=html-的简单介绍:document>document</a>.<a href=dom.html#dom-document-forms id=html-的简单介绍:dom-document-forms>forms</a>.main.<a href=forms.html#dom-form-elements id=html-的简单介绍:dom-form-elements>elements</a>.result.<a href=forms.html#dom-output-value id=html-的简单介绍:dom-output-value>value</a> = 'Hello World';
  &lt;/script>
 &lt;/form></pre>
 
-  <p>Each element in the DOM tree is represented by an object, and these objects have APIs so that
-  they can be manipulated. For instance, a link (e.g. the <code id=a-quick-introduction-to-html:the-a-element-3><a href=semantics.html#the-a-element>a</a></code> element in the tree above)
-  can have its "<code id=a-quick-introduction-to-html:attr-hyperlink-href-3><a href=semantics.html#attr-hyperlink-href>href</a></code>" attribute changed in several
-  ways:</p>
+  <p>DOM 树中的每个元素表示为一个对象，这些对象提供 API 以供操作。
+  例如，一个链接（比如上述树中的<code id=html-的简单介绍:the-a-element-3><a href=semantics.html#the-a-element>a</a></code>元素）的
+  "<code id=html-的简单介绍:attr-hyperlink-href-3><a href=semantics.html#attr-hyperlink-href>href</a></code>"属性可以通过多种方式改变：</p>
 
-  <pre>var a = <a href=dom.html#document id=a-quick-introduction-to-html:document-2>document</a>.<a href=dom.html#dom-document-links id=a-quick-introduction-to-html:dom-document-links>links</a>[0]; // obtain the first link in the document
-a.<a href=semantics.html#dom-hyperlink-href id=a-quick-introduction-to-html:dom-hyperlink-href>href</a> = 'sample.html'; // change the destination URL of the link
-a.<a href=semantics.html#dom-hyperlink-protocol id=a-quick-introduction-to-html:dom-hyperlink-protocol>protocol</a> = 'https'; // change just the scheme part of the URL
+  <pre>var a = <a href=dom.html#document id=html-的简单介绍:document-2>document</a>.<a href=dom.html#dom-document-links id=html-的简单介绍:dom-document-links>links</a>[0]; // obtain the first link in the document
+a.<a href=semantics.html#dom-hyperlink-href id=html-的简单介绍:dom-hyperlink-href>href</a> = 'sample.html'; // change the destination URL of the link
+a.<a href=semantics.html#dom-hyperlink-protocol id=html-的简单介绍:dom-hyperlink-protocol>protocol</a> = 'https'; // change just the scheme part of the URL
 a.setAttribute('href', 'https://example.com/'); // change the content attribute directly</pre>
 
-  <p>Since DOM trees are used as the way to represent HTML documents when they are processed and
-  presented by implementations (especially interactive implementations like Web browsers), this
-  specification is mostly phrased in terms of DOM trees, instead of the markup described above.</p>
+  <p>由于 DOM 树是实现者（尤其是像 Web 浏览器这样的交互式实现）用来处理和显示 HTML 文档的，
+  本标准更多地是按照 DOM 树来介绍的，而不是按照上面描述的标记代码。</p>
 
   <hr>
 
-  <p>HTML documents represent a media-independent description of interactive content. HTML documents
-  might be rendered to a screen, or through a speech synthesizer, or on a braille display. To
-  influence exactly how such rendering takes place, authors can use a styling language such as
-  CSS.</p>
+  <p>HTML 文档表示了交互式内容的一种媒体无关的描述。HTML 文档可能会渲染在屏幕、语音合成器、或者盲文点触设备。
+  为了精确地控制渲染行为，作者可以使用一个像 CSS 这样的样式语言。</p>
 
-  <p>In the following example, the page has been made yellow-on-blue using CSS.</p>
+  <p>在下列例子中，使用 CSS 将页面设置为蓝底白字。</p>
 
   <pre>&lt;!DOCTYPE html>
 &lt;html lang="en">
@@ -782,10 +724,9 @@ a.setAttribute('href', 'https://example.com/'); // change the content attribute 
  &lt;/body>
 &lt;/html></pre>
 
-  <p>For more details on how to use HTML, authors are encouraged to consult tutorials and guides.
-  Some of the examples included in this specification might also be of use, but the novice author is
-  cautioned that this specification, by necessity, defines the language with a level of detail that
-  might be difficult to understand at first.</p>
+  <p>关于更多 HTML 的使用细节，鼓励作者参考教程和指南。
+  本标准中的一些示例可能也有用，但新手作者需要注意本标准必须非常详细地定义该语言，
+  以至于一开始可能很难理解。</p>
 
 
 
@@ -891,36 +832,32 @@ a.setAttribute('href', 'https://example.com/'); // change the content attribute 
 
 
 
-  <h4 id=common-pitfalls-to-avoid-when-using-the-scripting-apis>1.11.2 Common pitfalls to avoid when using the scripting APIs<a href=#common-pitfalls-to-avoid-when-using-the-scripting-apis class=self-link></a></h4>
+  <h4 id=使用脚本-api-时常见的陷阱>1.11.2 使用脚本 API 时常见的陷阱<a href=#使用脚本-api-时常见的陷阱 class=self-link></a></h4>
 
   <p><i>This section is non-normative.</i></p>
 
-  <p>Scripts in HTML have "run-to-completion" semantics, meaning that the browser will generally run
-  the script uninterrupted before doing anything else, such as firing further events or continuing
-  to parse the document.</p>
+  <p>HTML 中的脚本有着"运行到完成"的语义，这意味着浏览器通常在执行任何其他操作
+  （诸如触发进一步的事件或继续解析文档）之前会不中断地执行脚本。</p>
 
-  <p>On the other hand, parsing of HTML files happens incrementally, meaning that
-  the parser can pause at any point to let scripts run. This is generally a good thing, but it does
-  mean that authors need to be careful to avoid hooking event handlers after the events could have
-  possibly fired.</p>
+  <p>另一方面，HTML 文件的解析是逐步发生的，这意味着解析器可以在任何地方暂停来让脚本运行。
+  这通常是一件好事，但确实意味着作者需要小心地避免在事件可能已经触发之后才绑定事件处理程序。</p>
 
-  <p>There are two techniques for doing this reliably: use <a id=common-pitfalls-to-avoid-when-using-the-scripting-apis:event-handler-content-attributes href=webappapis.html#event-handler-content-attributes>event handler content
-  attributes</a>, or create the element and add the event handlers in the same script. The latter
-  is safe because, as mentioned earlier, scripts are run to completion before further events can
-  fire.</p>
+  <p>有两项技术能够可靠地完成这件事情：使用
+  <a href=webappapis.html#event-handler-content-attributes id=使用脚本-api-时常见的陷阱:event-handler-content-attributes>事件处理程序内容属性</a>，
+  或者在同一脚本中创建元素和添加事件处理程序。后一种更为安全，因为如前所述，
+  脚本会在进一步的事件发生前一直运行到完成。</p>
 
   <div class=example>
 
-   <p>One way this could manifest itself is with <code id=common-pitfalls-to-avoid-when-using-the-scripting-apis:the-img-element><a href=embedded-content.html#the-img-element>img</a></code> elements and the <code id=common-pitfalls-to-avoid-when-using-the-scripting-apis:event-load><a href=indices.html#event-load>load</a></code> event. The event could fire as soon as the element has been
-   parsed, especially if the image has already been cached (which is common).</p>
+   <p>一个可以表示此种情形的例子是<code id=使用脚本-api-时常见的陷阱:the-img-element><a href=embedded-content.html#the-img-element>img</a></code>元素和<code id=使用脚本-api-时常见的陷阱:event-load><a href=indices.html#event-load>load</a></code>事件。
+   该事件在元素解析完成时就会触发，特别是当图片已经被缓存之后（这很常见）。</p>
 
-   <p>Here, the author uses the <code id=common-pitfalls-to-avoid-when-using-the-scripting-apis:handler-onload><a href=webappapis.html#handler-onload>onload</a></code> handler on an
-   <code id=common-pitfalls-to-avoid-when-using-the-scripting-apis:the-img-element-2><a href=embedded-content.html#the-img-element>img</a></code> element to catch the <code id=common-pitfalls-to-avoid-when-using-the-scripting-apis:event-load-2><a href=indices.html#event-load>load</a></code> event:</p>
+   <p>这里，作者在<code id=使用脚本-api-时常见的陷阱:the-img-element-2><a href=embedded-content.html#the-img-element>img</a></code>标签上使用 <code id=使用脚本-api-时常见的陷阱:handler-onload><a href=webappapis.html#handler-onload>onload</a></code> 事件处理程序
+   来捕捉 <code id=使用脚本-api-时常见的陷阱:event-load-2><a href=indices.html#event-load>load</a></code> 事件：</p>
 
    <pre>&lt;img src="games.png" alt="Games" onload="gamesLogoHasLoaded(event)"></pre>
 
-   <p>If the element is being added by script, then so long as the event handlers are added in the
-   same script, the event will still not be missed:</p>
+   <p>如果使用脚本添加元素，那么只要在同一脚本中添加事件处理函数，该事件就不会被错过：</p>
 
    <pre>&lt;script>
  var img = new Image();
@@ -930,9 +867,8 @@ a.setAttribute('href', 'https://example.com/'); // change the content attribute 
  // img.addEventListener('load', gamesLogoHasLoaded, false); // would work also
 &lt;/script></pre>
 
-   <p>However, if the author first created the <code id=common-pitfalls-to-avoid-when-using-the-scripting-apis:the-img-element-3><a href=embedded-content.html#the-img-element>img</a></code> element and then in a separate
-   script added the event listeners, there's a chance that the <code id=common-pitfalls-to-avoid-when-using-the-scripting-apis:event-load-3><a href=indices.html#event-load>load</a></code>
-   event would be fired in between, leading it to be missed:</p>
+   <p>然而如果作者首先创建了<code id=使用脚本-api-时常见的陷阱:the-img-element-3><a href=embedded-content.html#the-img-element>img</a></code>元素，然后在另一个单独的脚本中添加了事件监听器，
+   那么有可能<code id=使用脚本-api-时常见的陷阱:event-load-3><a href=indices.html#event-load>load</a></code>事件会在两者之间触发，导致它被错过：</p>
 
    <pre class=bad>&lt;!-- Do not use this style, it has a race condition! -->
  &lt;img id="games" src="games.png" alt="Games">
@@ -947,12 +883,12 @@ a.setAttribute('href', 'https://example.com/'); // change the content attribute 
 
 
 
-  <h4 id=how-to-catch-mistakes-when-writing-html:-validators-and-conformance-checkers>1.11.3 How to catch mistakes when writing HTML: validators and conformance checkers<a href=#how-to-catch-mistakes-when-writing-html:-validators-and-conformance-checkers class=self-link></a></h4>
+  <h4 id=编写-html-时如何发现错误：验证器和一致性检查器>1.11.3 编写 HTML 时如何发现错误：验证器和一致性检查器<a href=#编写-html-时如何发现错误：验证器和一致性检查器 class=self-link></a></h4>
 
   <p><i>This section is non-normative.</i></p>
 
-  <p>Authors are encouraged to make use of conformance checkers (also known as <i>validators</i>) to
-  catch common mistakes. The WHATWG maintains a list of such tools at: <a href=https://validator.whatwg.org/>https://validator.whatwg.org/</a></p>
+  <p>鼓励作者使用一致性检查器（又称<i>验证器</i>）来发现常见的错误。
+  WHATWG 维护着这种工具的一个列表：<a href=https://validator.whatwg.org/>https://validator.whatwg.org/</a></p>
 
 
 

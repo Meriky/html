@@ -25,10 +25,10 @@ build-zh:
 	node ./bin/json-pretify.js ${OUTPUT}/multipage/fragment-links.json
 
 deploy:
-	git subtree push --prefix=${OUTPUT} --squash origin gh-pages
+	git subtree push --prefix=output/html --squash origin gh-pages
 
 deploy-force:
-	git push origin `git subtree split --prefix ${OUTPUT} master`:gh-pages --force
+	git push origin `git subtree split --prefix output/html master`:gh-pages --force
 
 clean-en:
 	rm -rf src/SUMMARY.en.md

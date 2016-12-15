@@ -177,7 +177,7 @@
   <script data-file-issue-url=https://github.com/whatwg/html/issues/new src=https://resources.whatwg.org/file-issue.js async=""></script>
   <header id=head class="head with-buttons">
    <p><a href=https://whatwg.org/ class=logo><img alt=WHATWG src=https://resources.whatwg.org/logo.svg width=100 height=100></a></p>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>11 December 2016</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>16 December 2016</span></h2></hgroup>
    
    
   </header>
@@ -194,7 +194,7 @@
 
   
 
-  <nav><a href=index.html>Table of Contents</a> — <a href=infrastructure.html>2 通用基础设施 →</a></nav><ol class=toc><li id=toc-introduction><a href=introduction.html#introduction>1 概述</a><ol><li><a href=introduction.html#abstract>1.1 本标准的适用范围</a><li><a href=introduction.html#is-this-html5?>1.2 这是 HTML5 吗?</a><li><a href=introduction.html#背景>1.3 背景</a><li><a href=introduction.html#受众>1.4 受众</a><li><a href=introduction.html#范围>1.5 范围</a><li><a href=introduction.html#历史>1.6 历史</a><li><a href=introduction.html#设计笔记>1.7 设计笔记</a><ol><li><a href=introduction.html#serialisability-of-script-execution>1.7.1 脚本执行的可串行性</a><li><a href=introduction.html#与其他标准的兼容性>1.7.2 与其他标准的兼容性</a><li><a href=introduction.html#可扩展性>1.7.3 可扩展性</a></ol><li><a href=introduction.html#html-vs-xhtml>1.8 HTML 和 XML 语法</a><li><a href=introduction.html#本标准的结构>1.9 本标准的结构</a><ol><li><a href=introduction.html#how-to-read-this-specification>1.9.1 How to read this specification</a><li><a href=introduction.html#typographic-conventions>1.9.2 Typographic conventions</a></ol><li><a href=introduction.html#fingerprint>1.10 隐私问题</a><ol><li><a href=introduction.html#fingerprint-postMessage>1.10.1 跨站通信</a></ol><li><a href=introduction.html#html-的简单介绍>1.11 HTML 的简单介绍</a><ol><li><a href=introduction.html#writing-secure-applications-with-html>1.11.1 Writing secure applications with HTML</a><li><a href=introduction.html#使用脚本-api-时常见的陷阱>1.11.2 使用脚本 API 时常见的陷阱</a><li><a href=introduction.html#编写-html-时如何发现错误：验证器和一致性检查器>1.11.3 编写 HTML 时如何发现错误：验证器和一致性检查器</a></ol><li><a href=introduction.html#conformance-requirements-for-authors>1.12 Conformance requirements for authors</a><ol><li><a href=introduction.html#presentational-markup>1.12.1 Presentational markup</a><li><a href=introduction.html#syntax-errors>1.12.2 Syntax errors</a><li><a href=introduction.html#restrictions-on-content-models-and-on-attribute-values>1.12.3 Restrictions on content models and on attribute values</a></ol><li><a href=introduction.html#推荐阅读>1.13 推荐阅读</a></ol></ol><h2 id=introduction>1 概述<a href=#introduction class=self-link></a></h2><div class=status><input onclick=toggleStatus(this) value=⋰ type=button><p class=bugs><strong>Spec bugs:</strong> <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=23036" title="Either drop all mention of mutation events, or specify them in full detail">23036</a></div>
+  <nav><a href=index.html>Table of Contents</a> — <a href=infrastructure.html>2 通用基础设施 →</a></nav><ol class=toc><li id=toc-introduction><a href=introduction.html#introduction>1 概述</a><ol><li><a href=introduction.html#abstract>1.1 本标准的适用范围</a><li><a href=introduction.html#is-this-html5?>1.2 这是 HTML5 吗?</a><li><a href=introduction.html#背景>1.3 背景</a><li><a href=introduction.html#受众>1.4 受众</a><li><a href=introduction.html#范围>1.5 范围</a><li><a href=introduction.html#历史>1.6 历史</a><li><a href=introduction.html#设计笔记>1.7 设计笔记</a><ol><li><a href=introduction.html#serialisability-of-script-execution>1.7.1 脚本执行的可串行性</a><li><a href=introduction.html#与其他标准的兼容性>1.7.2 与其他标准的兼容性</a><li><a href=introduction.html#可扩展性>1.7.3 可扩展性</a></ol><li><a href=introduction.html#html-vs-xhtml>1.8 HTML 和 XML 语法</a><li><a href=introduction.html#本标准的结构>1.9 本标准的结构</a><ol><li><a href=introduction.html#how-to-read-this-specification>1.9.1 How to read this specification</a><li><a href=introduction.html#typographic-conventions>1.9.2 Typographic conventions</a></ol><li><a href=introduction.html#fingerprint>1.10 隐私问题</a><ol><li><a href=introduction.html#fingerprint-postMessage>1.10.1 跨站通信</a></ol><li><a href=introduction.html#html-的简单介绍>1.11 HTML 的简单介绍</a><ol><li><a href=introduction.html#使用-html-编写安全应用>1.11.1 使用 HTML 编写安全应用</a><li><a href=introduction.html#使用脚本-api-时常见的陷阱>1.11.2 使用脚本 API 时常见的陷阱</a><li><a href=introduction.html#编写-html-时如何发现错误：验证器和一致性检查器>1.11.3 编写 HTML 时如何发现错误：验证器和一致性检查器</a></ol><li><a href=introduction.html#conformance-requirements-for-authors>1.12 Conformance requirements for authors</a><ol><li><a href=introduction.html#presentational-markup>1.12.1 Presentational markup</a><li><a href=introduction.html#syntax-errors>1.12.2 Syntax errors</a><li><a href=introduction.html#restrictions-on-content-models-and-on-attribute-values>1.12.3 Restrictions on content models and on attribute values</a></ol><li><a href=introduction.html#推荐阅读>1.13 推荐阅读</a></ol></ol><h2 id=introduction>1 概述<a href=#introduction class=self-link></a></h2><div class=status><input onclick=toggleStatus(this) value=⋰ type=button><p class=bugs><strong>Spec bugs:</strong> <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=23036" title="Either drop all mention of mutation events, or specify them in full detail">23036</a></div>
 
   
 
@@ -731,41 +731,33 @@ a.setAttribute('href', 'https://example.com/'); // change the content attribute 
 
 
 
-  <h4 id=writing-secure-applications-with-html>1.11.1 Writing secure applications with HTML<a href=#writing-secure-applications-with-html class=self-link></a></h4>
+  <h4 id=使用-html-编写安全应用>1.11.1 使用 HTML 编写安全应用<a href=#使用-html-编写安全应用 class=self-link></a></h4>
 
   <p><i>This section is non-normative.</i></p>
 
-  <p>When HTML is used to create interactive sites, care needs to be taken to avoid introducing
-  vulnerabilities through which attackers can compromise the integrity of the site itself or of the
-  site's users.</p>
+  <p>当使用 HTML 创建交互式网站时，需要注意避免引入漏洞，使得攻击者通过这些漏洞危害网站本身或网站用户信息的完整性。</p>
 
-  <p>A comprehensive study of this matter is beyond the scope of this document, and authors are
-  strongly encouraged to study the matter in more detail. However, this section attempts to provide
-  a quick introduction to some common pitfalls in HTML application development.</p>
+  <p>对这一问题的全面研究超出了本文档的范围，我们强烈建议网站作者去更详细地研究这一问题。
+  即便如此，本节尝试对 HTML 应用程序开发中的一些常见陷阱作简单介绍。</p>
 
-  <p>The security model of the Web is based on the concept of "origins", and correspondingly many of
-  the potential attacks on the Web involve cross-origin actions. <a href=references.html#refsORIGIN>[ORIGIN]</a></p>
+  <p>Web 的安全模型基于“域”的概念，因此 Web 上许多潜在的攻击涉及跨域操作。<a href=references.html#refsORIGIN>[ORIGIN]</a></p>
 
-  <dl><dt>Not validating user input<dt>Cross-site scripting (XSS)<dt>SQL injection<dd>
+  <dl><dt>不验证用户输入<dt>跨站脚本（XSS）<dt>SQL 注入<dd>
 
-    <p>When accepting untrusted input, e.g. user-generated content such as text comments, values in
-    URL parameters, messages from third-party sites, etc, it is imperative that the data be
-    validated before use, and properly escaped when displayed. Failing to do this can allow a
-    hostile user to perform a variety of attacks, ranging from the potentially benign, such as
-    providing bogus user information like a negative age, to the serious, such as running scripts
-    every time a user looks at a page that includes the information, potentially propagating the
-    attack in the process, to the catastrophic, such as deleting all data in the server.</p>
+    <p>当接受不可信输入时（例如文本评论这样的用户生成内容，URL 参数中的值，来自第三方网站的消息等），
+    必须在使用前验证数据，并在显示时正确转义。 否则就会允许恶意的用户执行各种攻击，
+    这些攻击可能是轻微的，例如提供诸如负的年龄这样的假的用户信息；
+    也可能是严重的，例如在每次用户查看包含该信息的页面时执行脚本；
+    也可能是传播性的攻击导致灾难性后果，比如删除服务器中的所有数据。</p>
 
-    <p>When writing filters to validate user input, it is imperative that filters always be
-    safelist-based, allowing known-safe constructs and disallowing all other input. Blocklist-based
-    filters that disallow known-bad inputs and allow everything else are not secure, as not
-    everything that is bad is yet known (for example, because it might be invented in the
-    future).</p>
+    <p>当编写过滤器验证用户输入时，过滤器应当是基于白名单的，允许已知的安全构造并禁止所有其他输入。
+    基于黑名单的过滤器（禁止已知的错误输入并允许其他所有输入）是不安全的，
+    因为并不是所有错误输入都是已知的（因为它可能会在未来发明）。</p>
 
     <div class=example>
 
-     <p>For example, suppose a page looked at its URL's query string to determine what to display,
-     and the site then redirected the user to that page to display a message, as in:</p>
+     <p>例如，一个页面查看它的 URL 查询字符串来决定显示的内容，
+     然后网站将用户重定向到显示该消息的页面。比如：</p>
 
      <pre>&lt;ul>
  &lt;li>&lt;a href="message.cgi?say=Hello">Say Hello&lt;/a>
@@ -773,60 +765,48 @@ a.setAttribute('href', 'https://example.com/'); // change the content attribute 
  &lt;li>&lt;a href="message.cgi?say=Kittens">Say Kittens&lt;/a>
 &lt;/ul></pre>
 
-     <p>If the message was just displayed to the user without escaping, a hostile attacker could
-     then craft a URL that contained a script element:</p>
+     <p>如果这一消息没有转义就显示给用户，恶意的攻击者可能会构造一个包含脚本元素的 URL：</p>
 
      <pre>https://example.com/message.cgi?say=%3Cscript%3Ealert%28%27Oh%20no%21%27%29%3C/script%3E</pre>
 
-     <p>If the attacker then convinced a victim user to visit this page, a script of the attacker's
-     choosing would run on the page. Such a script could do any number of hostile actions, limited
-     only by what the site offers: if the site is an e-commerce shop, for instance, such a script
-     could cause the user to unknowingly make arbitrarily many unwanted purchases.</p>
+     <p>如果攻击者随后说服受害者访问此页面，攻击者选择的脚本将在页面上运行。
+     这样的脚本可以执行任意的恶意操作，只要是站点提供的。
+     例如站点是电子商务商店，这样的脚本可以导致在用户不知情的情况下进行任意的购买。</p>
 
-     <p>This is called a cross-site scripting attack.</p>
+     <p>这称为跨站脚本攻击。</p>
 
     </div>
 
-    <p>There are many constructs that can be used to try to trick a site into executing code. Here
-    are some that authors are encouraged to consider when writing safelist filters:</p>
+    <p>有很多构造可以欺骗网站执行代码。以下是网站作者在编写白名单过滤器时应考虑的事项：</p>
 
-    <ul><li>When allowing harmless-seeming elements like <code id=writing-secure-applications-with-html:the-img-element><a href=embedded-content.html#the-img-element>img</a></code>, it is important to safelist
-     any provided attributes as well. If one allowed all attributes then an attacker could, for
-     instance, use the <code id=writing-secure-applications-with-html:handler-onload><a href=webappapis.html#handler-onload>onload</a></code> attribute to run arbitrary
-     script.<li>When allowing URLs to be provided (e.g. for links), the scheme of each URL also needs to be
-     explicitly safelisted, as there are many schemes that can be abused. The most prominent
-     example is "<code id=writing-secure-applications-with-html:javascript-protocol><a href=browsers.html#javascript-protocol>javascript:</a></code>", but user agents can
-     implement (and indeed, have historically implemented) others.<li>Allowing a <code id=writing-secure-applications-with-html:the-base-element><a href=semantics.html#the-base-element>base</a></code> element to be inserted means any <code id=writing-secure-applications-with-html:the-script-element><a href=scripting.html#the-script-element>script</a></code> elements
-     in the page with relative links can be hijacked, and similarly that any form submissions can
-     get redirected to a hostile site.</ul>
+    <ul><li>当允许像<code id=使用-html-编写安全应用:the-img-element><a href=embedded-content.html#the-img-element>img</a></code>这样看起来无害的元素时，重要的是同时为所有提供的属性给出白名单。
+     比如，如果一个元素允许所有属性，攻击者可能会使用<code id=使用-html-编写安全应用:handler-onload><a href=webappapis.html#handler-onload>onload</a></code>属性来运行任意脚本。<li>当允许提供 URL 时（比如 link），每一个 URL 的 scheme 也需要显式地给出白名单。
+     因为有很多 scheme 都可能会被滥用。最著名的例子是：“<code id=使用-html-编写安全应用:javascript-protocol><a href=browsers.html#javascript-protocol>javascript:</a></code>”，
+     用户代理也可能会实现其他的一些scheme，由于历史原因确实已经实现了不少。<li>允许插入 <code id=使用-html-编写安全应用:the-base-element><a href=semantics.html#the-base-element>base</a></code> 元素意味着页面中的任何相对链接的 <code id=使用-html-编写安全应用:the-script-element><a href=scripting.html#the-script-element>script</a></code> 元素都可能被劫持，
+     类似地任何表单提交也可能重定向到恶意站点。</ul>
 
-   <dt>Cross-site request forgery (CSRF)<dd>
+   <dt>跨站请求伪造 (CSRF)<dd>
 
-    <p>If a site allows a user to make form submissions with user-specific side-effects, for example
-    posting messages on a forum under the user's name, making purchases, or applying for a passport,
-    it is important to verify that the request was made by the user intentionally, rather than by
-    another site tricking the user into making the request unknowingly.</p>
+    <p>如果网站允许用户提交的表单产生用户相关的影响，例如使用名字在论坛上发布消息，
+    进行购买或申请护照，那么很有必要核实该请求确实是用户有意发起的，
+    而不是由另一个站点欺骗用户不知情地发起请求。</p>
 
-    <p>This problem exists because HTML forms can be submitted to other origins.</p>
+    <p>该问题的存在是因为 HTML 表单可能被提交到其他域名。</p>
 
-    <p>Sites can prevent such attacks by populating forms with user-specific hidden tokens, or by
-    checking `<code id=writing-secure-applications-with-html:http-origin><a data-x-internal=http-origin href=https://fetch.spec.whatwg.org/#http-origin>Origin</a></code>` headers on all requests.</p>
+    <p>站点可以通过为表单填充用户相关的隐藏标记或检查所有请求的`<code id=使用-html-编写安全应用:http-origin><a data-x-internal=http-origin href=https://fetch.spec.whatwg.org/#http-origin>Origin</a></code>`头字段，
+    来防止这样的攻击。</p>
 
    <dt>Clickjacking<dd>
 
-    <p>A page that provides users with an interface to perform actions that the user might not wish
-    to perform needs to be designed so as to avoid the possibility that users can be tricked into
-    activating the interface.</p>
+    <p>如果页面为用户提供的界面中包含用户可能不希望执行的操作时，
+    该页面应当经过特殊设计来避免用户被欺骗以激活该界面的可能性。</p>
 
-    <p>One way that a user could be so tricked is if a hostile site places the victim site in a
-    small <code id=writing-secure-applications-with-html:the-iframe-element><a href=embedded-content.html#the-iframe-element>iframe</a></code> and then convinces the user to click, for instance by having the user
-    play a reaction game. Once the user is playing the game, the hostile site can quickly position
-    the iframe under the mouse cursor just as the user is about to click, thus tricking the user
-    into clicking the victim site's interface.</p>
+    <p>一种用户被欺骗的可能是，如果恶意站点将受害站点放在一个小的 <code id=使用-html-编写安全应用:the-iframe-element><a href=embedded-content.html#the-iframe-element>iframe</a></code> 中然后让用户去点击，
+    例如让用户玩一个反应类游戏。一旦用户开始玩这个游戏，恶意站点可以在用户正要点击时快速地将这个 iframe 放到鼠标光标下。
+    以此来欺骗用户点击受害站点的界面。</p>
 
-    <p>To avoid this, sites that do not expect to be used in frames are encouraged to only enable
-    their interface if they detect that they are not in a frame (e.g. by comparing the <code id=writing-secure-applications-with-html:dom-window><a href=browsers.html#dom-window>window</a></code> object to the value of the <code id=writing-secure-applications-with-html:dom-top><a href=browsers.html#dom-top>top</a></code>
-    attribute).</p>
+    <p>为了避免这种情况，鼓励不期望在 iframe 下使用的站点只有检测（例如通过比较<code id=使用-html-编写安全应用:dom-window><a href=browsers.html#dom-window>window</a></code>对象和<code id=使用-html-编写安全应用:dom-top><a href=browsers.html#dom-top>top</a></code>属性的值）
+    到它们不在 iframe 下时才激活它们的界面。</p>
 
    </dl>
 

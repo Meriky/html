@@ -10,7 +10,7 @@ ASCII digits | ASCII digits | ASCII digits | 2.3.1
 ASCII hex digits | ASCII hex digits | ASCII hex digits | 2.3.1
 ASCII letters | ASCII letters | ASCII 字符 | 2.3.1
 ASCII serialization of an origin | ASCII serialization of an origin | ASCII serialization of an origin | 7.5
-ASCII-compatible encoding | ASCII 兼容的编码 | ASCII-compatible encoding | 2.1.6
+ASCII-compatible encoding | ASCII-compatible encoding | ASCII 兼容的编码 | 2.1.6
 Absolute URL | Absolute URL | 绝对 URL | 2.1.8
 After DOCTYPE name state | After DOCTYPE name state | After DOCTYPE name state | 12.2.4.56
 After DOCTYPE public identifier state | After DOCTYPE public identifier state | After DOCTYPE public identifier state | 12.2.4.61

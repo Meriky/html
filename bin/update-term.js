@@ -35,7 +35,7 @@ Object.keys(terms)
     .map(id => terms[id])
     .filter(term => !isCode(term))
     .forEach(term => {
-        file.write(`${term.id} | ${term.name} | ${term.name} | ${term.ref}\n`);
+        file.write(`${term.id} | ${term.name} | ${term.zh} | ${term.ref}\n`);
     });
 
 file.end();

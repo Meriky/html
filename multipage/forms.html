@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/html/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard.css><script defer="" src=https://resources.whatwg.org/dfn.js></script><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/html/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard.css><link rel=stylesheet href=/html/resources/zh-cn.css><script defer="" src=https://resources.whatwg.org/dfn.js></script><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -174,7 +174,7 @@
    #abstractimg .left, #abstractimg .bottom { word-spacing: 12px; }
    #abstractimg .right { font-size: 25px; }
   </style>
-  <script data-file-issue-url=https://github.com/whatwg/html/issues/new src=https://resources.whatwg.org/file-issue.js async=""></script>
+  <script data-file-issue-url=https://github.com/whatwg-cn/html/issues/new src=/html/resources/file-issue.js async=""></script>
   <header id=head class="head with-buttons">
    <p><a href=https://whatwg.org/ class=logo><img alt=WHATWG src=https://resources.whatwg.org/logo.svg width=100 height=100></a></p>
    <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>17 December 2016</span></h2></hgroup>
@@ -12681,7 +12681,7 @@ dictionary <dfn id=relatedeventinit>RelatedEventInit</dfn> : <a id=the-relatedev
   
 
 
-  <h4 id=the-dialog-element>4.11.7 The <dfn><code>dialog</code></dfn> element<a href=#the-dialog-element class=self-link></a></h4><div class=status><input onclick=toggleStatus(this) value=⋰ type=button><p class=bugs><strong>Spec bugs:</strong> <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=21770" title="<dialog>: The <dialog> positioning logic needs to support vertical writing modes.">21770</a><p class=support><strong>Support:</strong> <span class="and_chr yes"><span>Chrome for Android</span> <span>54+</span></span><span class="chrome yes"><span>Chrome</span> <span>37+</span></span><span class="ios_saf no"><span>iOS Safari</span> <span>None</span></span><span class="and_uc no"><span>UC Browser for Android</span> <span>None</span></span><span class="firefox no"><span>Firefox</span> <span>None</span></span><span class="op_mini no"><span>Opera Mini</span> <span>None</span></span><span class="ie no"><span>IE</span> <span>None</span></span><span class="samsung yes"><span>Samsung Internet</span> <span>4+</span></span><span class="android yes"><span>Android Browser</span> <span>53+</span></span><span class="safari no"><span>Safari</span> <span>None</span></span><span class="edge no"><span>Edge</span> <span>None</span></span><span class="opera yes"><span>Opera</span> <span>24+</span></span><p class=caniuse>Source: <a href="http://caniuse.com/#feat=dialog">caniuse.com</a></div>
+  <h4 id=the-dialog-element>4.11.7 The <dfn><code>dialog</code></dfn> element<a href=#the-dialog-element class=self-link></a></h4><div class=status><input onclick=toggleStatus(this) value=⋰ type=button><p class=support><strong>Support:</strong> <span class="and_chr yes"><span>Chrome for Android</span> <span>54+</span></span><span class="chrome yes"><span>Chrome</span> <span>37+</span></span><span class="ios_saf no"><span>iOS Safari</span> <span>None</span></span><span class="and_uc no"><span>UC Browser for Android</span> <span>None</span></span><span class="firefox no"><span>Firefox</span> <span>None</span></span><span class="op_mini no"><span>Opera Mini</span> <span>None</span></span><span class="ie no"><span>IE</span> <span>None</span></span><span class="samsung yes"><span>Samsung Internet</span> <span>4+</span></span><span class="android yes"><span>Android Browser</span> <span>53+</span></span><span class="safari no"><span>Safari</span> <span>None</span></span><span class="edge no"><span>Edge</span> <span>None</span></span><span class="opera yes"><span>Opera</span> <span>24+</span></span><p class=caniuse>Source: <a href="http://caniuse.com/#feat=dialog">caniuse.com</a></div>
 
   <dl class=element><dt><a href=dom.html#concept-element-categories id=the-dialog-element:concept-element-categories>Categories</a>:<dd><a id=the-dialog-element:flow-content-2 href=dom.html#flow-content-2>Flow content</a>.<dd><a id=the-dialog-element:sectioning-root href=semantics.html#sectioning-root>Sectioning root</a>.<dt><a href=dom.html#concept-element-contexts id=the-dialog-element:concept-element-contexts>Contexts in which this element can be used</a>:<dd>Where <a id=the-dialog-element:flow-content-2-2 href=dom.html#flow-content-2>flow content</a> is expected.<dt><a href=dom.html#concept-element-content-model id=the-dialog-element:concept-element-content-model>Content model</a>:<dd><a id=the-dialog-element:flow-content-2-3 href=dom.html#flow-content-2>Flow content</a>.<dt><a href=dom.html#concept-element-tag-omission id=the-dialog-element:concept-element-tag-omission>Tag omission in text/html</a>:<dd>Neither tag is omissible.<dt><a href=dom.html#concept-element-attributes id=the-dialog-element:concept-element-attributes>Content attributes</a>:<dd><a id=the-dialog-element:global-attributes href=dom.html#global-attributes>Global attributes</a><dd><code id=the-dialog-element:attr-dialog-open><a href=#attr-dialog-open>open</a></code> — Whether the dialog box is showing<dt><a href=dom.html#concept-element-dom id=the-dialog-element:concept-element-dom>DOM interface</a>:<dd>
 <pre class=idl>[<a id=the-dialog-element:htmlconstructor href=dom.html#htmlconstructor>HTMLConstructor</a>]
@@ -12755,7 +12755,7 @@ interface <dfn id=htmldialogelement>HTMLDialogElement</dfn> : <a id=the-dialog-e
   
 
   <p>When the <dfn id=dom-dialog-show><code>show()</code></dfn> method is invoked, the user
-  agent must run the following steps:<div class=status><input onclick=toggleStatus(this) value=⋰ type=button><p class=bugs><strong>Spec bugs:</strong> <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=24718" title="<dialog>: we should add a showWithoutFocus() method to <dialog> for cases where you don't want it focused">24718</a></div>
+  agent must run the following steps:</p>
 
   <ol><li><p>If the element already has an <code id=the-dialog-element:attr-dialog-open-5><a href=#attr-dialog-open>open</a></code> attribute, then
    abort these steps.<li><p>Add an <code id=the-dialog-element:attr-dialog-open-6><a href=#attr-dialog-open>open</a></code> attribute to the <code id=the-dialog-element:the-dialog-element-9><a href=#the-dialog-element>dialog</a></code>
@@ -12916,3 +12916,4 @@ interface <dfn id=htmldialogelement>HTMLDialogElement</dfn> : <a id=the-dialog-e
 
 
   <nav><a href=tables.html>← 4.9 Tabular data</a> — <a href=index.html>Table of Contents</a> — <a href=scripting.html>4.12 Scripting →</a></nav>
+<script src=/html/resources/zh-cn.js></script>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/html/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard.css><script defer="" src=https://resources.whatwg.org/dfn.js></script><script>
+<!DOCTYPE html><html class=split lang=en-US-x-hixie><script src=/html/link-fixup.js defer=""></script><meta charset=utf-8><meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name=viewport><title>HTML Standard</title><meta content=#3c790a name=theme-color><link rel=stylesheet href=https://resources.whatwg.org/standard.css><link rel=stylesheet href=/html/resources/zh-cn.css><script defer="" src=https://resources.whatwg.org/dfn.js></script><script>
    function toggleStatus(div) {
      div.parentNode.classList.toggle('wrapped');
    }
@@ -174,7 +174,7 @@
    #abstractimg .left, #abstractimg .bottom { word-spacing: 12px; }
    #abstractimg .right { font-size: 25px; }
   </style>
-  <script data-file-issue-url=https://github.com/whatwg/html/issues/new src=https://resources.whatwg.org/file-issue.js async=""></script>
+  <script data-file-issue-url=https://github.com/whatwg-cn/html/issues/new src=/html/resources/file-issue.js async=""></script>
   <header id=head class="head with-buttons">
    <p><a href=https://whatwg.org/ class=logo><img alt=WHATWG src=https://resources.whatwg.org/logo.svg width=100 height=100></a></p>
    <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>17 December 2016</span></h2></hgroup>
@@ -194,7 +194,7 @@
 
   
 
-  <nav><a href=index.html>Table of Contents</a> — <a href=infrastructure.html>2 通用基础设施 →</a></nav><ol class=toc><li id=toc-introduction><a href=introduction.html#introduction>1 概述</a><ol><li><a href=introduction.html#abstract>1.1 本标准的适用范围</a><li><a href=introduction.html#is-this-html5?>1.2 这是 HTML5 吗?</a><li><a href=introduction.html#背景>1.3 背景</a><li><a href=introduction.html#受众>1.4 受众</a><li><a href=introduction.html#范围>1.5 范围</a><li><a href=introduction.html#历史>1.6 历史</a><li><a href=introduction.html#设计笔记>1.7 设计笔记</a><ol><li><a href=introduction.html#serialisability-of-script-execution>1.7.1 脚本执行的可串行性</a><li><a href=introduction.html#与其他标准的兼容性>1.7.2 与其他标准的兼容性</a><li><a href=introduction.html#可扩展性>1.7.3 可扩展性</a></ol><li><a href=introduction.html#html-vs-xhtml>1.8 HTML 和 XML 语法</a><li><a href=introduction.html#本标准的结构>1.9 本标准的结构</a><ol><li><a href=introduction.html#how-to-read-this-specification>1.9.1 How to read this specification</a><li><a href=introduction.html#typographic-conventions>1.9.2 Typographic conventions</a></ol><li><a href=introduction.html#fingerprint>1.10 隐私问题</a><ol><li><a href=introduction.html#fingerprint-postMessage>1.10.1 跨站通信</a></ol><li><a href=introduction.html#html-的简单介绍>1.11 HTML 的简单介绍</a><ol><li><a href=introduction.html#使用-html-编写安全应用>1.11.1 使用 HTML 编写安全应用</a><li><a href=introduction.html#使用脚本-api-时常见的陷阱>1.11.2 使用脚本 API 时常见的陷阱</a><li><a href=introduction.html#编写-html-时如何发现错误：验证器和一致性检查器>1.11.3 编写 HTML 时如何发现错误：验证器和一致性检查器</a></ol><li><a href=introduction.html#对页面作者的一致性要求>1.12 对页面作者的一致性要求</a><ol><li><a href=introduction.html#表示性的标记语言>1.12.1 表示性的标记语言</a><li><a href=introduction.html#syntax-errors>1.12.2 Syntax errors</a><li><a href=introduction.html#restrictions-on-content-models-and-on-attribute-values>1.12.3 Restrictions on content models and on attribute values</a></ol><li><a href=introduction.html#推荐阅读>1.13 推荐阅读</a></ol></ol><h2 id=introduction>1 概述<a href=#introduction class=self-link></a></h2><div class=status><input onclick=toggleStatus(this) value=⋰ type=button><p class=bugs><strong>Spec bugs:</strong> <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=23036" title="Either drop all mention of mutation events, or specify them in full detail">23036</a></div>
+  <nav><a href=index.html>Table of Contents</a> — <a href=infrastructure.html>2 通用基础设施 →</a></nav><ol class=toc><li id=toc-introduction><a href=introduction.html#introduction>1 概述</a><ol><li><a href=introduction.html#abstract>1.1 本标准的适用范围</a><li><a href=introduction.html#is-this-html5?>1.2 这是 HTML5 吗?</a><li><a href=introduction.html#背景>1.3 背景</a><li><a href=introduction.html#受众>1.4 受众</a><li><a href=introduction.html#范围>1.5 范围</a><li><a href=introduction.html#历史>1.6 历史</a><li><a href=introduction.html#设计笔记>1.7 设计笔记</a><ol><li><a href=introduction.html#serialisability-of-script-execution>1.7.1 脚本执行的可串行性</a><li><a href=introduction.html#与其他标准的兼容性>1.7.2 与其他标准的兼容性</a><li><a href=introduction.html#可扩展性>1.7.3 可扩展性</a></ol><li><a href=introduction.html#html-vs-xhtml>1.8 HTML 和 XML 语法</a><li><a href=introduction.html#本标准的结构>1.9 本标准的结构</a><ol><li><a href=introduction.html#how-to-read-this-specification>1.9.1 How to read this specification</a><li><a href=introduction.html#typographic-conventions>1.9.2 Typographic conventions</a></ol><li><a href=introduction.html#fingerprint>1.10 隐私问题</a><ol><li><a href=introduction.html#fingerprint-postMessage>1.10.1 跨站通信</a></ol><li><a href=introduction.html#html-的简单介绍>1.11 HTML 的简单介绍</a><ol><li><a href=introduction.html#使用-html-编写安全应用>1.11.1 使用 HTML 编写安全应用</a><li><a href=introduction.html#使用脚本-api-时常见的陷阱>1.11.2 使用脚本 API 时常见的陷阱</a><li><a href=introduction.html#编写-html-时如何发现错误：验证器和一致性检查器>1.11.3 编写 HTML 时如何发现错误：验证器和一致性检查器</a></ol><li><a href=introduction.html#对页面作者的一致性要求>1.12 对页面作者的一致性要求</a><ol><li><a href=introduction.html#表示性的标记>1.12.1 表示性的标记</a><li><a href=introduction.html#语法错误>1.12.2 语法错误</a><li><a href=introduction.html#restrictions-on-content-models-and-on-attribute-values>1.12.3 Restrictions on content models and on attribute values</a></ol><li><a href=introduction.html#推荐阅读>1.13 推荐阅读</a></ol></ol><h2 id=introduction>1 概述<a href=#introduction class=self-link></a></h2><div class=status><input onclick=toggleStatus(this) value=⋰ type=button><p class=bugs><strong>Spec bugs:</strong> <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=23036" title="Either drop all mention of mutation events, or specify them in full detail">23036</a></div>
 
   
 
@@ -884,7 +884,7 @@ a.setAttribute('href', 'https://example.com/'); // change the content attribute 
   本节详细地介绍了合法文档和错误文档仍然有所区别的一些常见原因。</p>
 
 
-  <h4 id=表示性的标记语言>1.12.1 表示性的标记语言<a href=#表示性的标记语言 class=self-link></a></h4>
+  <h4 id=表示性的标记>1.12.1 表示性的标记<a href=#表示性的标记 class=self-link></a></h4>
 
   <p><i>This section is non-normative.</i></p>
 
@@ -914,59 +914,58 @@ a.setAttribute('href', 'https://example.com/'); // change the content attribute 
   并提供了一种模式（HTML4 Transitional） 来帮助作者从表示性标记进行迁移；
   后来 XHTML 1.1 更进一步地一起废弃了那些特性。</p>
 
-  <p>HTML 中唯一保留下来的表示性标记特性是 <code id=表示性的标记语言:the-style-attribute><a href=dom.html#the-style-attribute>style</a></code> 属性和 <code id=表示性的标记语言:the-style-element><a href=semantics.html#the-style-element>style</a></code> 元素。
-  生产环境中使用 <code id=表示性的标记语言:the-style-attribute-2><a href=dom.html#the-style-attribute>style</a></code> 属性也在某种程度上不再推荐，
+  <p>HTML 中唯一保留下来的表示性标记特性是 <code id=表示性的标记:the-style-attribute><a href=dom.html#the-style-attribute>style</a></code> 属性和 <code id=表示性的标记:the-style-element><a href=semantics.html#the-style-element>style</a></code> 元素。
+  生产环境中使用 <code id=表示性的标记:the-style-attribute-2><a href=dom.html#the-style-attribute>style</a></code> 属性也在某种程度上不再推荐，
   但在创建原型（这些规则之后可以直接移动到单独的样式表中）
   以及在特殊情况下（当单独的样式表不方便时）提供特定样式很有用。
-  类似地，<code id=表示性的标记语言:the-style-element-2><a href=semantics.html#the-style-element>style</a></code> 元素在引入外部样式内容或者提供页面特定样式时很有用。
+  类似地，<code id=表示性的标记:the-style-element-2><a href=semantics.html#the-style-element>style</a></code> 元素在引入外部样式内容或者提供页面特定样式时很有用。
   但一般来说，当样式适用于多个页面时，外部样式表可能更加方便。</p>
 
   <p>值得注意的是有些先前的表示性元素在本标准中已经被重新定义为媒体无关的：
-  <code id=表示性的标记语言:the-b-element><a href=semantics.html#the-b-element>b</a></code>, <code id=表示性的标记语言:the-i-element><a href=semantics.html#the-i-element>i</a></code>,
-  <code id=表示性的标记语言:the-hr-element><a href=semantics.html#the-hr-element>hr</a></code>, <code id=表示性的标记语言:the-s-element><a href=semantics.html#the-s-element>s</a></code>, <code id=表示性的标记语言:the-small-element><a href=semantics.html#the-small-element>small</a></code>, and <code id=表示性的标记语言:the-u-element><a href=semantics.html#the-u-element>u</a></code>.</p>
+  <code id=表示性的标记:the-b-element><a href=semantics.html#the-b-element>b</a></code>, <code id=表示性的标记:the-i-element><a href=semantics.html#the-i-element>i</a></code>,
+  <code id=表示性的标记:the-hr-element><a href=semantics.html#the-hr-element>hr</a></code>, <code id=表示性的标记:the-s-element><a href=semantics.html#the-s-element>s</a></code>, <code id=表示性的标记:the-small-element><a href=semantics.html#the-small-element>small</a></code>, and <code id=表示性的标记:the-u-element><a href=semantics.html#the-u-element>u</a></code>.</p>
 
 
-  <h4 id=syntax-errors>1.12.2 Syntax errors<a href=#syntax-errors class=self-link></a></h4>
+  <h4 id=语法错误>1.12.2 语法错误<a href=#语法错误 class=self-link></a></h4>
 
   <p><i>This section is non-normative.</i></p>
 
-  <p>The syntax of HTML is constrained to avoid a wide variety of problems.</p>
+  <p>限制 HTML 的语法是为了避免各种各样的问题。</p>
 
-  <dl><dt>Unintuitive error-handling behavior<dd>
+  <dl><dt>不直观的错误处理行为<dd>
 
-    <p>Certain invalid syntax constructs, when parsed, result in DOM trees that are highly
-    unintuitive.</p>
+    <p>某些不合法的语法构造在解析后会导致很不直观的 DOM 树。</p>
 
     <div class=example>
 
-     <p>For example, the following markup fragment results in a DOM with an <code id=syntax-errors:the-hr-element><a href=semantics.html#the-hr-element>hr</a></code> element
-     that is an <em>earlier</em> sibling of the corresponding <code id=syntax-errors:the-table-element><a href=tables.html#the-table-element>table</a></code> element:</p>
+     <p>例如，以下标记片段会导致 DOM 树中的 <code id=语法错误:the-hr-element><a href=semantics.html#the-hr-element>hr</a></code> 元素
+     在相应的 <code id=语法错误:the-table-element><a href=tables.html#the-table-element>table</a></code> 元素<em>之前</em>。</p>
 
      <pre class=bad>&lt;table>&lt;hr>...</pre>
 
     </div>
 
-   <dt>Errors with optional error recovery<dd>
+   <dt>可选错误恢复的错误<dd>
 
-    <p>To allow user agents to be used in controlled environments without having to implement the
-    more bizarre and convoluted error handling rules, user agents are permitted to fail whenever
-    encountering a <a id=syntax-errors:parse-error href=syntax.html#parse-error>parse error</a>.</p>
+    <p>为了允许在受控环境中使用的用户代理不必实现更奇怪和复杂的错误处理规则，
+    允许用户代理在遇到<a href=syntax.html#parse-error id=语法错误:parse-error>解析错误</a>时失败。</p>
 
-   <dt>Errors where the error-handling behavior is not compatible with streaming user agents<dd>
+   <dt>错误处理行为与流式用户代理不兼容的的错误<dd>
 
-    <p>Some error-handling behavior, such as the behavior for the <code>&lt;table>&lt;hr>...</code> example mentioned above, are incompatible with streaming
-    user agents (user agents that process HTML files in one pass, without storing state). To avoid
-    interoperability problems with such user agents, any syntax resulting in such behavior is
-    considered invalid.</p>
+    <p>一些错误处理行为（比如上面提到的<code>&lt;table>&lt;hr>...</code>）
+    与流式用户代理（不存储状态且通过一次遍历来处理 HTML 文件的用户代理）不兼容。
+    为了避免与这样的用户代理的互操作性问题，任何导致该行为的语法都是无效的。</p>
 
-   <dt>Errors that can result in infoset coercion<dd>
+   <dt>的错误Errors that can result in infoset coercion<dd>
 
-    <p>When a user agent based on XML is connected to an HTML parser, it is possible that certain
-    invariants that XML enforces, such as element or attribute names never contain multiple colons,
-    will be violated by an HTML file. Handling this can require that the parser coerce the HTML DOM
-    into an XML-compatible infoset. Most syntax constructs that require such handling are considered
-    invalid. (Comments containing two consecutive hyphens, or ending with a hyphen, are exceptions
-    that are allowed in the HTML syntax.)</p>
+    <p>当一个基于 XML 的用户代理连接到一个 HTML 解析器时，
+    某些 XML 强制的不变式（比如元素或属性名不可包含多个冒号）可能被 HTML 文件违反。
+    处理这种情况可能要求解析器将 HTML DOM 信息强加给 XML 兼容的信息集。
+    要求这一处理的多数语法构造都是不合法的。
+    （包含两个连续的间隔符的注释，或以一个间隔符结尾的注释是特例，这在 HTML 语法中是允许的）。</p>
+    <p class=comment>译注：这一规则意味着基于 XML 的用户代理只需连接一个 HTML
+    解析器（Parser）即可拥有理解 HTML 的能力。所以 HTML 与 XML 只是语法有所不同，
+    表达语义的能力应当是等价的。</p>
 
    <dt>Errors that result in disproportionately poor performance<dd>
 
@@ -976,7 +975,7 @@ a.setAttribute('href', 'https://example.com/'); // change the content attribute 
     <div class=example>
 
      <p>For example, the following markup results in poor performance, since all the unclosed
-     <code id=syntax-errors:the-i-element><a href=semantics.html#the-i-element>i</a></code> elements have to be reconstructed in each paragraph, resulting in progressively
+     <code id=语法错误:the-i-element><a href=semantics.html#the-i-element>i</a></code> elements have to be reconstructed in each paragraph, resulting in progressively
      more elements in each paragraph:</p>
 
      <pre class=bad>&lt;p>&lt;i>She dreamt.
@@ -986,7 +985,7 @@ a.setAttribute('href', 'https://example.com/'); // change the content attribute 
 
      <p>The resulting DOM for this fragment would be:</p>
 
-     <ul class=domTree><li class=t1><code id=syntax-errors:the-p-element><a href=semantics.html#the-p-element>p</a></code><ul><li class=t1><code id=syntax-errors:the-i-element-2><a href=semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=syntax-errors:text><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>She dreamt.</span></ul></ul><li class=t1><code id=syntax-errors:the-p-element-2><a href=semantics.html#the-p-element>p</a></code><ul><li class=t1><code id=syntax-errors:the-i-element-3><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=syntax-errors:the-i-element-4><a href=semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=syntax-errors:text-2><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>She dreamt that she ate breakfast.</span></ul></ul></ul><li class=t1><code id=syntax-errors:the-p-element-3><a href=semantics.html#the-p-element>p</a></code><ul><li class=t1><code id=syntax-errors:the-i-element-5><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=syntax-errors:the-i-element-6><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=syntax-errors:the-i-element-7><a href=semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=syntax-errors:text-3><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>Then lunch.</span></ul></ul></ul></ul><li class=t1><code id=syntax-errors:the-p-element-4><a href=semantics.html#the-p-element>p</a></code><ul><li class=t1><code id=syntax-errors:the-i-element-8><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=syntax-errors:the-i-element-9><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=syntax-errors:the-i-element-10><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=syntax-errors:the-i-element-11><a href=semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=syntax-errors:text-4><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>And finally dinner.</span></ul></ul></ul></ul></ul></ul>
+     <ul class=domTree><li class=t1><code id=语法错误:the-p-element><a href=semantics.html#the-p-element>p</a></code><ul><li class=t1><code id=语法错误:the-i-element-2><a href=semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=语法错误:text><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>She dreamt.</span></ul></ul><li class=t1><code id=语法错误:the-p-element-2><a href=semantics.html#the-p-element>p</a></code><ul><li class=t1><code id=语法错误:the-i-element-3><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-4><a href=semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=语法错误:text-2><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>She dreamt that she ate breakfast.</span></ul></ul></ul><li class=t1><code id=语法错误:the-p-element-3><a href=semantics.html#the-p-element>p</a></code><ul><li class=t1><code id=语法错误:the-i-element-5><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-6><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-7><a href=semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=语法错误:text-3><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>Then lunch.</span></ul></ul></ul></ul><li class=t1><code id=语法错误:the-p-element-4><a href=semantics.html#the-p-element>p</a></code><ul><li class=t1><code id=语法错误:the-i-element-8><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-9><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-10><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-11><a href=semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=语法错误:text-4><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>And finally dinner.</span></ul></ul></ul></ul></ul></ul>
 
     </div>
 
@@ -1040,8 +1039,8 @@ a.setAttribute('href', 'https://example.com/'); // change the content attribute 
 
     <div class=example>
 
-     <p>Another example of this is the DOCTYPE, which is required to trigger <a id=syntax-errors:no-quirks-mode href=https://dom.spec.whatwg.org/#concept-document-no-quirks data-x-internal=no-quirks-mode>no-quirks
-     mode</a>, because the behavior of legacy user agents in <a id=syntax-errors:quirks-mode href=https://dom.spec.whatwg.org/#concept-document-quirks data-x-internal=quirks-mode>quirks mode</a> is often
+     <p>Another example of this is the DOCTYPE, which is required to trigger <a id=语法错误:no-quirks-mode href=https://dom.spec.whatwg.org/#concept-document-no-quirks data-x-internal=no-quirks-mode>no-quirks
+     mode</a>, because the behavior of legacy user agents in <a id=语法错误:quirks-mode href=https://dom.spec.whatwg.org/#concept-document-quirks data-x-internal=quirks-mode>quirks mode</a> is often
      largely undocumented.</p>
 
     </div>
@@ -1065,7 +1064,7 @@ a.setAttribute('href', 'https://example.com/'); // change the content attribute 
     <div class=example>
 
      <p>For example, it is unclear whether the author intended the following to be an
-     <code id=syntax-errors:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements><a href=semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h1</a></code> heading or an <code id=syntax-errors:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-2><a href=semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h2</a></code> heading:</p>
+     <code id=语法错误:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements><a href=semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h1</a></code> heading or an <code id=语法错误:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-2><a href=semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h2</a></code> heading:</p>
 
      <pre class=bad>&lt;h1>Contact details&lt;/h2></pre>
 
@@ -1286,3 +1285,4 @@ a.setAttribute('href', 'https://example.com/'); // change the content attribute 
 
 
   <nav><a href=index.html>Table of Contents</a> — <a href=infrastructure.html>2 通用基础设施 →</a></nav>
+<script src=/html/resources/zh-cn.js></script>

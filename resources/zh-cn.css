@@ -6,3 +6,12 @@
 .note::before, dl.domintro::before { content: '注意'; }
 .bookkeeping:before { content: '簿记细节'; }
 .warning::before { content: '\26A0 Warning!'; }
+
+
+.comment { position: relative; color: #2196F3; background: #e3f3ff; font-style: italic; margin-left: 2em; padding-left: 2em; }
+.comment em, .comment i, .comment var { font-style: normal; }
+span.comment { padding: 0 2em; }
+.comment p:first-child { margin-top: 0; }
+.comment p:last-child { margin-bottom: 0; }
+dd > .comment:first-child { margin-bottom: 0; }
+.comment::before { content: '译注'; background: #2196F3; color: white; padding: 0.15em 0.25em; font-style: normal; position: absolute; top: -0.2em; left: -1.5em; transform: rotate(-5deg); }

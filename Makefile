@@ -1,12 +1,13 @@
 OUTPUT=$(abspath output/html)
 RESULTS=$(OUTPUT)/multipage/*.html $(OUTPUT)/*.html $(OUTPUT)/*.js
 
-update-source:
+update-en: clean-en
 	[ -d html ] || git clone https://github.com/whatwg/html.git --depth=1
-	cd html && git pull && cd ..
+	cd html && git checkout master source && git pull && cd ..
 	mv html/source source
-
-build-en: clean-en
+	rm -rf src/SUMMARY.en.md
+	find src/ -name "*.en.html" -delete
+	find src/ -type d -empty -delete
 	node ./bin/split.js
 
 build-zh:
@@ -29,11 +30,6 @@ deploy:
 
 deploy-force:
 	git push origin `git subtree split --prefix output/html master`:gh-pages --force
-
-clean-en:
-	rm -rf src/SUMMARY.en.md
-	find src/ -name "*.en.html" -delete
-	find src/ -type d -empty -delete
 
 clean-cache:
 	rm -rf html-build/.cache

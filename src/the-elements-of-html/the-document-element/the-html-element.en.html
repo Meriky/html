@@ -32,6 +32,12 @@ interface <dfn>HTMLHtmlElement</dfn> : <span>HTMLElement</span> {};</pre>
   the attribute's value must be a <span>valid non-empty URL potentially surrounded by
   spaces</span>.</p>
 
+  <p class="critical">The <code data-x="attr-html-manifest">manifest</code> attribute is part of the
+  legacy "<a href="#offline">offline Web applications</a>" feature, which is in the process of being
+  removed from the Web platform. (This is a long process that takes many years.) Using the <code
+  data-x="attr-html-manifest">manifest</code> attribute at this time is highly discouraged. Use
+  service workers instead. <ref spec=SW></p>
+
   <p>The <code data-x="attr-html-manifest">manifest</code> attribute only <span
   data-x="concept-appcache-init">has an effect</span> during the early stages of document load.
   Changing the attribute dynamically thus has no effect (and thus, no DOM API is provided for this

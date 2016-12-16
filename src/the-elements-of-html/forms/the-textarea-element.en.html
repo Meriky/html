@@ -63,9 +63,9 @@ interface <dfn>HTMLTextAreaElement</dfn> : <span>HTMLElement</span> {
   [SameObject] readonly attribute <span>NodeList</span> <span data-x="dom-lfe-labels">labels</span>;
 
   void <span data-x="dom-textarea/input-select">select</span>();
-  attribute unsigned long? <span data-x="dom-textarea/input-selectionStart">selectionStart</span>;
-  attribute unsigned long? <span data-x="dom-textarea/input-selectionEnd">selectionEnd</span>;
-  attribute DOMString? <span data-x="dom-textarea/input-selectionDirection">selectionDirection</span>;
+  attribute unsigned long <span data-x="dom-textarea/input-selectionStart">selectionStart</span>;
+  attribute unsigned long <span data-x="dom-textarea/input-selectionEnd">selectionEnd</span>;
+  attribute DOMString <span data-x="dom-textarea/input-selectionDirection">selectionDirection</span>;
   void <span data-x="dom-textarea/input-setRangeText">setRangeText</span>(DOMString replacement);
   void <span data-x="dom-textarea/input-setRangeText">setRangeText</span>(DOMString replacement, unsigned long start, unsigned long end, optional <span>SelectionMode</span> selectionMode = "preserve");
   void <span data-x="dom-textarea/input-setSelectionRange">setSelectionRange</span>(unsigned long start, unsigned long end, optional DOMString direction);

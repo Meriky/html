@@ -1,0 +1,354 @@
+  <h4>The <dfn><code>dialog</code></dfn> element</h4>
+
+  <dl class="element">
+   <dt><span data-x="concept-element-categories">Categories</span>:</dt>
+   <dd><span>Flow content</span>.</dd>
+   <dd><span>Sectioning root</span>.</dd>
+   <dt><span data-x="concept-element-contexts">Contexts in which this element can be used</span>:</dt>
+   <dd>Where <span>flow content</span> is expected.</dd>
+   <dt><span data-x="concept-element-content-model">Content model</span>:</dt>
+   <dd><span>Flow content</span>.</dd>
+   <dt><span data-x="concept-element-attributes">Content attributes</span>:</dt>
+   <dd><span>Global attributes</span></dd>
+   <dd><code data-x="attr-dialog-open">open</code></dd>
+   <dt><span data-x="concept-element-dom">DOM interface</span>:</dt><!--TOPIC:DOM APIs-->
+   <dd>
+<pre class="idl">[<span>HTMLConstructor</span>]
+interface <dfn>HTMLDialogElement</dfn> : <span>HTMLElement</span> {
+  [<span>CEReactions</span>] attribute boolean <span data-x="dom-dialog-open">open</span>;
+  attribute DOMString <span data-x="dom-dialog-returnValue">returnValue</span>;
+  [<span>CEReactions</span>] void <span data-x="dom-dialog-show">show</span>();
+  [<span>CEReactions</span>] void <span data-x="dom-dialog-showModal">showModal</span>();
+  [<span>CEReactions</span>] void <span data-x="dom-dialog-close">close</span>(optional DOMString returnValue);
+};</pre>
+   </dd>
+  </dl><!--TOPIC:HTML-->
+
+  <p>The <code>dialog</code> element represents a part of an application that a user interacts with
+  to perform a task, for example a dialog box, inspector, or window.</p>
+
+  <p>The <dfn><code data-x="attr-dialog-open">open</code></dfn> attribute is a <span>boolean
+  attribute</span>. When specified, it indicates that the <code>dialog</code> element is active and
+  that the user can interact with it.</p>
+
+  <div w-nodev>
+
+  <p>A <code>dialog</code> element without an <code data-x="attr-dialog-open">open</code> attribute
+  specified should not be shown to the user. This requirement may be implemented indirectly through
+  the style layer. For example, user agents that <a href="#renderingUA">support the suggested
+  default rendering</a> implement this requirement using the CSS rules described in the <a
+  href="#rendering">rendering section</a>.</p>
+
+  </div>
+
+  <div class="note">
+   <p>Removing the <code data-x="attr-dialog-open">open</code> attribute will usually hide the
+   dialog. However, doing so has a number of strange additional consequences:
+
+   <ul>
+    <li><p>The <code data-x="event-close">close</code> event will not be fired.</p></li>
+
+    <li><p>The <code data-x="dom-dialog-close">close()</code> method, and any <a
+    href="#canceling-dialogs">user-agent provided cancelation interface</a>, will no longer be able
+    to close the dialog.</p></li>
+
+    <li><p>If the dialog was shown using its <code data-x="dom-dialog-showModal">showModal()</code>
+    method, the <code>Document</code> will still be <span data-x="blocked by a modal
+    dialog">blocked</span>.</p></li>
+   </ul>
+
+   <p>For these reasons, it is generally better to never remove the <code
+   data-x="attr-dialog-open">open</code> attribute manually. Instead, use the <code
+   data-x="dom-dialog-close">close()</code> method to close the dialog, or the <code
+   data-x="attr-hidden">hidden</code> attribute to hide it.</p>
+  </div>
+
+  <p>The <code data-x="attr-tabindex">tabindex</code> attribute must not be specified on
+  <code>dialog</code> elements.</p>
+
+<!--TOPIC:DOM APIs-->
+
+  <dl class="domintro">
+
+   <dt><var>dialog</var> . <code subdfn data-x="dom-dialog-show">show</code>()</dt>
+
+   <dd>
+
+    <p>Displays the <code>dialog</code> element.</p>
+
+   </dd>
+
+   <dt><var>dialog</var> . <code subdfn data-x="dom-dialog-showModal">showModal</code>()</dt>
+
+   <dd>
+
+    <p>Displays the <code>dialog</code> element and makes it the top-most modal dialog.</p>
+
+    <p>This method honors the <code data-x="attr-fe-autofocus">autofocus</code> attribute.</p>
+
+   </dd>
+
+   <dt><var>dialog</var> . <code subdfn data-x="dom-dialog-close">close</code>( [ <var>result</var> ] )</dt>
+
+   <dd>
+
+    <p>Closes the <code>dialog</code> element.</p>
+
+    <p>The argument, if provided, provides a return value.</p>
+
+   </dd>
+
+   <dt><var>dialog</var> . <code subdfn data-x="dom-dialog-returnValue">returnValue</code> [ = <var>result</var> ]</dt>
+
+   <dd>
+
+    <p>Returns the <code>dialog</code>'s return value.</p>
+
+    <p>Can be set, to update the return value.</p>
+
+   </dd>
+
+  </dl>
+
+<!--ADD-TOPIC:CSS-->
+
+  <div w-nodev>
+
+  <p>When the <dfn><code data-x="dom-dialog-show">show()</code></dfn> method is invoked, the user
+  agent must run the following steps:</p>
+
+  <ol>
+
+   <li><p>If the element already has an <code data-x="attr-dialog-open">open</code> attribute, then
+   abort these steps.</p></li>
+
+   <li><p>Add an <code data-x="attr-dialog-open">open</code> attribute to the <code>dialog</code>
+   element, whose value is the empty string.</p></li>
+
+   <li><p>Set the <code>dialog</code> to the <span>normal alignment</span> mode.</p></li>
+
+   <li><p>Run the <span>dialog focusing steps</span> for the <code>dialog</code> element.</p></li>
+
+  </ol>
+
+  <hr>
+
+  <p>Each <code>Document</code> has a stack of <code>dialog</code> elements known as the
+  <dfn>pending dialog stack</dfn>. When a <code>Document</code> is created, this stack must be
+  initialized to be empty.</p>
+
+  <p>When an element is added to the <span>pending dialog stack</span>, it must also be <span
+  data-x="top-layer-add">added</span> to the <span>top layer</span>. When an element is removed from
+  the <span>pending dialog stack</span>, it must be <span data-x="top-layer-remove">removed</span>
+  from the <span>top layer</span>. <ref spec=FULLSCREEN></p>
+
+  <p>When the <dfn><code data-x="dom-dialog-showModal">showModal()</code></dfn> method is invoked,
+  the user agent must run the following steps:</p>
+
+  <ol>
+
+   <li><p>Let <var>subject</var> be the <code>dialog</code> element on which the method was
+   invoked.</p></li>
+
+   <li><p>If <var>subject</var> already has an <code data-x="attr-dialog-open">open</code>
+   attribute, then throw an <span>"<code>InvalidStateError</code>"</span> <code>DOMException</code>
+   and abort these steps.</p></li>
+
+   <li><p>If <var>subject</var> is not <span>connected</span>, then throw an
+   <span>"<code>InvalidStateError</code>"</span> <code>DOMException</code> and abort these
+   steps.</p></li>
+
+   <li><p>Add an <code data-x="attr-dialog-open">open</code> attribute to <var>subject</var>, whose value is the empty string.</p></li>
+
+   <li><p>Set the <code>dialog</code> to the <span>centered alignment</span> mode.</p></li>
+
+   <li><p>Let <var>subject</var>'s <span>node document</span> be <span data-x="blocked by a
+   modal dialog">blocked by the modal dialog</span> <var>subject</var>.</p></li>
+
+   <li><p>Push <var>subject</var> onto <var>subject</var>'s
+   <span>node document</span>'s <span>pending dialog stack</span>.</p></li>
+
+   <li><p>Run the <span>dialog focusing steps</span> for <var>subject</var>.</p></li>
+
+  </ol>
+
+  <p>The <dfn>dialog focusing steps</dfn> for a <code>dialog</code> element <var>subject</var> are as follows:</p>
+
+  <ol>
+
+   <li><p>If for some reason <var>subject</var> is not a <span>control group owner object</span>
+   at this point, or if it is <span>inert</span>, abort these steps.</p></li>
+
+   <li>
+
+    <p>Let <var>control</var> be the first non-<span>inert</span> <span>focusable area</span> in
+    <var>subject</var>'s <span>control group</span> whose <span>DOM anchor</span> has an <code
+    data-x="attr-fe-autofocus">autofocus</code> attribute specified.</p>
+
+    <p>If there isn't one, then let <var>control</var> be the first non-<span>inert</span>
+    <span>focusable area</span> in <var>subject</var>'s <span>control group</span>.</p>
+
+    <p>If there isn't one of those either, then let <var>control</var> be <var>subject</var>.</p>
+
+   </li>
+
+   <li><p>Run the <span>focusing steps</span> for <var>control</var>.</p></li>
+
+  </ol>
+
+  <p>If at any time a <code>dialog</code> element is <span data-x="node is removed from a
+  document">removed from a <code>Document</code></span>, then if that <code>dialog</code> is in that
+  <code>Document</code>'s <span>pending dialog stack</span>, the following steps must be run:</p>
+
+  <ol>
+
+   <li><p>Let <var>subject</var> be that <code>dialog</code> element and <var>document</var> be the <code>Document</code> from which it is being removed.</p></li>
+
+   <li><p>Remove <var>subject</var> from <var>document</var>'s <span>pending
+   dialog stack</span>.</p></li>
+
+   <li><p>If <var>document</var>'s <span>pending dialog stack</span> is not empty, then let
+   <var>document</var> be <span data-x="blocked by a modal dialog">blocked by the modal
+   dialog</span> that is at the top of <var>document</var>'s <span>pending dialog
+   stack</span>. Otherwise, let <var>document</var> be no longer <span>blocked by a modal
+   dialog</span> at all.</p></li>
+
+  </ol>
+
+  <p>When the <dfn><code data-x="dom-dialog-close">close()</code></dfn> method is invoked, the user
+  agent must <span>close the dialog</span> that the method was invoked on. If the method was invoked
+  with an argument, that argument must be used as the return value; otherwise, there is no return
+  value.</p>
+
+<!--TOPIC:HTML-->
+
+  <p>When a <code>dialog</code> element <var>subject</var> is to be <dfn data-x="close the
+  dialog">closed</dfn>, optionally with a return value <var>result</var>, the user agent
+  must run the following steps:</p>
+
+  <ol>
+
+   <li><p>If <var>subject</var> does not have an <code data-x="attr-dialog-open">open</code>
+   attribute, then abort these steps.</p></li>
+
+   <li><p>Remove <var>subject</var>'s <code data-x="attr-dialog-open">open</code>
+   attribute.</p></li>
+
+   <li><p>If the argument <var>result</var> was provided, then set the <code
+   data-x="dom-dialog-returnValue">returnValue</code> attribute to the value of <var>result</var>.</p></li>
+
+   <li>
+
+    <p>If <var>subject</var> is in its <code>Document</code>'s <span>pending dialog
+    stack</span>, then run these substeps:</p>
+
+    <ol>
+
+     <li><p>Remove <var>subject</var> from that <span>pending dialog stack</span>.</p></li>
+
+     <li><p>If that <span>pending dialog stack</span> is not empty, then let <var>subject</var>'s <span>node document</span> be <span data-x="blocked by a modal
+     dialog">blocked by the modal dialog</span> that is at the top of the <span>pending dialog
+     stack</span>. Otherwise, let <var>document</var> be no longer <span>blocked by a modal
+     dialog</span> at all.</p></li>
+
+    </ol>
+
+   </li>
+
+   <li><p><span>Queue a task</span> to <span data-x="concept-event-fire">fire an event</span> named
+   <code data-x="event-close">close</code> at <var>subject</var>.</p></li>
+
+  </ol>
+
+<!--TOPIC:DOM APIs-->
+  <p>The <dfn><code data-x="dom-dialog-returnValue">returnValue</code></dfn> IDL attribute, on
+  getting, must return the last value to which it was set. On setting, it must be set to the new
+  value. When the element is created, it must be set to the empty string.</p>
+<!--TOPIC:HTML-->
+
+  <hr>
+
+  <p id="canceling-dialogs"><strong>Canceling dialogs</strong>: When a <code>Document</code>'s
+  <span>pending dialog stack</span> is not empty, user agents may provide a user interface that,
+  upon activation, <span data-x="queue a task">queues a task</span> to run these steps:
+
+  <ol>
+   <li><p>Let <var>dialog</var> be the top <code>dialog</code> element on the
+   <code>Document</code>'s <span>pending dialog stack</span>.</p></li>
+
+   <li><p>Let <var>close</var> be the result of <span data-x="concept-event-fire">firing an
+   event</span> named <code data-x="event-cancel">cancel</code> at <var>dialog</var>, with the <code
+   data-x="dom-Event-cancelable">cancelable</code> attribute initialized to true.</p></li>
+
+   <li><p>If <var>close</var> is true and <var>dialog</var> has an <code
+   data-x="attr-dialog-open">open</code> attribute, then <span>close the dialog</span> with no
+   return value.</p></li>
+  </ol>
+
+  <p class="note">An example of such a UI mechanism would be the user pressing the "Escape" key.</p>
+
+  <hr>
+
+  <p>A <code>dialog</code> element is in one of two modes: <dfn>normal alignment</dfn> or
+  <dfn>centered alignment</dfn>. When a <code>dialog</code> element is created, it must be placed in
+  the <span>normal alignment</span> mode. In this mode, normal CSS requirements apply to the
+  element. The <span>centered alignment</span> mode is only used for <code>dialog</code> elements
+  that are in the <span>top layer</span>. <ref spec=FULLSCREEN> <ref spec=CSS></p>
+
+  <p>When an element <var>subject</var> is placed in <span>centered alignment</span> mode,
+  and when it is in that mode and has new rendering boxes created, the user agent must set up the
+  element such that its top static position, for the purposes of calculating the
+  <span>used value</span> of the <span>'top'</span> property, is the value that would place the
+  element's top <span>margin edge</span> as far from the top of the <span>viewport</span> as the
+  element's bottom <span>margin edge</span> from the bottom of the <span>viewport</span>, if the
+  element's height is less than the height of the <span>viewport</span>, and otherwise is the value
+  that would place the element's top <span>margin edge</span> at the top of the
+  <span>viewport</span>.</p>
+
+  <p>If there is a <code>dialog</code> element with <span>centered alignment</span> and that is
+  <span>being rendered</span> when its <span>browsing context</span> changes <span>viewport</span>
+  width (as measured in <span data-x="'px'">CSS pixels</span>), then the user agent must recreate
+  the element's boxes, recalculating its top static position as in the previous paragraph.</p>
+
+  <p>This top static position of a <code>dialog</code> element with <span>centered alignment</span>
+  must remain the element's top static position until its boxes are recreated. (The element's static
+  position is only used in calculating the <span>used value</span> of the <span>'top'</span>
+  property in certain situations; it's not used, for instance, to position the element if its
+  <span>'position'</span> property is set to 'static'.)</p>
+
+  <p>User agents in visual interactive media should allow the user to pan the <span>viewport</span>
+  to access all parts of a <code>dialog</code> element's <span>border box</span>, even if the
+  element is larger than the <span>viewport</span> and the <span>viewport</span> would otherwise not
+  have a scroll mechanism (e.g. because the <span>viewport</span>'s <span>'overflow'</span> property
+  is set to 'hidden').</p>
+
+  <hr>
+
+<!--TOPIC:DOM APIs-->
+  <p>The <dfn><code data-x="dom-dialog-open">open</code></dfn> IDL attribute must
+  <span>reflect</span> the <code data-x="attr-dialog-open">open</code> content attribute.</p>
+<!--TOPIC:HTML-->
+
+  </div>
+
+  <div class="example">
+
+   <p>This dialog box has some small print. The <code>main</code> element is used to draw the user's
+   attention to the more important parts.</p>
+
+   <pre>&lt;dialog>
+ &lt;h1>Add to Wallet&lt;/h1>
+ &lt;main>
+  &lt;p>How many gold coins do you want to add to your wallet?&lt;/p>
+  &lt;p>&lt;input name=amt type=number min=0 step=0.01 value=100>&lt;/p>
+ &lt;/main>
+ &lt;p>&lt;small>You add coins at your own risk.&lt;/small>&lt;/p>
+ &lt;p>&lt;label>&lt;input name=round type=checkbox> Only add perfectly round coins &lt;/label>
+ &lt;p>&lt;input type=button onclick="submit()" value="Add Coins">&lt;/p>
+&lt;/dialog></pre>
+
+  </div>
+
+
+
+

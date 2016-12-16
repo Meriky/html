@@ -622,6 +622,11 @@
   the field. It would not be conforming to somehow set the <code>select</code> element to the value
   "Evan", since the user could not have done so themselves.</p>
 
+  <p>A user agent prefilling a form control must not discriminate between form controls that are
+  <span>in a document tree</span> and those that are <span>connected</span>; that is, it is not
+  conforming to make the decision on whether or not to autofill based on whether the element's
+  <span>root</span> is a <span>shadow root</span> versus a <code>Document</code>.</p>
+
   <p>A user agent prefilling a form control's <span data-x="concept-fe-value">value</span> must not
   cause that control to <span data-x="suffering from a type mismatch">suffer from a type
   mismatch</span>, <span data-x="suffering from being too long">suffer from being too long</span>,

@@ -474,8 +474,7 @@
   on a <code>legend</code> element to define a command</dfn>](the-elements-of-html/interactive-elements/commands/using-the-accesskey-attribute-on-a-legend-element-to-define-a-command.en.html)
       9. [<dfn data-x="accesskey-command">Using the <code data-x="attr-accesskey">accesskey</code>
   attribute to define a command on other elements</dfn>](the-elements-of-html/interactive-elements/commands/using-the-accesskey-attribute-to-define-a-command-on-other-elements.en.html)
-    7. [The <dfn><code>dialog</code></dfn> element](the-elements-of-html/interactive-elements/the-dialog-element/index.en.html)
-      1. [Anchor points](the-elements-of-html/interactive-elements/the-dialog-element/anchor-points.en.html)
+    7. [The <dfn><code>dialog</code></dfn> element](the-elements-of-html/interactive-elements/the-dialog-element.en.html)
   12. [Scripting](the-elements-of-html/scripting/index.en.html)
     1. [The <dfn id="script"><code>script</code></dfn> element](the-elements-of-html/scripting/the-script-element/index.en.html)
       1. [Processing model](the-elements-of-html/scripting/the-script-element/processing-model.en.html)

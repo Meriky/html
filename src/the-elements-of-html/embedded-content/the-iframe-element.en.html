@@ -563,6 +563,9 @@ interface <dfn>HTMLIFrameElement</dfn> : <span>HTMLElement</span> {
     <li><p>If <var>document</var> has no <span data-x="concept-document-bc">browsing context</span>,
     then return false.</p></li>
 
+    <li><p>If <var>document</var>'s <span data-x="concept-document-bc">browsing context</span>'s
+    <span>active document</span> is not <var>document</var>, then return false.</p></li>
+
     <li><p>If <var>document</var>'s <span data-x="concept-document-bc">browsing context</span> is a
     <span>top-level browsing context</span>, then return true.</p></li>
 

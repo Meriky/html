@@ -177,7 +177,7 @@
   <script data-file-issue-url=https://github.com/whatwg/html/issues/new src=https://resources.whatwg.org/file-issue.js async=""></script>
   <header id=head class="head with-buttons">
    <p><a href=https://whatwg.org/ class=logo><img alt=WHATWG src=https://resources.whatwg.org/logo.svg width=100 height=100></a></p>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>16 December 2016</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>17 December 2016</span></h2></hgroup>
    
    
   </header>
@@ -221,12 +221,17 @@ interface <dfn id=htmlhtmlelement>HTMLHtmlElement</dfn> : <a id=the-html-element
   the attribute's value must be a <a id=the-html-element:valid-non-empty-url-potentially-surrounded-by-spaces href=infrastructure.html#valid-non-empty-url-potentially-surrounded-by-spaces>valid non-empty URL potentially surrounded by
   spaces</a>.</p>
 
-  <p>The <code id=the-html-element:attr-html-manifest-2><a href=#attr-html-manifest>manifest</a></code> attribute only <a href=browsers.html#concept-appcache-init id=the-html-element:concept-appcache-init>has an effect</a> during the early stages of document load.
+  <p class=critical>The <code id=the-html-element:attr-html-manifest-2><a href=#attr-html-manifest>manifest</a></code> attribute is part of the
+  legacy "<a href=browsers.html#offline>offline Web applications</a>" feature, which is in the process of being
+  removed from the Web platform. (This is a long process that takes many years.) Using the <code id=the-html-element:attr-html-manifest-3><a href=#attr-html-manifest>manifest</a></code> attribute at this time is highly discouraged. Use
+  service workers instead. <a href=references.html#refsSW>[SW]</a></p>
+
+  <p>The <code id=the-html-element:attr-html-manifest-4><a href=#attr-html-manifest>manifest</a></code> attribute only <a href=browsers.html#concept-appcache-init id=the-html-element:concept-appcache-init>has an effect</a> during the early stages of document load.
   Changing the attribute dynamically thus has no effect (and thus, no DOM API is provided for this
   attribute).</p>
 
   <p class=note>For the purposes of <a href=browsers.html#concept-appcache-init id=the-html-element:concept-appcache-init-2>application cache
-  selection</a>, later <code id=the-html-element:the-base-element><a href=#the-base-element>base</a></code> elements cannot affect the <a href=infrastructure.html#parse-a-url id=the-html-element:parse-a-url>parsing of URLs</a> in <code id=the-html-element:attr-html-manifest-3><a href=#attr-html-manifest>manifest</a></code> attributes, as
+  selection</a>, later <code id=the-html-element:the-base-element><a href=#the-base-element>base</a></code> elements cannot affect the <a href=infrastructure.html#parse-a-url id=the-html-element:parse-a-url>parsing of URLs</a> in <code id=the-html-element:attr-html-manifest-5><a href=#attr-html-manifest>manifest</a></code> attributes, as
   the attributes are processed before those elements are seen.</p>
 
   <p class=note>The <code id=the-html-element:dom-applicationcache><a href=browsers.html#dom-applicationcache>window.applicationCache</a></code> IDL
@@ -7886,8 +7891,9 @@ interface <dfn id=htmlhyperlinkelementutils>HTMLHyperlinkElementUtils</dfn> {
   steps:</p>
 
   <ol><li><p><a href=#reinitialise-url id=api-for-a-and-area-elements:reinitialise-url-4>Reinitialize url</a>.<li><p>If this element's <a href=#concept-hyperlink-url id=api-for-a-and-area-elements:concept-hyperlink-url-11>url</a> is null, terminate these
-   steps.<li><p><a href=https://url.spec.whatwg.org/#concept-basic-url-parser id=api-for-a-and-area-elements:basic-url-parser data-x-internal=basic-url-parser>Basic URL parse</a> the given value, followed by <code>:</code>", with this element's <a href=#concept-hyperlink-url id=api-for-a-and-area-elements:concept-hyperlink-url-12>url</a> as
-   <var>url</var> and <a id=api-for-a-and-area-elements:scheme-start-state href=https://url.spec.whatwg.org/#scheme-start-state data-x-internal=scheme-start-state>scheme start state</a> as <var>state override</var>.<li><p><a href=#update-href id=api-for-a-and-area-elements:update-href>Update <code>href</code></a>.</ol>
+   steps.<li><p><a href=https://url.spec.whatwg.org/#concept-basic-url-parser id=api-for-a-and-area-elements:basic-url-parser data-x-internal=basic-url-parser>Basic URL parse</a> the given value, followed by
+   "<code>:</code>", with this element's <a href=#concept-hyperlink-url id=api-for-a-and-area-elements:concept-hyperlink-url-12>url</a>
+   as <var>url</var> and <a id=api-for-a-and-area-elements:scheme-start-state href=https://url.spec.whatwg.org/#scheme-start-state data-x-internal=scheme-start-state>scheme start state</a> as <var>state override</var>.<li><p><a href=#update-href id=api-for-a-and-area-elements:update-href>Update <code>href</code></a>.</ol>
 
   <p>The <dfn id=dom-hyperlink-username><code>username</code></dfn> attribute's getter must
   run these steps:</p>

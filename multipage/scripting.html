@@ -177,7 +177,7 @@
   <script data-file-issue-url=https://github.com/whatwg/html/issues/new src=https://resources.whatwg.org/file-issue.js async=""></script>
   <header id=head class="head with-buttons">
    <p><a href=https://whatwg.org/ class=logo><img alt=WHATWG src=https://resources.whatwg.org/logo.svg width=100 height=100></a></p>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>16 December 2016</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>17 December 2016</span></h2></hgroup>
    
    
   </header>
@@ -4878,8 +4878,8 @@ function AddCloud(data, x, y) { ... }</pre>
 
     <p>Returns the current image-smoothing-quality preference.</p>
 
-    <p>Can be set, to change the preferred quality of image smoothing. Unknown values are
-    ignored.</p>
+    <p>Can be set, to change the preferred quality of image smoothing. The possible values are
+    "<code id=image-smoothing:dom-context-2d-imagesmoothingquality-low><a href=#dom-context-2d-imagesmoothingquality-low>low</a></code>", "<code id=image-smoothing:dom-context-2d-imagesmoothingquality-medium><a href=#dom-context-2d-imagesmoothingquality-medium>medium</a></code>" and "<code id=image-smoothing:dom-context-2d-imagesmoothingquality-high><a href=#dom-context-2d-imagesmoothingquality-high>high</a></code>". Unknown values are ignored.</p>
 
    </dl>
 
@@ -4896,7 +4896,7 @@ function AddCloud(data, x, y) { ... }</pre>
   <p>The <dfn id=dom-context-2d-imagesmoothingquality><code>imageSmoothingQuality</code></dfn>
   attribute, on getting, must return the last value it was set to. On setting, it must be set to the
   new value. When the object implementing the <code id=image-smoothing:canvasimagesmoothing-3><a href=#canvasimagesmoothing>CanvasImageSmoothing</a></code> interface is
-  created, the attribute must be set to "<code id=image-smoothing:dom-context-2d-imagesmoothingquality-low><a href=#dom-context-2d-imagesmoothingquality-low>low</a></code>".</p>
+  created, the attribute must be set to "<code id=image-smoothing:dom-context-2d-imagesmoothingquality-low-2><a href=#dom-context-2d-imagesmoothingquality-low>low</a></code>".</p>
 
   
 
@@ -5839,7 +5839,7 @@ interface <a href=#offscreencanvasrenderingcontext2d id=the-offscreen-2d-renderi
   <ol><li><p>If this <code id=the-offscreen-2d-rendering-context:offscreencanvasrenderingcontext2d-21><a href=#offscreencanvasrenderingcontext2d>OffscreenCanvasRenderingContext2D</a></code>'s <a href=#associated-offscreencanvas-object id=the-offscreen-2d-rendering-context:associated-offscreencanvas-object-4>associated
     <code>OffscreenCanvas</code> object</a> does not have a <a href=#offscreencanvas-placeholder id=the-offscreen-2d-rendering-context:offscreencanvas-placeholder-3>placeholder <code>canvas</code> element</a>, abort
     these steps.<li><p>Let <var>image</var> be a copy of this <code id=the-offscreen-2d-rendering-context:offscreencanvasrenderingcontext2d-22><a href=#offscreencanvasrenderingcontext2d>OffscreenCanvasRenderingContext2D</a></code>'s
-    <a href=#offscreencontext2d-bitmap id=the-offscreen-2d-rendering-context:offscreencontext2d-bitmap-5>bitmap</a>.<li>
+    <a href=#offscreencontext2d-bitmap id=the-offscreen-2d-rendering-context:offscreencontext2d-bitmap-5>bitmap</a>, including the value of its <a href=#offscreencontext2d-origin-clean id=the-offscreen-2d-rendering-context:offscreencontext2d-origin-clean-2>origin-clean</a> flag.<li>
      <p><a id=the-offscreen-2d-rendering-context:queue-a-task href=webappapis.html#queue-a-task>Queue a task</a> in the <a href=#offscreencanvas-placeholder id=the-offscreen-2d-rendering-context:offscreencanvas-placeholder-4>placeholder <code>canvas</code> element</a>'s
      <a id=the-offscreen-2d-rendering-context:relevant-settings-object href=webappapis.html#relevant-settings-object>relevant settings object</a>'s <a id=the-offscreen-2d-rendering-context:responsible-event-loop href=webappapis.html#responsible-event-loop>responsible event loop</a> (which will be a
      <a id=the-offscreen-2d-rendering-context:browsing-context href=browsers.html#browsing-context>browsing context</a> <a id=the-offscreen-2d-rendering-context:event-loop href=webappapis.html#event-loop>event loop</a>) to set the <a href=#offscreencanvas-placeholder id=the-offscreen-2d-rendering-context:offscreencanvas-placeholder-5>placeholder <code>canvas</code> element</a>'s

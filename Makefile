@@ -1,7 +1,7 @@
 OUTPUT=$(abspath output/html)
 RESULTS=$(OUTPUT)/multipage/*.html $(OUTPUT)/*.html $(OUTPUT)/*.js
 
-update-en: clean-en
+update-en:
 	[ -d html ] || git clone https://github.com/whatwg/html.git --depth=1
 	cd html && git checkout master source && git pull && cd ..
 	mv html/source source

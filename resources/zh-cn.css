@@ -1,0 +1,8 @@
+/*
+ * zh-cn localization
+ */
+
+.example::before { content: '示例';  }
+.note::before, dl.domintro::before { content: '注意'; }
+.bookkeeping:before { content: '簿记细节'; }
+.warning::before { content: '\26A0 Warning!'; }

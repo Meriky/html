@@ -1,5 +1,6 @@
 OUTPUT=$(abspath output/html)
-RESULTS=$(OUTPUT)/multipage/*.html $(OUTPUT)/*.html $(OUTPUT)/*.js
+HTMLS=$(OUTPUT)/multipage/*.html $(OUTPUT)/*.html
+RESULTS=$(HTMLS) $(OUTPUT)/*.js
 
 update-en:
 	[ -d html ] || git clone https://github.com/whatwg/html.git --depth=1
@@ -23,7 +24,13 @@ build-zh:
 		-e 's/=\/\?demos\//=\/html\/demos\//g' \
 		-e 's/=\/\?entities.json/=\/html\/entities.json/g' \
 		$(RESULTS)
+	sed -i -r \
+		-e 's/standard.css>/standard.css><link rel=stylesheet href=\/html\/resources\/zh-cn.css>/' \
+		-e 's/issue-url=[^ ]+\s+src=[^ ]+/issue-url=https:\/\/github.com\/whatwg-cn\/html\/issues\/new src=\/html\/resources\/file-issue.js/' \
+		-e '$$a\<script src=\/html\/resources\/zh-cn.js></script>' \
+		$(HTMLS)
 	node ./bin/json-pretify.js ${OUTPUT}/multipage/fragment-links.json
+	rm -rf $(OUTPUT)/resources && cp -r resources $(OUTPUT)
 
 deploy:
 	git subtree push --prefix=output/html --squash origin gh-pages

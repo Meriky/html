@@ -317,19 +317,11 @@
    <var>browsingContext</var>'s <span>active document</span>'s <span>relevant settings
    object</span>'s <span data-x="concept-environment-id">id</span>.</p></li>
 
-   <li><p>Set <var>request</var>'s <span>omit-<code>Origin</code>-header flag</span>.
-
-   <li><p>If <var>request</var>'s <span data-x="concept-request-method">method</span> is not `<code
-   data-x="">GET</code>`, or, if <var>type</var> is "<code data-x="">form-submission</code>", then
-   if there is an <span>origin</span> of the <span>active document</span> of
-   <var>sourceBrowsingContext</var>, unset <var>request</var>'s
-   <span>omit-<code>Origin</code>-header flag</span>.</p></li>
-
-   <li><p>Otherwise, if <var>browsingContext</var> is a <span>child browsing context</span>, and the
+   <li><p>If <var>browsingContext</var> is a <span>child browsing context</span> and the
    <span>browsing context container</span> of <var>browsingContext</var> has a <span>browsing
-   context scope origin</span>, set <var>request</var>'s <span
-   data-x="concept-request-origin">origin</span> to that <span>browsing context scope origin</span>
-   and unset <var>request</var>'s <span>omit-<code>Origin</code>-header flag</span>.</p></li>
+   context scope origin</span>, then set <var>request</var>'s <span
+   data-x="concept-request-origin">origin</span> to that <span>browsing context scope
+   origin</span>.</p></li>
 
    <li>
     <p>Create a new <span>environment</span> <var>reservedEnvironment</var>, and set its <span
@@ -796,6 +788,20 @@
 
      </dd>
 
+     <dt>If the navigation was initiated with a <span>URL</span> that <span
+     data-x="concept-url-equals">equals</span> the <span>browsing context</span>'s <span>active
+     document</span>'s <span data-x="concept-document-url">URL</span></dt>
+
+     <dd>
+      <ol>
+       <li><p>Replace the <span>current entry</span> with a new entry representing the new resource
+       and its <code>Document</code> object, related state, and the default <span>scroll restoration
+       mode</span> of "<code data-x="dom-ScrollRestoration-auto">auto</code>".</p></li>
+       <!-- matches entry creation prose below -->
+
+       <li><p><span>Traverse the history</span> to the new entry.</p></li>
+      </ol>
+     </dd>
 
      <dt>Otherwise</dt>
 
@@ -817,6 +823,7 @@
        <li><p>Append a new entry at the end of the <code>History</code> object representing the new
        resource and its <code>Document</code> object, related state, and the default <span>scroll
        restoration mode</span> of "<code data-x="dom-ScrollRestoration-auto">auto</code>".</p></li>
+       <!-- matches entry creation prose above -->
 
        <li><p><span>Traverse the history</span> to the new entry. If the navigation was initiated
        with <span>replacement enabled</span>, then the traversal must itself be initiated with

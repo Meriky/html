@@ -177,7 +177,7 @@
   <script data-file-issue-url=https://github.com/whatwg-cn/html/issues/new src=/html/resources/file-issue.js async=""></script>
   <header id=head class="head with-buttons">
    <p><a href=https://whatwg.org/ class=logo><img alt=WHATWG src=https://resources.whatwg.org/logo.svg width=100 height=100></a></p>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>17 December 2016</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>22 December 2016</span></h2></hgroup>
    
    
   </header>
@@ -5059,7 +5059,9 @@ ldh-str       = &lt; as defined in <a href=https://tools.ietf.org/html/rfc1034#s
   <ol><li><p>Let <var>request</var> be a new <a href=https://fetch.spec.whatwg.org/#concept-request id="image-button-state-(type=image):concept-request" data-x-internal=concept-request>request</a> whose
    <a href=https://fetch.spec.whatwg.org/#concept-request-url id="image-button-state-(type=image):concept-request-url" data-x-internal=concept-request-url>url</a> is the <a id="image-button-state-(type=image):resulting-url-record" href=infrastructure.html#resulting-url-record>resulting URL record</a>,
    <a href=https://fetch.spec.whatwg.org/#concept-request-client id="image-button-state-(type=image):concept-request-client" data-x-internal=concept-request-client>client</a> is the element's <a id="image-button-state-(type=image):node-document-2" href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a>'s
-   <a id="image-button-state-(type=image):relevant-settings-object" href=webappapis.html#relevant-settings-object>relevant settings object</a>, <a href=https://fetch.spec.whatwg.org/#concept-request-type id="image-button-state-(type=image):concept-request-type" data-x-internal=concept-request-type>type</a> is "<code>image</code>", <a href=https://fetch.spec.whatwg.org/#concept-request-destination id="image-button-state-(type=image):concept-request-destination" data-x-internal=concept-request-destination>destination</a> is "<code>image</code>", <a id="image-button-state-(type=image):omit-origin-header-flag" href=https://fetch.spec.whatwg.org/#omit-origin-header-flag data-x-internal=omit-origin-header-flag>omit-<code>Origin</code>-header flag</a> is set, <a href=https://fetch.spec.whatwg.org/#concept-request-credentials-mode id="image-button-state-(type=image):concept-request-credentials-mode" data-x-internal=concept-request-credentials-mode>credentials mode</a> is "<code>include</code>", and whose <a id="image-button-state-(type=image):use-url-credentials-flag" href=https://fetch.spec.whatwg.org/#concept-request-use-url-credentials-flag data-x-internal=use-url-credentials-flag>use-URL-credentials flag</a> is set.<li><p><a href=https://fetch.spec.whatwg.org/#concept-fetch id="image-button-state-(type=image):concept-fetch" data-x-internal=concept-fetch>Fetch</a> <var>request</var>.</ol>
+   <a id="image-button-state-(type=image):relevant-settings-object" href=webappapis.html#relevant-settings-object>relevant settings object</a>, <a href=https://fetch.spec.whatwg.org/#concept-request-type id="image-button-state-(type=image):concept-request-type" data-x-internal=concept-request-type>type</a> is "<code>image</code>", <a href=https://fetch.spec.whatwg.org/#concept-request-destination id="image-button-state-(type=image):concept-request-destination" data-x-internal=concept-request-destination>destination</a> is "<code>image</code>", <a href=https://fetch.spec.whatwg.org/#concept-request-credentials-mode id="image-button-state-(type=image):concept-request-credentials-mode" data-x-internal=concept-request-credentials-mode>credentials mode</a>
+   is "<code>include</code>", and whose <a id="image-button-state-(type=image):use-url-credentials-flag" href=https://fetch.spec.whatwg.org/#concept-request-use-url-credentials-flag data-x-internal=use-url-credentials-flag>use-URL-credentials flag</a> is
+   set.<li><p><a href=https://fetch.spec.whatwg.org/#concept-fetch id="image-button-state-(type=image):concept-fetch" data-x-internal=concept-fetch>Fetch</a> <var>request</var>.</ol>
 
   
   <p>Fetching the image must <a id="image-button-state-(type=image):delay-the-load-event" href=syntax.html#delay-the-load-event>delay the load event</a> of the element's <a id="image-button-state-(type=image):node-document-3" href=https://dom.spec.whatwg.org/#concept-node-document data-x-internal=node-document>node document</a> until the
@@ -11736,7 +11738,9 @@ fur
     attributes in the <a href="#file-upload-state-(type=file)" id="constructing-form-data-set:file-upload-state-(type=file)-2">File Upload</a> state, the value is not
     normalized.</p>
 
-   <li><p>Return the <var>form data set</var>.</ol>
+   <li><p>Replace the name of each entry in the <var>form data set</var>, and the value of each
+   entry in the <var>form data set</var> whose type is not "<code>file</code>", with the
+   results of <a id=constructing-form-data-set:converting-to-a-sequence-of-unicode-scalar-values href=https://heycam.github.io/webidl/#dfn-obtain-unicode data-x-internal=converting-to-a-sequence-of-unicode-scalar-values>converting to a sequence of Unicode scalar values</a>.<li><p>Return the <var>form data set</var>.</ol>
 
   
 

@@ -177,7 +177,7 @@
   <script data-file-issue-url=https://github.com/whatwg-cn/html/issues/new src=/html/resources/file-issue.js async=""></script>
   <header id=head class="head with-buttons">
    <p><a href=https://whatwg.org/ class=logo><img alt=WHATWG src=https://resources.whatwg.org/logo.svg width=100 height=100></a></p>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>17 December 2016</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>22 December 2016</span></h2></hgroup>
    
    
   </header>
@@ -194,7 +194,7 @@
 
   
 
-  <nav><a href=index.html>Table of Contents</a> — <a href=infrastructure.html>2 通用基础设施 →</a></nav><ol class=toc><li id=toc-introduction><a href=introduction.html#introduction>1 概述</a><ol><li><a href=introduction.html#abstract>1.1 本标准的适用范围</a><li><a href=introduction.html#is-this-html5?>1.2 这是 HTML5 吗?</a><li><a href=introduction.html#背景>1.3 背景</a><li><a href=introduction.html#受众>1.4 受众</a><li><a href=introduction.html#范围>1.5 范围</a><li><a href=introduction.html#历史>1.6 历史</a><li><a href=introduction.html#设计笔记>1.7 设计笔记</a><ol><li><a href=introduction.html#serialisability-of-script-execution>1.7.1 脚本执行的可串行性</a><li><a href=introduction.html#与其他标准的兼容性>1.7.2 与其他标准的兼容性</a><li><a href=introduction.html#可扩展性>1.7.3 可扩展性</a></ol><li><a href=introduction.html#html-vs-xhtml>1.8 HTML 和 XML 语法</a><li><a href=introduction.html#本标准的结构>1.9 本标准的结构</a><ol><li><a href=introduction.html#how-to-read-this-specification>1.9.1 How to read this specification</a><li><a href=introduction.html#排版惯例>1.9.2 排版惯例</a></ol><li><a href=introduction.html#fingerprint>1.10 隐私问题</a><ol><li><a href=introduction.html#fingerprint-postMessage>1.10.1 跨站通信</a></ol><li><a href=introduction.html#html-的简单介绍>1.11 HTML 的简单介绍</a><ol><li><a href=introduction.html#使用-html-编写安全应用>1.11.1 使用 HTML 编写安全应用</a><li><a href=introduction.html#使用脚本-api-时常见的陷阱>1.11.2 使用脚本 API 时常见的陷阱</a><li><a href=introduction.html#编写-html-时如何发现错误：验证器和一致性检查器>1.11.3 编写 HTML 时如何发现错误：验证器和一致性检查器</a></ol><li><a href=introduction.html#对页面作者的一致性要求>1.12 对页面作者的一致性要求</a><ol><li><a href=introduction.html#表示性的标记>1.12.1 表示性的标记</a><li><a href=introduction.html#语法错误>1.12.2 语法错误</a><li><a href=introduction.html#restrictions-on-content-models-and-on-attribute-values>1.12.3 Restrictions on content models and on attribute values</a></ol><li><a href=introduction.html#推荐阅读>1.13 推荐阅读</a></ol></ol><h2 id=introduction>1 概述<a href=#introduction class=self-link></a></h2><div class=status><input onclick=toggleStatus(this) value=⋰ type=button><p class=bugs><strong>Spec bugs:</strong> <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=23036" title="Either drop all mention of mutation events, or specify them in full detail">23036</a></div>
+  <nav><a href=index.html>Table of Contents</a> — <a href=infrastructure.html>2 通用基础设施 →</a></nav><ol class=toc><li id=toc-introduction><a href=introduction.html#introduction>1 概述</a><ol><li><a href=introduction.html#abstract>1.1 本标准的适用范围</a><li><a href=introduction.html#is-this-html5?>1.2 这是 HTML5 吗?</a><li><a href=introduction.html#背景>1.3 背景</a><li><a href=introduction.html#受众>1.4 受众</a><li><a href=introduction.html#范围>1.5 范围</a><li><a href=introduction.html#历史>1.6 历史</a><li><a href=introduction.html#设计笔记>1.7 设计笔记</a><ol><li><a href=introduction.html#serialisability-of-script-execution>1.7.1 脚本执行的可串行性</a><li><a href=introduction.html#与其他标准的兼容性>1.7.2 与其他标准的兼容性</a><li><a href=introduction.html#可扩展性>1.7.3 可扩展性</a></ol><li><a href=introduction.html#html-vs-xhtml>1.8 HTML 和 XML 语法</a><li><a href=introduction.html#本标准的结构>1.9 本标准的结构</a><ol><li><a href=introduction.html#如何阅读本标准>1.9.1 如何阅读本标准</a><li><a href=introduction.html#排版惯例>1.9.2 排版惯例</a></ol><li><a href=introduction.html#fingerprint>1.10 隐私问题</a><ol><li><a href=introduction.html#fingerprint-postMessage>1.10.1 跨站通信</a></ol><li><a href=introduction.html#html-的简单介绍>1.11 HTML 的简单介绍</a><ol><li><a href=introduction.html#使用-html-编写安全应用>1.11.1 使用 HTML 编写安全应用</a><li><a href=introduction.html#使用脚本-api-时常见的陷阱>1.11.2 使用脚本 API 时常见的陷阱</a><li><a href=introduction.html#编写-html-时如何发现错误：验证器和一致性检查器>1.11.3 编写 HTML 时如何发现错误：验证器和一致性检查器</a></ol><li><a href=introduction.html#对页面作者的一致性要求>1.12 对页面作者的一致性要求</a><ol><li><a href=introduction.html#表示性的标记>1.12.1 表示性的标记</a><li><a href=introduction.html#语法错误>1.12.2 语法错误</a><li><a href=introduction.html#restrictions-on-content-models-and-on-attribute-values>1.12.3 Restrictions on content models and on attribute values</a></ol><li><a href=introduction.html#推荐阅读>1.13 推荐阅读</a></ol></ol><h2 id=introduction>1 概述<a href=#introduction class=self-link></a></h2><div class=status><input onclick=toggleStatus(this) value=⋰ type=button><p class=bugs><strong>Spec bugs:</strong> <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=23036" title="Either drop all mention of mutation events, or specify them in full detail">23036</a></div>
 
   
 
@@ -452,40 +452,32 @@
 
   
 
-  <h4 id=how-to-read-this-specification>1.9.1 How to read this specification<a href=#how-to-read-this-specification class=self-link></a></h4>
+  <h4 id=如何阅读本标准>1.9.1 如何阅读本标准<a href=#如何阅读本标准 class=self-link></a></h4>
 
-  <p>This specification should be read like all other specifications. First, it should be read
-  cover-to-cover, multiple times. Then, it should be read backwards at least once. Then it should be
-  read by picking random sections from the contents list and following all the cross-references.</p>
+  <p>阅读本标准的方式与其他标准类似。首先应该完整地阅读多次，然后至少倒着读一次，
+  然后应该从目录中随机选入章节并跟着所有交叉引用读一次。</p>
 
-  <p>As described in the conformance requirements section below, this specification describes
-  conformance criteria for a variety of conformance classes. In particular, there are conformance
-  requirements that apply to <em>producers</em>, for example authors and the documents they create,
-  and there are conformance requirements that apply to <em>consumers</em>, for example Web browsers.
-  They can be distinguished by what they are requiring: a requirement on a producer states what is
-  allowed, while a requirement on a consumer states how software is to act.</p>
+  <p>如下面一致性要求部分所述，本标准描述了各一致性等级的一致性标准。
+  特别地，有些一致性要求适用于<em>生产者</em>（例如作者和他们创建的文档），
+  也有一些适用于<em>消费者</em>（例如 Web 浏览器）。
+  他们的要求是不同的：对生产者的要求声明了什么是允许的，而对消费者的要求声明了软件的行为。</p>
 
   <div class=example>
 
-   <p>For example, "the <code>foo</code> attribute's value must be a <a id=how-to-read-this-specification:valid-integer href=infrastructure.html#valid-integer>valid
-   integer</a>" is a requirement on producers, as it lays out the allowed values; in contrast,
-   the requirement "the <code>foo</code> attribute's value must be parsed using the
-   <a id=how-to-read-this-specification:rules-for-parsing-integers href=infrastructure.html#rules-for-parsing-integers>rules for parsing integers</a>" is a requirement on consumers, as it describes how to
-   process the content.</p>
+   <p>例如，“<code>foo</code> 属性的值必须是一个<a href=infrastructure.html#valid-integer id=如何阅读本标准:valid-integer>合法的整数</a>”
+   是对生产者的要求，因为它规定了允许的取值；相反，
+   “<code>foo</code> 属性的值必须使用 <a href=infrastructure.html#rules-for-parsing-integers id=如何阅读本标准:rules-for-parsing-integers>解析整数的规则</a>来解析”
+   是对消费者的要求，因为它描述了如何处理内容。</p>
 
   </div>
 
-  <p><strong>Requirements on producers have no bearing whatsoever on consumers.</strong></p>
+  <p><strong>对生产者的要求不会对消费者产生任何影响。</strong></p>
 
   <div class=example>
 
-   <p>Continuing the above example, a requirement stating that a particular attribute's value is
-   constrained to being a <a id=how-to-read-this-specification:valid-integer-2 href=infrastructure.html#valid-integer>valid integer</a> emphatically does <em>not</em> imply anything
-   about the requirements on consumers. It might be that the consumers are in fact required to treat
-   the attribute as an opaque string, completely unaffected by whether the value conforms to the
-   requirements or not. It might be (as in the previous example) that the consumers are required to
-   parse the value using specific rules that define how invalid (non-numeric in this case) values
-   are to be processed.</p>
+   <p>继续上述例子，“属性值必须是<a href=infrastructure.html#valid-integer id=如何阅读本标准:valid-integer-2>合法的整数</a>”刻意地没有暗示对消费者的要求。
+   事实上消费者可能被要求把该属性当做透明的字符串，完全不关心它的值是否满足要求。
+   也可能被要求以指定的规则来解析它的值（就像上述例子中那样），这些规则就定义了如何处理不合法的值（在本例子中就是非数字的值）。</p>
 
   </div>
 
@@ -513,36 +505,33 @@
 
   <dl class=domintro><dt><var>variable</var> = <var>object</var> . <code id=排版惯例:x-that><a href=#x-that>method</a></code>( [ <var>optionalArgument</var> ] )<dd>
 
-    <p>This is a note to authors describing the usage of an interface.</p>
+    <p>这是给作者看的，描述了接口的使用。</p>
 
    </dl>
 
-  <pre class=css>/* this is a CSS fragment */</pre>
+  <pre class=css>/* 这是一个 CSS 片段 */</pre>
 
-  <p>The defining instance of a term is marked up like <dfn id=x-this>this</dfn>. Uses of that
-  term are marked up like <a href=#x-this id=排版惯例:x-this>this</a> or like <i id=排版惯例:x-this-2><a href=#x-this>this</a></i>.</p>
+  <p>术语的定义标记为 <dfn id=x-this>这样</dfn>。
+  该术语的使用标记为 <a href=#x-this id=排版惯例:x-this>这样</a> 或 <i id=排版惯例:x-this-2><a href=#x-this>这样</a></i>。</p>
 
-  <p>The defining instance of an element, attribute, or API is marked up like <dfn id=x-that><code>this</code></dfn>. References to that element, attribute, or API are marked up
-  like <code id=排版惯例:x-that-2><a href=#x-that>this</a></code>.</p>
+  <p>元素、属性或 API 的定义标记为<dfn id=x-that><code>这样</code></dfn>。
+  该元素、属性或 API 的引用标记为 <code id=排版惯例:x-that-2><a href=#x-that>这样</a></code>。</p>
 
-  <p>Other code fragments are marked up <code>like this</code>.</p>
+  <p>其他代码片段标记为<code>这样</code>。</p>
 
-  <p>Variables are marked up like <var>this</var>.</p>
+  <p>变量标记为<var>这样</var>。</p>
 
-  <p>In an algorithm, steps in <a href=webappapis.html#synchronous-section id=排版惯例:synchronous-section>synchronous
-  sections</a> are marked with ⌛.</p>
+  <p>在算法中，<a href=webappapis.html#synchronous-section id=排版惯例:synchronous-section>同步部分</a>的步骤标记为 ⌛。</p>
 
-  <p>In some cases, requirements are given in the form of lists with conditions and corresponding
-  requirements. In such cases, the requirements that apply to a condition are always the first set
-  of requirements that follow the condition, even in the case of there being multiple sets of
-  conditions for those requirements. Such cases are presented as follows:</p>
+  <p>有些情况下，要求以列表的形式给出，列表项包括条件和对应的要求。
+  在该情况下，适用于某项条件的要求紧跟着条件出现，这些要求的条件可能有很多个。例如：</p>
 
-  <dl class=switch><dt>This is a condition
-   <dt>This is another condition
-   <dd>This is the requirement that applies to the conditions above.
+  <dl class=switch><dt>这是一个条件
+   <dt>这是另一个条件
+   <dd>这是适用于上述条件的要求
 
-   <dt>This is a third condition
-   <dd>This is the requirement that applies to the third condition.
+   <dt>这是第三个条件
+   <dd>这是适用于第三个条件的要求
 
   </dl>
 
@@ -969,143 +958,128 @@ a.setAttribute('href', 'https://example.com/'); // change the content attribute 
     解析器（Parser）即可拥有理解 HTML 的能力。所以 HTML 与 XML 只是语法有所不同，
     表达语义的能力应当是等价的。</p>
 
-   <dt>Errors that result in disproportionately poor performance<dd>
+   <dt>会导致性能下降的错误<dd>
 
-    <p>Certain syntax constructs can result in disproportionately poor performance. To discourage the
-    use of such constructs, they are typically made non-conforming.</p>
+    <p>某些语法构造可能导致很差的性能。为了阻止这些构造的使用，通常把它们归为不合规范的。</p>
 
     <div class=example>
 
-     <p>For example, the following markup results in poor performance, since all the unclosed
-     <code id=语法错误:the-i-element><a href=semantics.html#the-i-element>i</a></code> elements have to be reconstructed in each paragraph, resulting in progressively
-     more elements in each paragraph:</p>
+     <p>例如，下列标记会导致很差的性能，因为所有未闭合的 <code id=语法错误:the-i-element><a href=semantics.html#the-i-element>i</a></code> 元素必须在每个段落中重新构造，
+     导致每个段落中的元素累加地增多：</p>
 
      <pre class=bad>&lt;p>&lt;i>She dreamt.
 &lt;p>&lt;i>She dreamt that she ate breakfast.
 &lt;p>&lt;i>Then lunch.
 &lt;p>&lt;i>And finally dinner.</pre>
 
-     <p>The resulting DOM for this fragment would be:</p>
+     <p>该片段的结果 DOM 将会是：</p>
 
      <ul class=domTree><li class=t1><code id=语法错误:the-p-element><a href=semantics.html#the-p-element>p</a></code><ul><li class=t1><code id=语法错误:the-i-element-2><a href=semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=语法错误:text><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>She dreamt.</span></ul></ul><li class=t1><code id=语法错误:the-p-element-2><a href=semantics.html#the-p-element>p</a></code><ul><li class=t1><code id=语法错误:the-i-element-3><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-4><a href=semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=语法错误:text-2><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>She dreamt that she ate breakfast.</span></ul></ul></ul><li class=t1><code id=语法错误:the-p-element-3><a href=semantics.html#the-p-element>p</a></code><ul><li class=t1><code id=语法错误:the-i-element-5><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-6><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-7><a href=semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=语法错误:text-3><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>Then lunch.</span></ul></ul></ul></ul><li class=t1><code id=语法错误:the-p-element-4><a href=semantics.html#the-p-element>p</a></code><ul><li class=t1><code id=语法错误:the-i-element-8><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-9><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-10><a href=semantics.html#the-i-element>i</a></code><ul><li class=t1><code id=语法错误:the-i-element-11><a href=semantics.html#the-i-element>i</a></code><ul><li class=t3><code id=语法错误:text-4><a data-x-internal=text href=https://dom.spec.whatwg.org/#interface-text>#text</a></code>: <span>And finally dinner.</span></ul></ul></ul></ul></ul></ul>
 
     </div>
 
-   <dt>Errors involving fragile syntax constructs<dd>
+   <dt>涉及到脆弱的语法构造的错误<dd>
 
-    <p>There are syntax constructs that, for historical reasons, are relatively fragile. To help
-    reduce the number of users who accidentally run into such problems, they are made
-    non-conforming.</p>
+    <p>由于历史原因有一些语法构造相对脆弱。为了避免用户意外地掉到坑里，它们也被归为不合规范的。</p>
 
     <div class=example>
 
-     <p>For example, the parsing of certain named character references in attributes happens even
-     with the closing semicolon being omitted. It is safe to include an ampersand followed by
-     letters that do not form a named character reference, but if the letters are changed to a
-     string that <em>does</em> form a named character reference, they will be interpreted as that
-     character instead.</p>
+     <p>例如，即使省略了关闭分号，对属性中命名的字符引用的解析也会发生。
+     可以安全地引入一个<code>&amp;</code>以及紧随其后的不构成特殊命名的字符引用，
+     但如果这些字母改成构成命名的字符引用，它们将会被解释为那个特殊字符。</p>
 
-     <p>In this fragment, the attribute's value is "<code>?bill&amp;ted</code>":</p>
+     <p>在这个代码片段中，属性值是“<code>?bill&amp;ted</code>”：</p>
 
      <pre class=bad>&lt;a href="?bill&amp;ted">Bill and Ted&lt;/a></pre>
 
-     <p>In the following fragment, however, the attribute's value is actually "<code>?art©</code>", <em>not</em> the intended "<code>?art&amp;copy</code>",
-     because even without the final semicolon, "<code>&amp;copy</code>" is handled the same
-     as "<code>&amp;copy;</code>" and thus gets interpreted as "<code>©</code>":</p>
+     <p>在下面的代码片段中，属性值实际上会变成“<code>?art©</code>”，
+     而<em>不是</em> 期望的 “<code>?art&amp;copy</code>”，
+     因为即使没有最后的分号“<code>&amp;copy</code>”也会一样地被处理为
+     “<code>&amp;copy;</code>”最终被解释为“<code>©</code>”：</p>
 
      <pre class=bad>&lt;a href="?art&amp;copy">Art and Copy&lt;/a></pre>
 
-     <p>To avoid this problem, all named character references are required to end with a semicolon,
-     and uses of named character references without a semicolon are flagged as errors.</p>
+     <p>为了避免这一问题，要求所有命名的字符引用以分号结束，
+     所有使用命名字符引用但未添加分号的都被标记为错误。</p>
 
-     <p>Thus, the correct way to express the above cases is as
-     follows:</p>
+     <p>因此正确地表达上述情况的方式如下：</p>
 
      <pre>&lt;a href="?bill&amp;ted">Bill and Ted&lt;/a> &lt;!-- &amp;ted is ok, since it's not a named character reference --></pre>
      <pre>&lt;a href="?art&amp;amp;copy">Art and Copy&lt;/a> &lt;!-- the &amp; has to be escaped, since &amp;copy <em>is</em> a named character reference --></pre>
 
     </div>
 
-   <dt>Errors involving known interoperability problems in legacy user agents<dd>
+   <dt>涉及旧用户代理中的已知互操作性问题的错误<dd>
 
-    <p>Certain syntax constructs are known to cause especially subtle or serious problems in legacy
-    user agents, and are therefore marked as non-conforming to help authors avoid them.</p>
+    <p>某些语法构造在旧的用户代理中会造成一些已知的细微或严重的问题。
+    因此他们被标记为不合规范的来帮助作者避免这些问题。</p>
 
     <div class=example>
 
-     <p>For example, this is why the U+0060 GRAVE ACCENT character (`) is not allowed in unquoted
-     attributes. In certain legacy user agents,  it is sometimes treated as a
-     quote character.</p>
+     <p>例如 U+0060 重音符（`）不允许出现在没有引号的属性中。
+     因为在某些旧用户代理中，它有时会被当做一个引号。</p>
 
     </div>
 
     <div class=example>
 
-     <p>Another example of this is the DOCTYPE, which is required to trigger <a id=语法错误:no-quirks-mode href=https://dom.spec.whatwg.org/#concept-document-no-quirks data-x-internal=no-quirks-mode>no-quirks
-     mode</a>, because the behavior of legacy user agents in <a id=语法错误:quirks-mode href=https://dom.spec.whatwg.org/#concept-document-quirks data-x-internal=quirks-mode>quirks mode</a> is often
-     largely undocumented.</p>
+     <p>另一个例子是必须使用 DOCTYPE 来触发 <a href=https://dom.spec.whatwg.org/#concept-document-no-quirks id=语法错误:no-quirks-mode data-x-internal=no-quirks-mode>非怪异模式</a>，
+     因为旧用户代理在 <a href=https://dom.spec.whatwg.org/#concept-document-quirks id=语法错误:quirks-mode data-x-internal=quirks-mode>怪异模式</a> 下的行为通常都没有文档。</p>
 
     </div>
 
-   <dt>Errors that risk exposing authors to security attacks<dd>
+   <dt>可能引发对作者的安全攻击的错误<dd>
 
-    <p>Certain restrictions exist purely to avoid known security problems.</p>
+    <p>某些限制纯粹是为了避免已知的安全问题。</p>
 
     <div class=example>
 
-     <p>For example, the restriction on using UTF-7 exists purely to avoid authors falling prey to a
-     known cross-site-scripting attack using UTF-7. <a href=references.html#refsUTF7>[UTF7]</a></p>
+     <p>例如，对使用 UTF-7 的限制纯粹是为了避免作者成为使用 UTF-7
+     的已知跨站脚本攻击的的目标。<a href=references.html#refsUTF7>[UTF7]</a></p>
 
     </div>
 
-   <dt>Cases where the author's intent is unclear<dd>
+   <dt>作者的意图不清楚的情况<dd>
 
-    <p>Markup where the author's intent is very unclear is often made non-conforming. Correcting
-    these errors early makes later maintenance easier.</p>
+    <p>作者意图不清楚的标记通常被划为不规范的。
+    尽早修复这些错误会使得后续维护更为容易。</p>
 
     <div class=example>
 
-     <p>For example, it is unclear whether the author intended the following to be an
-     <code id=语法错误:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements><a href=semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h1</a></code> heading or an <code id=语法错误:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-2><a href=semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h2</a></code> heading:</p>
+     <p>例如，作者是要将以下内容作为 <code id=语法错误:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements><a href=semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h1</a></code> 标题还是
+     <code id=语法错误:the-h1,-h2,-h3,-h4,-h5,-and-h6-elements-2><a href=semantics.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements>h2</a></code> 标题的意图并不明确：</p>
 
      <pre class=bad>&lt;h1>Contact details&lt;/h2></pre>
 
     </div>
 
-   <dt>Cases that are likely to be typos<dd>
+   <dt>可能是拼写错误的情况<dd>
 
-    <p>When a user makes a simple typo, it is helpful if the error can be caught early, as this can
-    save the author a lot of debugging time. This specification therefore usually considers it an
-    error to use element names, attribute names, and so forth, that do not match the names defined
-    in this specification.</p>
+    <p>当用户发生了拼写错误，提早捕获该错误是有帮助的，因为这可以节省作者很多调试时间。
+    因此本标准通常认为使用与本标准中定义的名字不匹配的元素名、属性名等是错误的。</p>
 
     <div class=example>
 
-     <p>For example, if the author typed <code>&lt;capton></code> instead of <code>&lt;caption></code>, this would be flagged as an error and the author could correct
-     the typo immediately.</p>
+     <p>例如，如果作者键入<code>&lt;capton></code> 而不是 <code>&lt;caption></code>，这将被标记为错误，作者可以立即更正错字。</p>
 
     </div>
 
-   <dt>Errors that could interfere with new syntax in the future<dd>
+   <dt>将来可能会干扰新语法的错误<dd>
 
-    <p>In order to allow the language syntax to be extended in the future, certain otherwise
-    harmless features are disallowed.</p>
+    <p>为了允许将来扩展语言语法，某些本来无害的特性也是不允许的。</p>
 
     <div class=example>
 
-     <p>For example, "attributes" in end tags are ignored currently, but they are invalid, in case a
-     future change to the language makes use of that syntax feature without conflicting with
-     already-deployed (and valid!) content.</p>
+     <p>例如，在结束标签中的“属性”目前被忽略，但它们是非法的。
+     以防未来使用该语法特性的语言变更与已部署（但是合法的！）内容产生冲突。</p>
 
     </div>
 
    </dl>
 
-  <p>Some authors find it helpful to be in the practice of always quoting all attributes and always
-  including all optional tags, preferring the consistency derived from such custom over the minor
-  benefits of terseness afforded by making use of the flexibility of the HTML syntax. To aid such
-  authors, conformance checkers can provide modes of operation wherein such conventions are
-  enforced.</p>
+  <p>一些作者发现，在实践中总是用引号包含所有的属性并且总是包含所有的可选标签很有帮助，
+  相比于利用 HTML 语法的灵活性而带来的一点简洁，更偏好这一做法带来的一致性。
+  为了协助这样的作者，一致性检查器可以提供执行这一惯例的运行模式。</p>
 
 
 

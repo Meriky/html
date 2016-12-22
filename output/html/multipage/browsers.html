@@ -177,7 +177,7 @@
   <script data-file-issue-url=https://github.com/whatwg-cn/html/issues/new src=/html/resources/file-issue.js async=""></script>
   <header id=head class="head with-buttons">
    <p><a href=https://whatwg.org/ class=logo><img alt=WHATWG src=https://resources.whatwg.org/logo.svg width=100 height=100></a></p>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>17 December 2016</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>22 December 2016</span></h2></hgroup>
    
    
   </header>
@@ -3492,15 +3492,10 @@ State: &lt;OUTPUT NAME=I>1&lt;/OUTPUT> &lt;INPUT VALUE="Increment" TYPE=BUTTON O
    mode</a> to "<code>include</code>", <a id=navigating-across-documents:use-url-credentials-flag href=https://fetch.spec.whatwg.org/#concept-request-use-url-credentials-flag data-x-internal=use-url-credentials-flag>use-URL-credentials flag</a>, <a href=https://fetch.spec.whatwg.org/#concept-request-redirect-mode id=navigating-across-documents:concept-request-redirect-mode data-x-internal=concept-request-redirect-mode>redirect mode</a> to "<code>manual</code>",
    and <a href=https://fetch.spec.whatwg.org/#concept-request-target-client-id id=navigating-across-documents:concept-request-target-client-id data-x-internal=concept-request-target-client-id>target client id</a> to
    <var>browsingContext</var>'s <a href=#active-document id=navigating-across-documents:active-document-11>active document</a>'s <a id=navigating-across-documents:relevant-settings-object-3 href=webappapis.html#relevant-settings-object>relevant settings
-   object</a>'s <a href=webappapis.html#concept-environment-id id=navigating-across-documents:concept-environment-id>id</a>.<li><p>Set <var>request</var>'s <a id=navigating-across-documents:omit-origin-header-flag href=https://fetch.spec.whatwg.org/#omit-origin-header-flag data-x-internal=omit-origin-header-flag>omit-<code>Origin</code>-header flag</a>.
-
-   <li><p>If <var>request</var>'s <a href=https://fetch.spec.whatwg.org/#concept-request-method id=navigating-across-documents:concept-request-method data-x-internal=concept-request-method>method</a> is not `<code>GET</code>`, or, if <var>type</var> is "<code>form-submission</code>", then
-   if there is an <a href=#concept-origin id=navigating-across-documents:concept-origin-3>origin</a> of the <a href=#active-document id=navigating-across-documents:active-document-12>active document</a> of
-   <var>sourceBrowsingContext</var>, unset <var>request</var>'s
-   <a id=navigating-across-documents:omit-origin-header-flag-2 href=https://fetch.spec.whatwg.org/#omit-origin-header-flag data-x-internal=omit-origin-header-flag>omit-<code>Origin</code>-header flag</a>.<li><p>Otherwise, if <var>browsingContext</var> is a <a href=#child-browsing-context id=navigating-across-documents:child-browsing-context>child browsing context</a>, and the
+   object</a>'s <a href=webappapis.html#concept-environment-id id=navigating-across-documents:concept-environment-id>id</a>.<li><p>If <var>browsingContext</var> is a <a href=#child-browsing-context id=navigating-across-documents:child-browsing-context>child browsing context</a> and the
    <a href=#browsing-context-container id=navigating-across-documents:browsing-context-container>browsing context container</a> of <var>browsingContext</var> has a <a href=#browsing-context-scope-origin id=navigating-across-documents:browsing-context-scope-origin>browsing
-   context scope origin</a>, set <var>request</var>'s <a href=https://fetch.spec.whatwg.org/#concept-request-origin id=navigating-across-documents:concept-request-origin data-x-internal=concept-request-origin>origin</a> to that <a href=#browsing-context-scope-origin id=navigating-across-documents:browsing-context-scope-origin-2>browsing context scope origin</a>
-   and unset <var>request</var>'s <a id=navigating-across-documents:omit-origin-header-flag-3 href=https://fetch.spec.whatwg.org/#omit-origin-header-flag data-x-internal=omit-origin-header-flag>omit-<code>Origin</code>-header flag</a>.<li>
+   context scope origin</a>, then set <var>request</var>'s <a href=https://fetch.spec.whatwg.org/#concept-request-origin id=navigating-across-documents:concept-request-origin data-x-internal=concept-request-origin>origin</a> to that <a href=#browsing-context-scope-origin id=navigating-across-documents:browsing-context-scope-origin-2>browsing context scope
+   origin</a>.<li>
     <p>Create a new <a id=navigating-across-documents:environment href=webappapis.html#environment>environment</a> <var>reservedEnvironment</var>, and set its <a href=webappapis.html#concept-environment-id id=navigating-across-documents:concept-environment-id-2>id</a> to a new unique opaque string, its <a href=webappapis.html#concept-environment-creation-url id=navigating-across-documents:concept-environment-creation-url>creation URL</a> to <var>request</var>'s
     <a id=navigating-across-documents:url-2 href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>url</a>, and its <a href=webappapis.html#concept-environment-target-browsing-context id=navigating-across-documents:concept-environment-target-browsing-context>target
     browsing context</a> to <var>browsingContext</var>.</p>
@@ -3597,7 +3592,7 @@ State: &lt;OUTPUT NAME=I>1&lt;/OUTPUT> &lt;INPUT VALUE="Increment" TYPE=BUTTON O
   <ol><li>
     <p>If any of the following are true, then <a href=#read-ua-inline id=navigating-across-documents:read-ua-inline>display the inline
     content with an appropriate error shown to the user</a>, with the newly created
-    <code id=navigating-across-documents:document-3><a href=dom.html#document>Document</a></code> object's <a href=#concept-origin id=navigating-across-documents:concept-origin-4>origin</a> set to a new <a href=#concept-origin-opaque id=navigating-across-documents:concept-origin-opaque>opaque origin</a>, and abort these steps.</p>
+    <code id=navigating-across-documents:document-3><a href=dom.html#document>Document</a></code> object's <a href=#concept-origin id=navigating-across-documents:concept-origin-3>origin</a> set to a new <a href=#concept-origin-opaque id=navigating-across-documents:concept-origin-opaque>opaque origin</a>, and abort these steps.</p>
 
     <ul><li><p><var>response</var> is a network error.<li><p class=XXX>TODO: Define <code>X-Frame-Options</code>
      processing here [<a href=https://github.com/whatwg/html/issue/1230>whatwg/html#1230</a>].<li><p>The <a id=navigating-across-documents:should-navigation-response-to-navigation-request-of-type-from-source-in-target-be-blocked-by-content-security-policy href=https://w3c.github.io/webappsec-csp/#should-block-navigation-response data-x-internal=should-navigation-response-to-navigation-request-of-type-from-source-in-target-be-blocked-by-content-security-policy>Should navigation response to navigation request of type from source in target
@@ -3747,7 +3742,7 @@ State: &lt;OUTPUT NAME=I>1&lt;/OUTPUT> &lt;INPUT VALUE="Increment" TYPE=BUTTON O
   data to an external software package</dfn> separate from the user agent (e.g. handing a <code id=navigating-across-documents:mailto-protocol-2><a data-x-internal=mailto-protocol href=https://tools.ietf.org/html/rfc6068#section-2>mailto:</a></code> URL to a mail client, or a Word document to a word
   processor), user agents should attempt to mitigate the risk that this is an attempt to exploit the
   target software, e.g. by prompting the user to confirm that the <a href=#source-browsing-context id=navigating-across-documents:source-browsing-context-10>source browsing
-  context</a>'s <a href=#active-document id=navigating-across-documents:active-document-13>active document</a>'s <a href=#concept-origin id=navigating-across-documents:concept-origin-5>origin</a> is to be allowed to invoke the
+  context</a>'s <a href=#active-document id=navigating-across-documents:active-document-12>active document</a>'s <a href=#concept-origin id=navigating-across-documents:concept-origin-4>origin</a> is to be allowed to invoke the
   specified software. In particular, if the <a href=#navigate id=navigating-across-documents:navigate-13>navigate</a> algorithm, when it was invoked,
   was not <a id=navigating-across-documents:triggered-by-user-activation href=interaction.html#triggered-by-user-activation>triggered by user activation</a>, the user agent should not invoke the external
   software package without prior user confirmation.</p>
@@ -3780,20 +3775,25 @@ State: &lt;OUTPUT NAME=I>1&lt;/OUTPUT> &lt;INPUT VALUE="Increment" TYPE=BUTTON O
       <ol><li><p>Replace the <code id=navigating-across-documents:document-18><a href=dom.html#document>Document</a></code> of the entry being updated, and any other entries
        that referenced the same document as that entry, with the new <code id=navigating-across-documents:document-19><a href=dom.html#document>Document</a></code>.<li><p><a href=#traverse-the-history id=navigating-across-documents:traverse-the-history>Traverse the history</a> to the new entry.</ol>
 
+     <dt>If the navigation was initiated with a <a id=navigating-across-documents:url-10 href=https://url.spec.whatwg.org/#concept-url data-x-internal=url>URL</a> that <a href=https://url.spec.whatwg.org/#concept-url-equals id=navigating-across-documents:concept-url-equals-2 data-x-internal=concept-url-equals>equals</a> the <a href=#browsing-context id=navigating-across-documents:browsing-context-9>browsing context</a>'s <a href=#active-document id=navigating-across-documents:active-document-13>active
+     document</a>'s <a href=https://dom.spec.whatwg.org/#concept-document-url id="navigating-across-documents:the-document's-address-6" data-x-internal="the-document's-address">URL</a><dd>
+      <ol><li><p>Replace the <a href=#current-entry id=navigating-across-documents:current-entry-3>current entry</a> with a new entry representing the new resource
+       and its <code id=navigating-across-documents:document-20><a href=dom.html#document>Document</a></code> object, related state, and the default <a href=#scroll-restoration-mode id=navigating-across-documents:scroll-restoration-mode>scroll restoration
+       mode</a> of "<code id=navigating-across-documents:dom-scrollrestoration-auto><a href=#dom-scrollrestoration-auto>auto</a></code>".<li><p><a href=#traverse-the-history id=navigating-across-documents:traverse-the-history-2>Traverse the history</a> to the new entry.</ol>
      <dt>Otherwise<dd>
 
       <ol><li>
 
-        <p>Remove all the entries in the <a href=#browsing-context id=navigating-across-documents:browsing-context-9>browsing context</a>'s <a href=#session-history id=navigating-across-documents:session-history-2>session
-        history</a> after the <a href=#current-entry id=navigating-across-documents:current-entry-3>current entry</a>. If the <a href=#current-entry id=navigating-across-documents:current-entry-4>current entry</a> is
+        <p>Remove all the entries in the <a href=#browsing-context id=navigating-across-documents:browsing-context-10>browsing context</a>'s <a href=#session-history id=navigating-across-documents:session-history-2>session
+        history</a> after the <a href=#current-entry id=navigating-across-documents:current-entry-4>current entry</a>. If the <a href=#current-entry id=navigating-across-documents:current-entry-5>current entry</a> is
         the last entry in the session history, then no entries are removed.</p>
 
         <p class=note>This <a href=#history-notes>doesn't necessarily have to affect</a> the
         user agent's user interface.</p>
 
        <li><p>Append a new entry at the end of the <code id=navigating-across-documents:history-2><a href=#history-2>History</a></code> object representing the new
-       resource and its <code id=navigating-across-documents:document-20><a href=dom.html#document>Document</a></code> object, related state, and the default <a href=#scroll-restoration-mode id=navigating-across-documents:scroll-restoration-mode>scroll
-       restoration mode</a> of "<code id=navigating-across-documents:dom-scrollrestoration-auto><a href=#dom-scrollrestoration-auto>auto</a></code>".<li><p><a href=#traverse-the-history id=navigating-across-documents:traverse-the-history-2>Traverse the history</a> to the new entry. If the navigation was initiated
+       resource and its <code id=navigating-across-documents:document-21><a href=dom.html#document>Document</a></code> object, related state, and the default <a href=#scroll-restoration-mode id=navigating-across-documents:scroll-restoration-mode-2>scroll
+       restoration mode</a> of "<code id=navigating-across-documents:dom-scrollrestoration-auto-2><a href=#dom-scrollrestoration-auto>auto</a></code>".<li><p><a href=#traverse-the-history id=navigating-across-documents:traverse-the-history-3>Traverse the history</a> to the new entry. If the navigation was initiated
        with <a href=#replacement-enabled id=navigating-across-documents:replacement-enabled-2>replacement enabled</a>, then the traversal must itself be initiated with
        <a href=#replacement-enabled id=navigating-across-documents:replacement-enabled-3>replacement enabled</a>.</p>
 
@@ -3803,9 +3803,9 @@ State: &lt;OUTPUT NAME=I>1&lt;/OUTPUT> &lt;INPUT VALUE="Increment" TYPE=BUTTON O
 
    <li><p>The <a href=#navigate id=navigating-across-documents:navigate-16>navigation algorithm</a> has now <dfn id=concept-navigate-mature>matured</dfn>.<li><p><i>Fragment loop</i>: <a id=navigating-across-documents:spin-the-event-loop href=webappapis.html#spin-the-event-loop>Spin the event loop</a> for a user-agent-defined amount of
    time, as desired by the user agent implementor. (This is intended to allow the user agent to
-   optimize the user experience in the face of performance concerns.)<li><p>If the <code id=navigating-across-documents:document-21><a href=dom.html#document>Document</a></code> object has no parser, or its parser has <a href=syntax.html#stop-parsing id=navigating-across-documents:stop-parsing>stopped parsing</a>, or the user agent has reason to believe the user is no longer
+   optimize the user experience in the face of performance concerns.)<li><p>If the <code id=navigating-across-documents:document-22><a href=dom.html#document>Document</a></code> object has no parser, or its parser has <a href=syntax.html#stop-parsing id=navigating-across-documents:stop-parsing>stopped parsing</a>, or the user agent has reason to believe the user is no longer
    interested in scrolling to the <a href=https://url.spec.whatwg.org/#concept-url-fragment id=navigating-across-documents:concept-url-fragment-2 data-x-internal=concept-url-fragment>fragment</a>, then abort
-   these steps.<li><p><a href=#scroll-to-the-fragment-identifier id=navigating-across-documents:scroll-to-the-fragment-identifier>Scroll to the fragment</a> given in the document's <a href=https://dom.spec.whatwg.org/#concept-document-url id="navigating-across-documents:the-document's-address-6" data-x-internal="the-document's-address">URL</a>. If this fails to find <a href=#the-indicated-part-of-the-document id=navigating-across-documents:the-indicated-part-of-the-document>an indicated part of the document</a>, then return to the <i>fragment
+   these steps.<li><p><a href=#scroll-to-the-fragment-identifier id=navigating-across-documents:scroll-to-the-fragment-identifier>Scroll to the fragment</a> given in the document's <a href=https://dom.spec.whatwg.org/#concept-document-url id="navigating-across-documents:the-document's-address-7" data-x-internal="the-document's-address">URL</a>. If this fails to find <a href=#the-indicated-part-of-the-document id=navigating-across-documents:the-indicated-part-of-the-document>an indicated part of the document</a>, then return to the <i>fragment
    loop</i> step.</ol>
 
   <p>The <a id=navigating-across-documents:task-source-2 href=webappapis.html#task-source>task source</a> for this <a href=webappapis.html#concept-task id=navigating-across-documents:concept-task-3>task</a> is the
@@ -5502,8 +5502,7 @@ NETWORK:
      progress</a>, then display some sort of user interface indicating to the user that the user
      agent is checking for the availability of updates.</ol>
    <li><p>Let <var>request</var> be a new <a href=https://fetch.spec.whatwg.org/#concept-request id=downloading-or-updating-an-application-cache:concept-request data-x-internal=concept-request>request</a> whose
-   <a href=https://fetch.spec.whatwg.org/#concept-request-url id=downloading-or-updating-an-application-cache:concept-request-url data-x-internal=concept-request-url>url</a> is <var>manifest URL</var>, <a href=https://fetch.spec.whatwg.org/#concept-request-client id=downloading-or-updating-an-application-cache:concept-request-client data-x-internal=concept-request-client>client</a> is null, <a href=https://fetch.spec.whatwg.org/#concept-request-destination id=downloading-or-updating-an-application-cache:concept-request-destination data-x-internal=concept-request-destination>destination</a> is the empty string,
-   <a id=downloading-or-updating-an-application-cache:omit-origin-header-flag href=https://fetch.spec.whatwg.org/#omit-origin-header-flag data-x-internal=omit-origin-header-flag>omit-<code>Origin</code>-header flag</a> is set, <a href=https://fetch.spec.whatwg.org/#concept-request-referrer id=downloading-or-updating-an-application-cache:concept-request-referrer data-x-internal=concept-request-referrer>referrer</a> is "<code>no-referrer</code>",
+   <a href=https://fetch.spec.whatwg.org/#concept-request-url id=downloading-or-updating-an-application-cache:concept-request-url data-x-internal=concept-request-url>url</a> is <var>manifest URL</var>, <a href=https://fetch.spec.whatwg.org/#concept-request-client id=downloading-or-updating-an-application-cache:concept-request-client data-x-internal=concept-request-client>client</a> is null, <a href=https://fetch.spec.whatwg.org/#concept-request-destination id=downloading-or-updating-an-application-cache:concept-request-destination data-x-internal=concept-request-destination>destination</a> is the empty string, <a href=https://fetch.spec.whatwg.org/#concept-request-referrer id=downloading-or-updating-an-application-cache:concept-request-referrer data-x-internal=concept-request-referrer>referrer</a> is "<code>no-referrer</code>",
    <a id=downloading-or-updating-an-application-cache:synchronous-flag href=https://fetch.spec.whatwg.org/#synchronous-flag data-x-internal=synchronous-flag>synchronous flag</a> is set, <a href=https://fetch.spec.whatwg.org/#concept-request-credentials-mode id=downloading-or-updating-an-application-cache:concept-request-credentials-mode data-x-internal=concept-request-credentials-mode>credentials
    mode</a> is "<code>include</code>", and whose <a id=downloading-or-updating-an-application-cache:use-url-credentials-flag href=https://fetch.spec.whatwg.org/#concept-request-use-url-credentials-flag data-x-internal=use-url-credentials-flag>use-URL-credentials
    flag</a> is set.<li>

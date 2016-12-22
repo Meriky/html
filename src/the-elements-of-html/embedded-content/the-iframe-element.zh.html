@@ -18,6 +18,7 @@
    <dd><code data-x="attr-iframe-name">name</code></dd>
    <dd><code data-x="attr-iframe-sandbox">sandbox</code></dd>
    <dd><code data-x="attr-iframe-allowfullscreen">allowfullscreen</code></dd>
+   <dd><code data-x="attr-iframe-allowpaymentrequest">allowpaymentrequest</code></dd>
    <dd><code data-x="attr-iframe-allowusermedia">allowusermedia</code></dd>
    <dd><code data-x="attr-dim-width">width</code></dd>
    <dd><code data-x="attr-dim-height">height</code></dd>
@@ -31,6 +32,7 @@ interface <dfn>HTMLIFrameElement</dfn> : <span>HTMLElement</span> {
   [<span>CEReactions</span>] attribute DOMString <span data-x="dom-iframe-name">name</span>;
   [<span>CEReactions</span>, SameObject, PutForwards=<span data-x="dom-DOMTokenList-value">value</span>] readonly attribute <span>DOMTokenList</span> <span data-x="dom-iframe-sandbox">sandbox</span>;
   [<span>CEReactions</span>] attribute boolean <span data-x="dom-iframe-allowFullscreen">allowFullscreen</span>;
+  [<span>CEReactions</span>] attribute boolean <span data-x="dom-iframe-allowPaymentRequest">allowPaymentRequest</span>;
   [<span>CEReactions</span>] attribute boolean <span data-x="dom-iframe-allowUserMedia">allowUserMedia</span>;
   [<span>CEReactions</span>] attribute DOMString <span data-x="dom-dim-width">width</span>;
   [<span>CEReactions</span>] attribute DOMString <span data-x="dom-dim-height">height</span>;
@@ -548,6 +550,11 @@ interface <dfn>HTMLIFrameElement</dfn> : <span>HTMLElement</span> {
 
   </div>
 
+  <p>The <dfn><code data-x="attr-iframe-allowpaymentrequest">allowpaymentrequest</code></dfn>
+  attribute is a <span>boolean attribute</span>. When specified, it indicates that
+  <code>Document</code> objects in the <code>iframe</code> element's <span>browsing context</span>
+  are to be allowed to use the <code>PaymentRequest</code> interface to make payment requests.</p>
+
   <p>The <dfn><code data-x="attr-iframe-allowusermedia">allowusermedia</code></dfn> attribute is a
   <span>boolean attribute</span>. When specified, it indicates that <code>Document</code> objects in
   the <code>iframe</code> element's <span>browsing context</span> are to be allowed to use <code
@@ -620,6 +627,10 @@ interface <dfn>HTMLIFrameElement</dfn> : <span>HTMLElement</span> {
   <p>The <dfn><code data-x="dom-iframe-allowFullscreen">allowFullscreen</code></dfn> IDL attribute
   must <span>reflect</span> the <code data-x="attr-iframe-allowfullscreen">allowfullscreen</code>
   content attribute.</p>
+
+  <p>The <dfn><code data-x="dom-iframe-allowPaymentRequest">allowPaymentRequest</code></dfn> IDL
+  attribute must <span>reflect</span> the <code
+  data-x="attr-iframe-allowpaymentrequest">allowpaymentrequest</code> content attribute.</p>
 
   <p>The <dfn><code data-x="dom-iframe-allowUserMedia">allowUserMedia</code></dfn> IDL attribute
   must <span>reflect</span> the <code data-x="attr-iframe-allowusermedia">allowusermedia</code>

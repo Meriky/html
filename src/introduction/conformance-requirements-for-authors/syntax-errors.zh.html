@@ -61,25 +61,23 @@
    </dd>
 
 
-   <dt>Errors that result in disproportionately poor performance</dt>
+   <dt>会导致性能下降的错误</dt>
 
    <dd>
 
-    <p>Certain syntax constructs can result in disproportionately poor performance. To discourage the
-    use of such constructs, they are typically made non-conforming.</p>
+    <p>某些语法构造可能导致很差的性能。为了阻止这些构造的使用，通常把它们归为不合规范的。</p>
 
     <div class="example">
 
-     <p>For example, the following markup results in poor performance, since all the unclosed
-     <code>i</code> elements have to be reconstructed in each paragraph, resulting in progressively
-     more elements in each paragraph:</p>
+     <p>例如，下列标记会导致很差的性能，因为所有未闭合的 <code>i</code> 元素必须在每个段落中重新构造，
+     导致每个段落中的元素累加地增多：</p>
 
      <pre class="bad">&lt;p>&lt;i>She dreamt.
 &lt;p>&lt;i>She dreamt that she ate breakfast.
 &lt;p>&lt;i>Then lunch.
 &lt;p>&lt;i>And finally dinner.</pre>
 
-     <p>The resulting DOM for this fragment would be:</p>
+     <p>该片段的结果 DOM 将会是：</p>
 
      <ul class="domTree"><li class="t1"><code>p</code><ul><li class="t1"><code>i</code><ul><li class="t3"><code>#text</code>: <span data-x="">She dreamt.</span></li></ul></li></ul></li><li class="t1"><code>p</code><ul><li class="t1"><code>i</code><ul><li class="t1"><code>i</code><ul><li class="t3"><code>#text</code>: <span data-x="">She dreamt that she ate breakfast.</span></li></ul></li></ul></li></ul></li><li class="t1"><code>p</code><ul><li class="t1"><code>i</code><ul><li class="t1"><code>i</code><ul><li class="t1"><code>i</code><ul><li class="t3"><code>#text</code>: <span data-x="">Then lunch.</span></li></ul></li></ul></li></ul></li></ul></li><li class="t1"><code>p</code><ul><li class="t1"><code>i</code><ul><li class="t1"><code>i</code><ul><li class="t1"><code>i</code><ul><li class="t1"><code>i</code><ul><li class="t3"><code>#text</code>: <span data-x="">And finally dinner.</span></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul>
 
@@ -88,39 +86,33 @@
    </dd>
 
 
-   <dt>Errors involving fragile syntax constructs</dt>
+   <dt>涉及到脆弱的语法构造的错误</dt>
 
    <dd>
 
-    <p>There are syntax constructs that, for historical reasons, are relatively fragile. To help
-    reduce the number of users who accidentally run into such problems, they are made
-    non-conforming.</p>
+    <p>由于历史原因有一些语法构造相对脆弱。为了避免用户意外地掉到坑里，它们也被归为不合规范的。</p>
 
     <div class="example">
 
-     <p>For example, the parsing of certain named character references in attributes happens even
-     with the closing semicolon being omitted. It is safe to include an ampersand followed by
-     letters that do not form a named character reference, but if the letters are changed to a
-     string that <em>does</em> form a named character reference, they will be interpreted as that
-     character instead.</p>
+     <p>例如，即使省略了关闭分号，对属性中命名的字符引用的解析也会发生。
+     可以安全地引入一个<code data-x="">&amp;</code>以及紧随其后的不构成特殊命名的字符引用，
+     但如果这些字母改成构成命名的字符引用，它们将会被解释为那个特殊字符。</p>
 
-     <p>In this fragment, the attribute's value is "<code data-x="">?bill&amp;ted</code>":</p>
+     <p>在这个代码片段中，属性值是“<code data-x="">?bill&amp;ted</code>”：</p>
 
      <pre class="bad">&lt;a href="?bill&amp;ted">Bill and Ted&lt;/a></pre>
 
-     <p>In the following fragment, however, the attribute's value is actually "<code
-     data-x="">?art&copy;</code>", <em>not</em> the intended "<code data-x="">?art&amp;copy</code>",
-     because even without the final semicolon, "<code data-x="">&amp;copy</code>" is handled the same
-     as "<code data-x="">&amp;copy;</code>" and thus gets interpreted as "<code
-     data-x="">&copy;</code>":</p>
+     <p>在下面的代码片段中，属性值实际上会变成“<code data-x="">?art&copy;</code>”，
+     而<em>不是</em> 期望的 “<code data-x="">?art&amp;copy</code>”，
+     因为即使没有最后的分号“<code data-x="">&amp;copy</code>”也会一样地被处理为
+     “<code data-x="">&amp;copy;</code>”最终被解释为“<code data-x="">&copy;</code>”：</p>
 
      <pre class="bad">&lt;a href="?art&amp;copy">Art and Copy&lt;/a></pre>
 
-     <p>To avoid this problem, all named character references are required to end with a semicolon,
-     and uses of named character references without a semicolon are flagged as errors.</p>
+     <p>为了避免这一问题，要求所有命名的字符引用以分号结束，
+     所有使用命名字符引用但未添加分号的都被标记为错误。</p>
 
-     <p>Thus, the correct way to express the above cases is as
-     follows:</p>
+     <p>因此正确地表达上述情况的方式如下：</p>
 
      <pre>&lt;a href="?bill&amp;ted">Bill and Ted&lt;/a> &lt;!-- &amp;ted is ok, since it's not a named character reference --></pre>
      <pre>&lt;a href="?art&amp;amp;copy">Art and Copy&lt;/a> &lt;!-- the &amp; has to be escaped, since &amp;copy <em>is</em> a named character reference --></pre>
@@ -130,26 +122,24 @@
    </dd>
 
 
-   <dt>Errors involving known interoperability problems in legacy user agents</dt>
+   <dt>涉及旧用户代理中的已知互操作性问题的错误</dt>
 
    <dd>
 
-    <p>Certain syntax constructs are known to cause especially subtle or serious problems in legacy
-    user agents, and are therefore marked as non-conforming to help authors avoid them.</p>
+    <p>某些语法构造在旧的用户代理中会造成一些已知的细微或严重的问题。
+    因此他们被标记为不合规范的来帮助作者避免这些问题。</p>
 
     <div class="example">
 
-     <p>For example, this is why the U+0060 GRAVE ACCENT character (`) is not allowed in unquoted
-     attributes. In certain legacy user agents, <!-- namely IE --> it is sometimes treated as a
-     quote character.</p>
+     <p>例如 U+0060 重音符（`）不允许出现在没有引号的属性中。
+     因为在某些旧用户代理中<!-- namely IE -->，它有时会被当做一个引号。</p>
 
     </div>
 
     <div class="example">
 
-     <p>Another example of this is the DOCTYPE, which is required to trigger <span>no-quirks
-     mode</span>, because the behavior of legacy user agents in <span>quirks mode</span> is often
-     largely undocumented.</p>
+     <p>另一个例子是必须使用 DOCTYPE 来触发 <span data-x="no-quirks mode">非怪异模式</span>，
+     因为旧用户代理在 <span data-x="quirks mode">怪异模式</span> 下的行为通常都没有文档。</p>
 
     </div>
 
@@ -157,16 +147,16 @@
 
 
 <!--ADD-TOPIC:Security-->
-   <dt>Errors that risk exposing authors to security attacks</dt>
+   <dt>可能引发对作者的安全攻击的错误</dt>
 
    <dd>
 
-    <p>Certain restrictions exist purely to avoid known security problems.</p>
+    <p>某些限制纯粹是为了避免已知的安全问题。</p>
 
     <div class="example">
 
-     <p>For example, the restriction on using UTF-7 exists purely to avoid authors falling prey to a
-     known cross-site-scripting attack using UTF-7. <ref spec=UTF7></p>
+     <p>例如，对使用 UTF-7 的限制纯粹是为了避免作者成为使用 UTF-7
+     的已知跨站脚本攻击的的目标。<ref spec=UTF7></p>
 
     </div>
 
@@ -174,17 +164,17 @@
 <!--REMOVE-TOPIC:Security-->
 
 
-   <dt>Cases where the author's intent is unclear</dt>
+   <dt>作者的意图不清楚的情况</dt>
 
    <dd>
 
-    <p>Markup where the author's intent is very unclear is often made non-conforming. Correcting
-    these errors early makes later maintenance easier.</p>
+    <p>作者意图不清楚的标记通常被划为不规范的。
+    尽早修复这些错误会使得后续维护更为容易。</p>
 
     <div class="example">
 
-     <p>For example, it is unclear whether the author intended the following to be an
-     <code>h1</code> heading or an <code>h2</code> heading:</p>
+     <p>例如，作者是要将以下内容作为 <code>h1</code> 标题还是
+     <code>h2</code> 标题的意图并不明确：</p>
 
      <pre class="bad">&lt;h1>Contact details&lt;/h2></pre>
 
@@ -193,38 +183,33 @@
    </dd>
 
 
-   <dt>Cases that are likely to be typos</dt>
+   <dt>可能是拼写错误的情况</dt>
 
    <dd>
 
-    <p>When a user makes a simple typo, it is helpful if the error can be caught early, as this can
-    save the author a lot of debugging time. This specification therefore usually considers it an
-    error to use element names, attribute names, and so forth, that do not match the names defined
-    in this specification.</p>
+    <p>当用户发生了拼写错误，提早捕获该错误是有帮助的，因为这可以节省作者很多调试时间。
+    因此本标准通常认为使用与本标准中定义的名字不匹配的元素名、属性名等是错误的。</p>
 
     <div class="example">
 
-     <p>For example, if the author typed <code data-x="">&lt;capton></code> instead of <code
-     data-x="">&lt;caption></code>, this would be flagged as an error and the author could correct
-     the typo immediately.</p>
+     <p>例如，如果作者键入<code data-x="">&lt;capton></code> 而不是 <code
+     data-x="">&lt;caption></code>，这将被标记为错误，作者可以立即更正错字。</p>
 
     </div>
 
    </dd>
 
 
-   <dt>Errors that could interfere with new syntax in the future</dt>
+   <dt>将来可能会干扰新语法的错误</dt>
 
    <dd>
 
-    <p>In order to allow the language syntax to be extended in the future, certain otherwise
-    harmless features are disallowed.</p>
+    <p>为了允许将来扩展语言语法，某些本来无害的特性也是不允许的。</p>
 
     <div class="example">
 
-     <p>For example, "attributes" in end tags are ignored currently, but they are invalid, in case a
-     future change to the language makes use of that syntax feature without conflicting with
-     already-deployed (and valid!) content.</p>
+     <p>例如，在结束标签中的“属性”目前被忽略，但它们是非法的。
+     以防未来使用该语法特性的语言变更与已部署（但是合法的！）内容产生冲突。</p>
 
     </div>
 
@@ -233,11 +218,9 @@
 
   </dl>
 
-  <p>Some authors find it helpful to be in the practice of always quoting all attributes and always
-  including all optional tags, preferring the consistency derived from such custom over the minor
-  benefits of terseness afforded by making use of the flexibility of the HTML syntax. To aid such
-  authors, conformance checkers can provide modes of operation wherein such conventions are
-  enforced.</p>
+  <p>一些作者发现，在实践中总是用引号包含所有的属性并且总是包含所有的可选标签很有帮助，
+  相比于利用 HTML 语法的灵活性而带来的一点简洁，更偏好这一做法带来的一致性。
+  为了协助这样的作者，一致性检查器可以提供执行这一惯例的运行模式。</p>
 
 
 

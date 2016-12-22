@@ -241,6 +241,9 @@ people expect to have work and what is necessary.
      <li><p>If the <code>meta</code> element has no <code data-x="attr-meta-content">content</code>
      attribute, or if that attribute's value is the empty string, then abort these steps.</p></li>
 
+     <li><p>Let <var>document</var> be the <code>meta</code> element's <span>node
+     document</span>.</p></li>
+
      <li><p>Let <var>input</var> be the value of the element's <code
      data-x="attr-meta-content">content</code> attribute.</p></li>
 
@@ -256,8 +259,8 @@ people expect to have work and what is necessary.
      <li><p><span>Collect a sequence of characters</span> that are <span>ASCII digits</span> and
      U+002E FULL STOP characters (.). Ignore any collected characters.</p></li>
 
-     <li><p>Let <var>url</var> be the <code>meta</code> element's <span>node document</span>'s
-     <span data-x="concept-document-URL">URL</span>.</p></li>
+     <li><p>Let <var>url</var> be <var>document</var>'s <span
+     data-x="concept-document-URL">URL</span>.</p></li>
 
      <li><p>If <var>position</var> is past the end of <var>input</var>, jump to the step labeled
      <i>end</i>.</p></li>
@@ -315,9 +318,9 @@ people expect to have work and what is necessary.
      equal to <var>quote</var>, then truncate <var>url</var> at that character, so that it and all
      subsequent characters are removed.</p>
 
-     <li><p><i>Parse</i>: <span data-x="parse a url">Parse</span> <var>url</var> relative to the
-     <code>meta</code> element's <span>node document</span>. If that fails, abort these steps.
-     Otherwise, let <var>urlRecord</var> be the <span>resulting URL record</span></p></li>
+     <li><p><i>Parse</i>: <span data-x="parse a url">Parse</span> <var>url</var> relative to
+     <var>document</var>. If that fails, abort these steps. Otherwise, let <var>urlRecord</var> be
+     the <span>resulting URL record</span>.</p></li>
 
      <li>
 
@@ -328,30 +331,34 @@ people expect to have work and what is necessary.
        <li>
 
         <p>After the refresh has come due (as defined below), if the user has not canceled the
-        redirect and if the <code>meta</code> element's <span>node document</span>'s <span>active
-        sandboxing flag set</span> does not have the <span>sandboxed automatic features browsing
-        context flag</span> set, <span data-x="navigate">navigate</span><!--DONAV meta refresh-->
-        the <code>Document</code>'s <span data-x="concept-document-bc">browsing context</span> to
-        <var>urlRecord</var>, with <span>replacement enabled</span>, and with the
-        <code>Document</code>'s <span data-x="concept-document-bc">browsing context</span> as the
-        <span>source browsing context</span>.</p>
+        redirect and <var>document</var>'s <span>active sandboxing flag set</span> does not have the
+        <span>sandboxed automatic features browsing context flag</span> set, <span
+        data-x="navigate">navigate</span><!--DONAV meta refresh--> <var>document</var>'s <span
+        data-x="concept-document-bc">browsing context</span> to <var>urlRecord</var>, with
+        <span>replacement enabled</span>, and with <var>document</var>'s <span
+        data-x="concept-document-bc">browsing context</span> as the <span>source browsing
+        context</span>.</p>
 
         <p>For the purposes of the previous paragraph, a refresh is said to have come due as soon as
         the <em>later</em> of the following two conditions occurs:</p>
 
         <ul>
 
-         <li>At least <var>time</var> seconds have elapsed since the document has
+         <li>At least <var>time</var> seconds have elapsed since <var>document</var> has
          <span>completely loaded</span>, adjusted to take into account user or user agent
          preferences.</li>
          <!-- https://software.hixie.ch/utilities/js/live-dom-viewer/?saved=774 -->
 
          <li>At least <var>time</var> seconds have elapsed since the <code>meta</code> element was
-         <span data-x="node is inserted into a document">inserted into the document</span>, adjusted
-         to take into account user or user agent preferences.</li>
+         <span data-x="node is inserted into a document">inserted into the document</span>
+         <var>document</var>, adjusted to take into account user or user agent preferences.</li>
          <!-- https://software.hixie.ch/utilities/js/live-dom-viewer/?saved=772 -->
 
         </ul>
+
+        <p class="note">It is important to use <var>document</var> here, and not the
+        <code>meta</code> element's <span>node document</span>, as that might have changed between
+        the initial set of steps and the refresh coming due.</p>
 
        </li>
 

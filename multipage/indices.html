@@ -177,7 +177,7 @@
   <script data-file-issue-url=https://github.com/whatwg-cn/html/issues/new src=/html/resources/file-issue.js async=""></script>
   <header id=head class="head with-buttons">
    <p><a href=https://whatwg.org/ class=logo><img alt=WHATWG src=https://resources.whatwg.org/logo.svg width=100 height=100></a></p>
-   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>17 December 2016</span></h2></hgroup>
+   <hgroup><h1 class=allcaps>HTML</h1><h2 id=living-standard class="no-num no-toc">Living Standard — Last Updated <span class=pubdate>22 December 2016</span></h2></hgroup>
    
    
   </header>
@@ -390,6 +390,7 @@
          <code id=elements-3:attr-iframe-name><a href=embedded-content.html#attr-iframe-name>name</a></code>;
          <code id=elements-3:attr-iframe-sandbox><a href=embedded-content.html#attr-iframe-sandbox>sandbox</a></code>;
          <code id=elements-3:attr-iframe-allowfullscreen><a href=embedded-content.html#attr-iframe-allowfullscreen>allowfullscreen</a></code>;
+         <code id=elements-3:attr-iframe-allowpaymentrequest><a href=embedded-content.html#attr-iframe-allowpaymentrequest>allowpaymentrequest</a></code>;
          <code id=elements-3:attr-iframe-allowusermedia><a href=embedded-content.html#attr-iframe-allowusermedia>allowusermedia</a></code>;
          <code id=elements-3:attr-dim-width-2><a href=embedded-content.html#attr-dim-width>width</a></code>;
          <code id=elements-3:attr-dim-height-2><a href=embedded-content.html#attr-dim-height>height</a></code>;
@@ -1193,10 +1194,14 @@
      <td> <code id=attributes-3:attr-iframe-allowfullscreen><a href=embedded-content.html#attr-iframe-allowfullscreen>iframe</a></code>
      <td> Whether to allow the <code id=attributes-3:the-iframe-element><a href=embedded-content.html#the-iframe-element>iframe</a></code>'s contents to use <code id=attributes-3:dom-element-requestfullscreen><a data-x-internal=dom-element-requestfullscreen href=https://fullscreen.spec.whatwg.org/#dom-element-requestfullscreen>requestFullscreen()</a></code>
      <td> <a id=attributes-3:boolean-attribute href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+    <tr><th> <code>allowpaymentrequest</code>
+     <td> <code id=attributes-3:attr-iframe-allowpaymentrequest><a href=embedded-content.html#attr-iframe-allowpaymentrequest>iframe</a></code>
+     <td> Whether the <code id=attributes-3:the-iframe-element-2><a href=embedded-content.html#the-iframe-element>iframe</a></code>'s contents are allowed to use the <code id=attributes-3:paymentrequest><a data-x-internal=paymentrequest href=https://w3c.github.io/browser-payment-api/#paymentrequest-interface>PaymentRequest</a></code> interface to make payment requests
+     <td> <a id=attributes-3:boolean-attribute-2 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>allowusermedia</code>
      <td> <code id=attributes-3:attr-iframe-allowusermedia><a href=embedded-content.html#attr-iframe-allowusermedia>iframe</a></code>
-     <td> Whether to allow the <code id=attributes-3:the-iframe-element-2><a href=embedded-content.html#the-iframe-element>iframe</a></code>'s contents to use <code id=attributes-3:dom-mediadevices-getusermedia><a data-x-internal=dom-mediadevices-getusermedia href=https://w3c.github.io/mediacapture-main/#dom-mediadevices-getusermedia>getUserMedia()</a></code>
-     <td> <a id=attributes-3:boolean-attribute-2 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> Whether to allow the <code id=attributes-3:the-iframe-element-3><a href=embedded-content.html#the-iframe-element>iframe</a></code>'s contents to use <code id=attributes-3:dom-mediadevices-getusermedia><a data-x-internal=dom-mediadevices-getusermedia href=https://w3c.github.io/mediacapture-main/#dom-mediadevices-getusermedia>getUserMedia()</a></code>
+     <td> <a id=attributes-3:boolean-attribute-3 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>alt</code>
      <td> <code id=attributes-3:attr-area-alt><a href=embedded-content.html#attr-area-alt>area</a></code>;
           <code id=attributes-3:attr-img-alt><a href=embedded-content.html#attr-img-alt>img</a></code>;
@@ -1210,7 +1215,7 @@
     <tr><th> <code>async</code>
      <td> <code id=attributes-3:attr-script-async><a href=scripting.html#attr-script-async>script</a></code>
      <td> Execute script when available, without blocking
-     <td> <a id=attributes-3:boolean-attribute-3 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-4 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>autocomplete</code>
      <td> <code id=attributes-3:attr-form-autocomplete><a href=forms.html#attr-form-autocomplete>form</a></code>
      <td> Default setting for autofill feature for controls in the form
@@ -1228,12 +1233,12 @@
           <code id=attributes-3:attr-fe-autofocus-4><a href=forms.html#attr-fe-autofocus>select</a></code>;
           <code id=attributes-3:attr-fe-autofocus-5><a href=forms.html#attr-fe-autofocus>textarea</a></code>
      <td> Automatically focus the form control when the page is loaded
-     <td> <a id=attributes-3:boolean-attribute-4 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-5 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>autoplay</code>
      <td> <code id=attributes-3:attr-media-autoplay><a href=embedded-content.html#attr-media-autoplay>audio</a></code>;
           <code id=attributes-3:attr-media-autoplay-2><a href=embedded-content.html#attr-media-autoplay>video</a></code>
      <td> Hint that the <a id=attributes-3:media-resource href=embedded-content.html#media-resource>media resource</a> can be started automatically when the page is loaded
-     <td> <a id=attributes-3:boolean-attribute-5 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-6 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>challenge</code>
      <td> <code id=attributes-3:attr-keygen-challenge><a href=forms.html#attr-keygen-challenge>keygen</a></code>
      <td> String to package with the generated and signed public key
@@ -1250,7 +1255,7 @@
      <td> <code id=attributes-3:attr-menuitem-checked><a href=forms.html#attr-menuitem-checked>menuitem</a></code>;
           <code id=attributes-3:attr-input-checked><a href=forms.html#attr-input-checked>input</a></code>
      <td> Whether the command or control is checked
-     <td> <a id=attributes-3:boolean-attribute-6 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-7 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>cite</code>
      <td> <code id=attributes-3:attr-blockquote-cite><a href=semantics.html#attr-blockquote-cite>blockquote</a></code>;
           <code id=attributes-3:attr-mod-cite><a href=semantics.html#attr-mod-cite>del</a></code>;
@@ -1287,7 +1292,7 @@
      <td> <code id=attributes-3:attr-media-controls><a href=embedded-content.html#attr-media-controls>audio</a></code>;
           <code id=attributes-3:attr-media-controls-2><a href=embedded-content.html#attr-media-controls>video</a></code>
      <td> Show user agent controls
-     <td> <a id=attributes-3:boolean-attribute-7 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-8 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>coords</code>
      <td> <code id=attributes-3:attr-area-coords><a href=embedded-content.html#attr-area-coords>area</a></code>
      <td> Coordinates for the shape to be created in an <a id=attributes-3:image-map href=embedded-content.html#image-map>image map</a>
@@ -1325,15 +1330,15 @@
     <tr><th> <code>default</code>
      <td> <code id=attributes-3:attr-menuitem-default><a href=forms.html#attr-menuitem-default>menuitem</a></code>
      <td> Mark the command as being a default command
-     <td> <a id=attributes-3:boolean-attribute-8 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-9 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>default</code>
      <td> <code id=attributes-3:attr-track-default><a href=embedded-content.html#attr-track-default>track</a></code>
      <td> Enable the track if no other <a id=attributes-3:text-track href=embedded-content.html#text-track>text track</a> is more suitable
-     <td> <a id=attributes-3:boolean-attribute-9 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-10 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>defer</code>
      <td> <code id=attributes-3:attr-script-defer><a href=scripting.html#attr-script-defer>script</a></code>
      <td> Defer script execution
-     <td> <a id=attributes-3:boolean-attribute-10 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-11 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>dir</code>
      <td> <a href=dom.html#the-dir-attribute id=attributes-3:the-dir-attribute>HTML elements</a>
      <td> <a href=dom.html#the-directionality id=attributes-3:the-directionality>The text directionality</a> of the element
@@ -1358,7 +1363,7 @@
           <code id=attributes-3:attr-fe-disabled-4><a href=forms.html#attr-fe-disabled>select</a></code>;
           <code id=attributes-3:attr-fe-disabled-5><a href=forms.html#attr-fe-disabled>textarea</a></code>
      <td> Whether the form control is disabled
-     <td> <a id=attributes-3:boolean-attribute-11 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-12 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>download</code>
      <td> <code id=attributes-3:attr-hyperlink-download><a href=semantics.html#attr-hyperlink-download>a</a></code>;
           <code id=attributes-3:attr-hyperlink-download-2><a href=semantics.html#attr-hyperlink-download>area</a></code>
@@ -1414,7 +1419,7 @@
      <td> <code id=attributes-3:attr-fs-formnovalidate><a href=forms.html#attr-fs-formnovalidate>button</a></code>;
           <code id=attributes-3:attr-fs-formnovalidate-2><a href=forms.html#attr-fs-formnovalidate>input</a></code>
      <td> Bypass form control validation for <a id=attributes-3:form-submission-2-8 href=forms.html#form-submission-2>form submission</a>
-     <td> <a id=attributes-3:boolean-attribute-12 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-13 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>formtarget</code>
      <td> <code id=attributes-3:attr-fs-formtarget><a href=forms.html#attr-fs-formtarget>button</a></code>;
           <code id=attributes-3:attr-fs-formtarget-2><a href=forms.html#attr-fs-formtarget>input</a></code>
@@ -1438,7 +1443,7 @@
     <tr><th> <code>hidden</code>
      <td> <a href=interaction.html#the-hidden-attribute id=attributes-3:the-hidden-attribute>HTML elements</a>
      <td> Whether the element is relevant
-     <td> <a id=attributes-3:boolean-attribute-13 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-14 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>high</code>
      <td> <code id=attributes-3:attr-meter-high><a href=forms.html#attr-meter-high>meter</a></code>
      <td> Low limit of high range
@@ -1502,7 +1507,7 @@
     <tr><th> <code>ismap</code>
      <td> <code id=attributes-3:attr-img-ismap><a href=embedded-content.html#attr-img-ismap>img</a></code>
      <td> Whether the image is a server-side image map
-     <td> <a id=attributes-3:boolean-attribute-14 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-15 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>itemid</code>
      <td> <a href=microdata.html#attr-itemid id=attributes-3:attr-itemid>HTML elements</a>
      <td> <a id=attributes-3:global-identifier href=microdata.html#global-identifier>Global identifier</a> for a microdata item
@@ -1518,7 +1523,7 @@
     <tr><th> <code>itemscope</code>
      <td> <a href=microdata.html#attr-itemscope id=attributes-3:attr-itemscope>HTML elements</a>
      <td> Introduces a microdata item
-     <td> <a id=attributes-3:boolean-attribute-15 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-16 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>itemtype</code>
      <td> <a href=microdata.html#attr-itemtype id=attributes-3:attr-itemtype>HTML elements</a>
      <td> <a id=attributes-3:item-types href=microdata.html#item-types>Item types</a> of a microdata item
@@ -1555,7 +1560,7 @@
      <td> <code id=attributes-3:attr-media-loop><a href=embedded-content.html#attr-media-loop>audio</a></code>;
           <code id=attributes-3:attr-media-loop-2><a href=embedded-content.html#attr-media-loop>video</a></code>
      <td> Whether to loop the <a id=attributes-3:media-resource-2 href=embedded-content.html#media-resource>media resource</a>
-     <td> <a id=attributes-3:boolean-attribute-16 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-17 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>low</code>
      <td> <code id=attributes-3:attr-meter-low><a href=forms.html#attr-meter-low>meter</a></code>
      <td> High limit of low range
@@ -1611,12 +1616,12 @@
      <td> <code id=attributes-3:attr-input-multiple><a href=forms.html#attr-input-multiple>input</a></code>;
           <code id=attributes-3:attr-select-multiple><a href=forms.html#attr-select-multiple>select</a></code>
      <td> Whether to allow multiple values
-     <td> <a id=attributes-3:boolean-attribute-17 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-18 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>muted</code>
      <td> <code id=attributes-3:attr-media-muted><a href=embedded-content.html#attr-media-muted>audio</a></code>;
           <code id=attributes-3:attr-media-muted-2><a href=embedded-content.html#attr-media-muted>video</a></code>
      <td> Whether to mute the <a id=attributes-3:media-resource-3 href=embedded-content.html#media-resource>media resource</a> by default
-     <td> <a id=attributes-3:boolean-attribute-18 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-19 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>name</code>
      <td> <code id=attributes-3:attr-fe-name><a href=forms.html#attr-fe-name>button</a></code>;
           <code id=attributes-3:attr-fe-name-2><a href=forms.html#attr-fe-name>fieldset</a></code>;
@@ -1661,15 +1666,15 @@
     <tr><th> <code>novalidate</code>
      <td> <code id=attributes-3:attr-fs-novalidate><a href=forms.html#attr-fs-novalidate>form</a></code>
      <td> Bypass form control validation for <a id=attributes-3:form-submission-2-12 href=forms.html#form-submission-2>form submission</a>
-     <td> <a id=attributes-3:boolean-attribute-19 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-20 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>open</code>
      <td> <code id=attributes-3:attr-details-open><a href=forms.html#attr-details-open>details</a></code>
      <td> Whether the details are visible
-     <td> <a id=attributes-3:boolean-attribute-20 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-21 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>open</code>
      <td> <code id=attributes-3:attr-dialog-open><a href=forms.html#attr-dialog-open>dialog</a></code>
      <td> Whether the dialog box is showing
-     <td> <a id=attributes-3:boolean-attribute-21 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-22 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>optimum</code>
      <td> <code id=attributes-3:attr-meter-optimum><a href=forms.html#attr-meter-optimum>meter</a></code>
      <td> Optimum value in gauge
@@ -1691,7 +1696,7 @@
     <tr><th> <code>playsinline</code>
      <td> <code id=attributes-3:attr-video-playsinline><a href=embedded-content.html#attr-video-playsinline>video</a></code>
      <td> Encourage the user agent to display video content within the element's playback area
-     <td> <a id=attributes-3:boolean-attribute-22 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-23 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>poster</code>
      <td> <code id=attributes-3:attr-video-poster><a href=embedded-content.html#attr-video-poster>video</a></code>
      <td> Poster frame to show prior to video playback
@@ -1711,7 +1716,7 @@
      <td> <code id=attributes-3:attr-input-readonly><a href=forms.html#attr-input-readonly>input</a></code>;
           <code id=attributes-3:attr-textarea-readonly><a href=forms.html#attr-textarea-readonly>textarea</a></code>
      <td> Whether to allow the value to be edited by the user
-     <td> <a id=attributes-3:boolean-attribute-23 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-24 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>referrerpolicy</code>
      <td> <code id=attributes-3:attr-hyperlink-referrerpolicy><a href=semantics.html#attr-hyperlink-referrerpolicy>a</a></code>;
           <code id=attributes-3:attr-hyperlink-referrerpolicy-2><a href=semantics.html#attr-hyperlink-referrerpolicy>area</a></code>;
@@ -1734,11 +1739,11 @@
           <code id=attributes-3:attr-select-required><a href=forms.html#attr-select-required>select</a></code>;
           <code id=attributes-3:attr-textarea-required><a href=forms.html#attr-textarea-required>textarea</a></code>
      <td> Whether the control is required for <a id=attributes-3:form-submission-2-13 href=forms.html#form-submission-2>form submission</a>
-     <td> <a id=attributes-3:boolean-attribute-24 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-25 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>reversed</code>
      <td> <code id=attributes-3:attr-ol-reversed><a href=semantics.html#attr-ol-reversed>ol</a></code>
      <td> Number the list backwards
-     <td> <a id=attributes-3:boolean-attribute-25 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-26 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>rows</code>
      <td> <code id=attributes-3:attr-textarea-rows><a href=forms.html#attr-textarea-rows>textarea</a></code>
      <td> Number of lines to show
@@ -1780,7 +1785,7 @@
     <tr><th> <code>selected</code>
      <td> <code id=attributes-3:attr-option-selected><a href=forms.html#attr-option-selected>option</a></code>
      <td> Whether the option is selected by default
-     <td> <a id=attributes-3:boolean-attribute-26 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-27 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>shape</code>
      <td> <code id=attributes-3:attr-area-shape><a href=embedded-content.html#attr-area-shape>area</a></code>
      <td> The kind of shape to be created in an <a id=attributes-3:image-map-3 href=embedded-content.html#image-map>image map</a>
@@ -1821,7 +1826,7 @@
      <td> <a id=attributes-3:valid-non-empty-url-potentially-surrounded-by-spaces-8 href=infrastructure.html#valid-non-empty-url-potentially-surrounded-by-spaces>Valid non-empty URL potentially surrounded by spaces</a>
     <tr><th> <code>srcdoc</code>
      <td> <code id=attributes-3:attr-iframe-srcdoc><a href=embedded-content.html#attr-iframe-srcdoc>iframe</a></code>
-     <td> A document to render in the <code id=attributes-3:the-iframe-element-3><a href=embedded-content.html#the-iframe-element>iframe</a></code>
+     <td> A document to render in the <code id=attributes-3:the-iframe-element-4><a href=embedded-content.html#the-iframe-element>iframe</a></code>
      <td> The source of <a id=attributes-3:an-iframe-srcdoc-document href=embedded-content.html#an-iframe-srcdoc-document>an <code>iframe</code> <code>srcdoc</code> document</a>*
     <tr><th> <code>srclang</code>
      <td> <code id=attributes-3:attr-track-srclang><a href=embedded-content.html#attr-track-srclang>track</a></code>
@@ -1936,7 +1941,7 @@
     <tr><th> <code>typemustmatch</code>
      <td> <code id=attributes-3:attr-object-typemustmatch><a href=embedded-content.html#attr-object-typemustmatch>object</a></code>
      <td> Whether the <code id=attributes-3:attr-object-type-2><a href=embedded-content.html#attr-object-type>type</a></code> attribute and the <a id=attributes-3:content-type href=infrastructure.html#content-type>Content-Type</a> value need to match for the resource to be used
-     <td> <a id=attributes-3:boolean-attribute-27 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
+     <td> <a id=attributes-3:boolean-attribute-28 href=infrastructure.html#boolean-attribute>Boolean attribute</a>
     <tr><th> <code>usemap</code>
      <td> <code id=attributes-3:attr-hyperlink-usemap-2><a href=embedded-content.html#attr-hyperlink-usemap>img</a></code>;
           <code id=attributes-3:attr-hyperlink-usemap-3><a href=embedded-content.html#attr-hyperlink-usemap>object</a></code>

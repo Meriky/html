@@ -27,8 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var date = dateEl.innerHTML.trim().split(/\s+/).reverse();
     dateEl.innerHTML = date[0] + '年' + date_zh[date[1]] + '月' + date[2] + '日';
 
-    var a = document.querySelector('nav a');
-    if(a.innerHTML.trim() === 'Table of Contents'){
-        a.innerHTML = '目录';
-    }
+    var as = document.querySelectorAll('nav a');
+    as.forEach(function(a){
+        if(a.innerHTML.trim() === 'Table of Contents'){
+            a.innerHTML = '目录';
+        }
+    });
 });

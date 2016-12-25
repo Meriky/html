@@ -5,7 +5,7 @@
 .example::before { content: '示例';  }
 .note::before, dl.domintro::before { content: '注意'; }
 .bookkeeping:before { content: '簿记细节'; }
-.warning::before { content: '\26A0 Warning!'; }
+.warning::before { content: '\26A0 警告！'; }
 
 
 .comment { position: relative; color: #2196F3; background: #e3f3ff; font-style: italic; margin-left: 2em; padding-left: 2em; }

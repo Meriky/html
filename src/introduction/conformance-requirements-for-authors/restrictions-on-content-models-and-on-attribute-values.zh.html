@@ -1,0 +1,210 @@
+  <h4>内容模型和属性值的限制</h4>
+
+  <!-- NON-NORMATIVE SECTION -->
+
+  <p>除了语言的语法，本标准还对如何指定元素和属性做出了限制。
+  这些限制是出于类似的原因：</p>
+
+  <dl>
+
+
+   <dt>语义可疑的内容</dt>
+
+   <dd>
+
+    <p>为了避免误用定义了含义的元素，
+    定义内容模型时，限制了可疑的元素嵌套方式。</p>
+
+    <p class="example">例如，本标准不允许 <code>section</code>
+    元素嵌套在 <code>kbd</code> 元素中，因为作者不太可能表示
+    应该键入整个 <code>section</code>。</p>
+
+   </dd>
+
+
+   <dt>表达的语义存在冲突</dt>
+
+   <dd>
+
+    <p>类似地，为了让作者对元素使用中的错误引起注意，
+    表达出的语义存在明显的矛盾也被认为是一致性错误。</p>
+
+    <div class="example">
+
+     <p>例如下面的片段中的语义是毫无意义的：
+     分隔符不能同时是单元格，单选按钮也不能是进度条。</p>
+
+     <pre class="bad">&lt;hr role="cell"></pre>
+     <pre class="bad">&lt;input type=radio role=progressbar></pre>
+
+    </div>
+
+    <p class="example">另一个例子是对<code>ul</code>元素的内容模型的限制，
+    该限制只允许 <code>li</code> 子元素。根据定义列表只可包含一些列表项。
+    所以如果 <code>ul</code> 元素包含一些除了 <code>li</code> 之外的元素，
+    它的含义就不清楚了。</p>
+
+   </dd>
+
+
+   <dt>默认样式可能会导致困惑的情况</dt>
+
+   <dd>
+
+    <p>某些元素有一些默认样式和行为，它们的某些组合可能会令人困惑。
+    如果存在没有这一问题的等效替代，就不允许这样令人困惑的组合。</p>
+
+    <p class="example">例如，<code>div</code> 元素会被渲染为 <span
+    data-x="block box">block boxes</span>，<code>span</code> 元素则为 <span
+    data-x="inline box">inline boxes</span>。将 <span>block box</span> 放到
+    <span>inline box</span> 中就会导致不必要的困惑；因为只嵌套 <code>div</code>
+    元素，或只嵌套 <code>span</code> 元素，或在<code>div</code>元素中嵌套
+    <code>span</code> 元素都可以与在<code>span</code>元素中嵌套<code>div</code>元素
+    达到同样的目的。但只有后者涉及到在 <span>inline box</span> 中嵌套 <span>block box</span>，
+    所以后者的组合方式是不允许的。</p>
+
+    <p class="example">另一个可能的例子是 <span data-x="interactive content">交互内容</span>
+    不可嵌套。例如： <code>button</code> 元素不可包含 <code>textarea</code> 元素。
+    这是因为这样嵌套交互元素可能对用户造成困惑。可以并排放置这些元素。</p>
+
+   </dd>
+
+
+   <dt>对本标准可能的误解</dt>
+
+   <dd>
+
+    <p>有时，某些禁止是因为允许它将可能会让作者困惑。</p>
+
+    <p class="example">例如，设置 <code data-x="attr-fe-disabled">disabled</code>
+    属性为 "<code data-x="">false</code>" 是不允许的，因为表面上看起来它的含义是元素可用，
+    但实际上含义是元素被 <em data-x="disabled">禁用</em>
+    （实现中起作用的是该属性是否存在，而非它的值）。</p>
+
+   </dd>
+
+
+   <dt>纯粹为了简化语言而强加的限制</dt>
+
+   <dd>
+
+    <p>一些一致性错误简化了作者需要学习的语言。</p>
+
+    <p class="example">例如，<code>area</code> 元素的 <code
+    data-x="attr-area-shape">shape</code> 属性，在实践中虽然同时接受 <code
+    data-x="attr-area-shape-keyword-circ">circ</code> 和 <code
+    data-x="attr-area-shape-keyword-circle">circle</code>
+    取值并作为同义词，但禁止
+    <code data-x="attr-area-shape-keyword-circ">circ</code> 值的使用，
+    以此来简化教程和其他学习材料。同时允许它们并没有好处，
+    但它们可能在学习语言时造成额外的困惑。</p>
+
+   </dd>
+
+
+   <dt>解析器的一些怪异行为</dt>
+
+   <dd>
+
+    <p>某些元素的解析有点奇怪（通常是由于历史原因），
+    它们的内容模型限制旨在避免作者碰到这些问题。</p>
+
+    <div class="example">
+
+     <p>例如，<span>phrasing content</span> 中不允许
+     <code>form</code> 元素，因为当解析 HTML 时，
+     <code>form</code> 元素的开始标签将会产生一个
+     <code>p</code> 元素的关闭标签。因此下面的标记会产生两个
+     <span data-x="paragraph">段落</span>（而不是一个）：</p>
+
+     <pre>&lt;p>Welcome. &lt;form>&lt;label>Name:&lt;/label> &lt;input>&lt;/form></pre>
+
+     <p>与下面代码的解析结果完全一样：</p>
+
+     <pre>&lt;p>Welcome. &lt;/p>&lt;form>&lt;label>Name:&lt;/label> &lt;input>&lt;/form></pre>
+
+    </div>
+
+   </dd>
+
+
+   <dt>可能导致难以调试的脚本错误的情况</dt>
+
+   <dd>
+
+    <p>有些错误旨在避免难以调试的脚本问题。</p>
+
+    <p class="example">比如，这就是为什么有两个等值的 <code
+    data-x="attr-id">id</code> 属性是不合法的。
+    重复的 ID 导致选择到错误的元素，有时会产生难以确定原因的灾难性后果。</p>
+
+   </dd>
+
+
+   <dt>会浪费编写时间的错误</dt>
+
+   <dd>
+
+    <p>某些构造被禁止是因为历史上它们曾浪费大量的编写时间。
+    鼓励作者避免使用这些构造，将来可以节省很多时间。</p>
+
+    <p class="example">例如，<code>script</code> 元素的 <code
+    data-x="attr-script-src">src</code> 属性会导致元素的内容被忽略。
+    然而这并不明显（尤其是元素内容是可执行脚本时）&mdash;
+    这会导致作者花费大量时间尝试调试内联脚本，却没意识到它并未执行。
+    为了减少这一问题，在本标准中<code data-x="attr-script-src">src</code>
+    属性出现时，<code>script</code>元素中不允许存在可执行脚本。
+    这意味着作者在验证他们的文档时，不太可能在这样的错误上浪费时间。</p>
+
+   </dd>
+
+
+   <dt>影响作者在 HTML 和 XML 语法间迁移的部分</dt>
+
+   <dd>
+
+    <p>有些作者喜欢编写用 XML 和 HTML 解释可以得到类似结果的文件。
+    由于种种微妙的复杂性（尤其是涉及脚本、样式、或其他任何自动的序列化），
+    一般并不鼓励这一做法，尽管如此，本标准也有一些限制意在在某种程度上减轻困难。
+    这让作者在 HTML 和 XML 语法之间迁移时，可以更容易地将其用于过渡步骤。</p>
+
+    <p class="example">例如，围绕 <code data-x="attr-lang">lang</code> 和
+    <code data-x="attr-xml-lang">xml:lang</code> 属性有一些复杂的规则，
+    就是为了让 HTML 和 XML 同步。</p>
+
+    <p class="example">另一个例子可能是在 HTML 序列化中对 <code
+    data-x="">xmlns</code> 属性值的限制，意在确保不管是 HTML 还是 XML 解析，
+    合法的文档中元素总在同一命名空间。</p>
+
+   </dd>
+
+
+   <dt>为将来扩充而保留的部分</dt>
+
+   <dd>
+
+    <p>对语法的某些限制是为了允许语言的未来版本中添加新的语法，
+    类似地，对元素和属性取值的内容模型的一些限制是为了允许将来对 HTML 词库进行扩充。</p>
+
+    <p class="example">例如，限制 <code data-x="attr-hyperlink-target">target</code> 属性的值，
+    以 U+005F 下划线（_）起始的只能是特定的预定义值。这允许了在将来引入新的预定义值，
+    同时不会与作者定义的值产生冲突。</p>
+
+   </dd>
+
+
+   <dt>对其他标准的误用</dt>
+
+   <dd>
+
+    <p>某些限制意在支持其他标准作出的限制。</p>
+
+    <p class="example">例如，使用媒体查询列表的属性只能使用
+    <em data-x="valid">合法的</em> 媒体查询列表，强调了遵循那一标准的一致性规则的重要性。</p>
+
+   </dd>
+
+  </dl>
+
+
+
